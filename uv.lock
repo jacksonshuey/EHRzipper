@@ -627,7 +627,7 @@ requires-dist = [
     { name = "snowflake-connector-python", marker = "extra == 'snowflake'", specifier = ">=3.12.0" },
     { name = "snowflake-snowpark-python", marker = "extra == 'snowflake'", specifier = ">=1.24.0" },
     { name = "streamlit", specifier = ">=1.40.0" },
-    { name = "zipper", git = "https://github.com/jacksonshuey/zipper.git?rev=beb53d84725b0a70b2c1a17a63dbb2f28bbfc4c6" },
+    { name = "zipper", git = "https://github.com/jacksonshuey/zipper.git?rev=fcc33532f44df4b467e834c9737474dde638d637" },
 ]
 provides-extras = ["dev", "snowflake", "integrations"]
 
@@ -2556,7 +2556,7 @@ wheels = [
 [[package]]
 name = "zipper"
 version = "0.1.0"
-source = { git = "https://github.com/jacksonshuey/zipper.git?rev=beb53d84725b0a70b2c1a17a63dbb2f28bbfc4c6#beb53d84725b0a70b2c1a17a63dbb2f28bbfc4c6" }
+source = { git = "https://github.com/jacksonshuey/zipper.git?rev=fcc33532f44df4b467e834c9737474dde638d637#fcc33532f44df4b467e834c9737474dde638d637" }
 dependencies = [
     { name = "anthropic" },
     { name = "pydantic" },

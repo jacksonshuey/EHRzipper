@@ -9,7 +9,7 @@
 # OAuth secrets the Import page shows their setup instructions and the demo
 # runs on computer upload + the bundled synthetic files.
 
-zipper @ git+https://github.com/jacksonshuey/zipper.git@beb53d84725b0a70b2c1a17a63dbb2f28bbfc4c6
+zipper @ git+https://github.com/jacksonshuey/zipper.git@fcc33532f44df4b467e834c9737474dde638d637
 
 streamlit==1.57.0
 pandas==3.0.3

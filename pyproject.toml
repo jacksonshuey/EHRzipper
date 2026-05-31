@@ -36,7 +36,7 @@ integrations = [
 ]
 
 [tool.uv.sources]
-zipper = { git = "https://github.com/jacksonshuey/zipper.git", rev = "beb53d84725b0a70b2c1a17a63dbb2f28bbfc4c6" }
+zipper = { git = "https://github.com/jacksonshuey/zipper.git", rev = "fcc33532f44df4b467e834c9737474dde638d637" }
 
 [build-system]
 requires = ["hatchling"]
