@@ -1,0 +1,21 @@
+ONCOLOGY PROGRESS NOTE
+Date: 2016-11-15
+Patient: Campos, Tanya | MRN: pat_e0620ac1
+
+SUBJECTIVE:
+Patient returns for cycle 3 of carboplatin, pemetrexed, pembrolizumab, docetaxel. Reports mild cough and dyspnea on exertion; otherwise tolerating treatment.
+
+OBJECTIVE:
+ECOG performance status: 0
+Weight: 94.5 kg
+Laboratory values within acceptable parameters for treatment continuation.
+
+ASSESSMENT:
+adenocarcinoma NSCLC, stage IVB.
+Treatment: carboplatin, pemetrexed, pembrolizumab, docetaxel (initiated 2016-10-04).
+CT imaging shows stable disease. No new lesions identified.
+
+PLAN:
+Disease progression identified. Discontinue current carboplatin, pemetrexed, pembrolizumab, docetaxel. Referral to clinical trial team. Consider second-line therapy options.
+
+Disease progression documented on 2017-03-10 with new involvement at: lymph_node_distant.

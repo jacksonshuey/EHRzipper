@@ -1,0 +1,26 @@
+ONCOLOGY INITIAL CONSULTATION NOTE
+Date: 2021-09-27
+Patient: Henry, Sheena | DOB: 1944-05 | MRN: pat_cac02ae7
+Practice: prac_0002
+
+REASON FOR CONSULTATION:
+New diagnosis of advanced non-small cell lung cancer, stage IVA.
+
+HISTORY OF PRESENT ILLNESS:
+Sheena Henry is a 77-year-old female with a active smoking (current >10 pack-year) history
+who presents with a new diagnosis of adenocarcinoma of the lung, stage IVA per
+AJCC 8th edition. Initial symptoms included progressive dyspnea and a 6-week
+history of hemoptysis. CT of the chest revealed a right lower lobe mass with mediastinal
+lymphadenopathy. PET/CT confirmed IVA disease.
+
+PERFORMANCE STATUS:
+ECOG performance status: 1
+
+MOLECULAR TESTING:
+EGFR: negative; ALK: negative; ROS1: negative; KRAS: positive; BRAF: negative
+
+ASSESSMENT AND PLAN:
+Diagnosis: adenocarcinoma, stage IVA, de novo stage iiib plus.
+Will initiate carboplatin + pemetrexed + pembrolizumab per guideline-concordant approach.
+
+Follow-up in 6 weeks for treatment monitoring.

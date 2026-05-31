@@ -1,0 +1,26 @@
+ONCOLOGY INITIAL CONSULTATION NOTE
+Date: 2019-01-08
+Patient: Maldonado, Michelle | DOB: 1949-09 | MRN: pat_556c6240
+Practice: prac_0001
+
+REASON FOR CONSULTATION:
+New diagnosis of advanced non-small cell lung cancer, stage IIIC.
+
+HISTORY OF PRESENT ILLNESS:
+Michelle Maldonado is a 70-year-old female with a 44-pack-year smoking history
+who presents with a new diagnosis of adenocarcinoma of the lung, stage IIIC per
+AJCC 8th edition. Initial symptoms included progressive dyspnea and a 6-week
+history of hemoptysis. CT of the chest revealed a left upper lobe mass with mediastinal
+lymphadenopathy. PET/CT confirmed IIIC disease.
+
+PERFORMANCE STATUS:
+ECOG performance status: 1
+
+MOLECULAR TESTING:
+EGFR: positive; ALK: negative; ROS1: negative; KRAS: negative; BRAF: negative; PD-L1: low (TPS 12.4%)
+
+ASSESSMENT AND PLAN:
+Diagnosis: adenocarcinoma, stage IIIC, progression from earlier stage.
+Treatment options discussed; plan for watchful waiting vs. clinical trial enrollment.
+
+Follow-up in 6 weeks for treatment monitoring.

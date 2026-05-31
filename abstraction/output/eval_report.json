@@ -1,0 +1,90 @@
+{
+  "n_patients": 50,
+  "macro_accuracy": 0.9434758659561386,
+  "scalar_accuracy": {
+    "histology": 1.0,
+    "stage": 1.0,
+    "egfr_status": 1.0,
+    "egfr_mutation": 0.9,
+    "alk_status": 1.0,
+    "ros1_status": 1.0,
+    "kras_status": 1.0,
+    "kras_variant": 0.74,
+    "braf_status": 1.0,
+    "pdl1_status": 1.0,
+    "ecog": 1.0,
+    "progression_mentioned": 0.86,
+    "progression_date": 1.0
+  },
+  "scalar_miss_rate": {
+    "histology": 0.0,
+    "stage": 0.0,
+    "egfr_status": 0.0,
+    "egfr_mutation": 0.0,
+    "alk_status": 0.0,
+    "ros1_status": 0.0,
+    "kras_status": 0.0,
+    "kras_variant": 1.0,
+    "braf_status": 0.0,
+    "pdl1_status": 0.0,
+    "ecog": 0.0,
+    "progression_mentioned": 0.0,
+    "progression_date": 0.0
+  },
+  "numeric_accuracy": {
+    "pdl1_tps": 1.0
+  },
+  "list_metrics": {
+    "new_metastatic_sites": {
+      "precision": 0.64,
+      "recall": 1.0,
+      "f1": 0.7804878048780487
+    },
+    "treatments_mentioned": {
+      "precision": 0.7348484848484849,
+      "recall": 0.9150943396226415,
+      "f1": 0.8151260504201682
+    }
+  },
+  "confusion": {
+    "egfr_status": {
+      "negative": {
+        "negative": 45
+      },
+      "positive": {
+        "positive": 5
+      }
+    },
+    "histology": {
+      "adenocarcinoma": {
+        "adenocarcinoma": 32
+      },
+      "squamous_cell_carcinoma": {
+        "squamous_cell_carcinoma": 14
+      },
+      "adenosquamous_carcinoma": {
+        "adenosquamous_carcinoma": 1
+      },
+      "large_cell_carcinoma": {
+        "large_cell_carcinoma": 2
+      },
+      "sarcomatoid_carcinoma": {
+        "sarcomatoid_carcinoma": 1
+      }
+    },
+    "ecog": {
+      "2": {
+        "2": 8
+      },
+      "1": {
+        "1": 27
+      },
+      "0": {
+        "0": 13
+      },
+      "3": {
+        "3": 2
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+ONCOLOGY PROGRESS NOTE
+Date: 2019-01-07
+Patient: Phillips, Jennifer | MRN: pat_e0983fe8
+
+SUBJECTIVE:
+Patient returns for cycle 6 of carboplatin, paclitaxel, pembrolizumab. Patient reports mild fatigue, grade 1. No nausea or vomiting.
+
+OBJECTIVE:
+ECOG performance status: 1
+Weight: 94.2 kg
+Laboratory values within acceptable parameters for treatment continuation.
+
+ASSESSMENT:
+sarcomatoid carcinoma NSCLC, stage IIIB.
+Treatment: carboplatin, paclitaxel, pembrolizumab (initiated 2018-10-17).
+Stable disease per RECIST 1.1. Continuing current regimen.
+
+PLAN:
+Continue carboplatin, paclitaxel, pembrolizumab per current dosing schedule. Repeat CT chest in 6 weeks. CBC and CMP prior to next cycle.
+
+

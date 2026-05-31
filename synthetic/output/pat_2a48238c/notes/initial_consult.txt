@@ -1,0 +1,26 @@
+ONCOLOGY INITIAL CONSULTATION NOTE
+Date: 2018-08-05
+Patient: Wise, Aaron | DOB: 1940-04 | MRN: pat_2a48238c
+Practice: prac_0003
+
+REASON FOR CONSULTATION:
+New diagnosis of advanced non-small cell lung cancer, stage IVB.
+
+HISTORY OF PRESENT ILLNESS:
+Aaron Wise is a 78-year-old male with a 70-pack-year smoking history
+who presents with a new diagnosis of adenocarcinoma of the lung, stage IVB per
+AJCC 8th edition. Initial symptoms included progressive dyspnea and a 6-week
+history of hemoptysis. CT of the chest revealed a left lower lobe mass with mediastinal
+lymphadenopathy. PET/CT confirmed IVB disease.
+
+PERFORMANCE STATUS:
+ECOG performance status: 0
+
+MOLECULAR TESTING:
+EGFR: negative; ALK: negative; ROS1: positive; KRAS: negative; BRAF: negative; PD-L1: high (TPS 69.3%)
+
+ASSESSMENT AND PLAN:
+Diagnosis: adenocarcinoma, stage IVB, de novo stage iiib plus.
+Treatment options discussed; plan for watchful waiting vs. clinical trial enrollment.
+
+Follow-up in 3 weeks for treatment monitoring.

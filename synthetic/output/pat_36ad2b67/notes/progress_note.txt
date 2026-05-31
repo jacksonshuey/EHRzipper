@@ -1,0 +1,21 @@
+ONCOLOGY PROGRESS NOTE
+Date: 2019-08-13
+Patient: Humphrey, Ashley | MRN: pat_36ad2b67
+
+SUBJECTIVE:
+Patient returns for cycle 4 of pembrolizumab, gemcitabine. Patient reports mild fatigue, grade 1. No nausea or vomiting.
+
+OBJECTIVE:
+ECOG performance status: 2
+Weight: 79.1 kg
+Laboratory values within acceptable parameters for treatment continuation.
+
+ASSESSMENT:
+adenocarcinoma NSCLC, stage IVA.
+Treatment: pembrolizumab, gemcitabine (initiated 2019-06-26).
+Stable disease per RECIST 1.1. Continuing current regimen.
+
+PLAN:
+Disease progression identified. Discontinue current pembrolizumab, gemcitabine. Referral to clinical trial team. Consider second-line therapy options.
+
+Disease progression documented on 2019-12-13 with new involvement at: brain, lymph_node_distant.

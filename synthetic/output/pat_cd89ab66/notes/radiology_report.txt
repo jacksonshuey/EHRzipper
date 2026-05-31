@@ -1,0 +1,34 @@
+RADIOLOGY REPORT — CT CHEST WITH CONTRAST
+Study Date: 2016-06-22
+Patient: Gonzalez, Teresa | MRN: pat_cd89ab66
+Ordering Provider: Medical Oncology
+
+INDICATION:
+adenocarcinoma lung cancer, stage IVA. Staging evaluation.
+
+COMPARISON:
+No prior CT available.
+
+TECHNIQUE:
+Helical CT acquisition through the chest with IV contrast.
+
+FINDINGS:
+Primary tumor: right upper lobe mass measuring 3.6 cm in greatest dimension,
+with spiculated margins. No evidence of chest wall invasion.
+
+Mediastinum/Hilar: Enlarged mediastinal lymph nodes measuring up to 1.8 cm,
+most prominent in the right paratracheal station (4R). Mediastinal nodes mildly enlarged.
+
+Pleural spaces: No pleural effusion.
+
+Pulmonary vasculature: Normal.
+
+Bones: No bone lesions identified on current study.
+
+IMPRESSION:
+1. 3.6 cm right upper lobe primary lung mass consistent with known adenocarcinoma,
+   stage IVA.
+2. Mediastinal lymphadenopathy as described above.
+3. Pleural effusion as above, may warrant thoracentesis.
+
+Disease progression documented on 2016-12-03 with new involvement at: lung_contralateral, lymph_node_distant.

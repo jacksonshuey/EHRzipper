@@ -1,0 +1,32 @@
+SURGICAL PATHOLOGY REPORT
+Accession Number: PATH-pat_9b7cedbc
+Specimen Date: 2016-12-08
+Patient: Campos, Katherine | MRN: pat_9b7cedbc
+
+CLINICAL HISTORY:
+Right upper lobe mass, suspicious for malignancy. Rule out primary lung carcinoma.
+
+SPECIMENS SUBMITTED:
+A. CT-guided core needle biopsy, right upper lobe mass (3 cores)
+B. Bronchial washings
+
+GROSS DESCRIPTION:
+A. Three tan-white cores measuring 0.5-1.2 cm in aggregate length.
+
+MICROSCOPIC DESCRIPTION:
+Sections show fragments of lung parenchyma with infiltrating carcinoma.
+The tumor demonstrates sheets of malignant squamous epithelium with keratinization and intercellular bridges..
+
+DIAGNOSIS:
+A-B. Squamous cell carcinoma of the lung, 8070/3
+   - Stage at diagnosis: IIIC (AJCC 8th edition)
+   - Lymphovascular invasion: present
+   - Ki-67 proliferative index: approximately 35%
+
+MOLECULAR ANCILLARY STUDIES:
+EGFR: negative; ALK: negative; ROS1: negative; KRAS: positive; BRAF: negative; PD-L1: negative (TPS 0.3%)
+
+COMMENT:
+This case was reviewed at multidisciplinary tumor board. Molecular testing was recommended per NCCN guidelines for advanced NSCLC.
+
+Electronically signed: Synthetic Pathologist, MD

@@ -1,0 +1,91 @@
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ADT^A01^ADT_A01|EHRZ0000046|P|2.5.1
+PID|1||pat_e0983fe8||Phillips^Jennifer||196505|F||White|66299 Sullivan Village^^West Justinchester^CO^76520^USA|||||H||||pat_e0983fe8
+PV1|1|O|prac_0001^ONCOLOGY^^^||||DR9999^ONCOLOGIST^SYNTHETIC^MD|||||||||||||20180903|20180903
+DG1|1|I10|C34.10|NSCLC Sarcomatoid Carcinoma|20131029|F|||||||STAGE_IIIB|||||||8033.3
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ORU^R01^ORU_R01|EHRZ0000047|P|2.5.1
+PID|1||pat_e0983fe8||Phillips^Jennifer||196505|F||White|66299 Sullivan Village^^West Justinchester^CO^76520^USA|||||H||||pat_e0983fe8
+OBR|1|ORD00001|FIL00001|26464-8^Leukocytes [#/volume] in Blood^LN||20180903|20180903||||||||F
+OBX|1|NM|26464-8^Leukocytes [#/volume] in Blood^LN||8.6|10*3/uL|5.0-10.5|||F|||20180903
+OBR|2|ORD00002|FIL00002|26515-7^Platelets [#/volume] in Blood^LN||20180903|20180903||||||||F
+OBX|1|NM|26515-7^Platelets [#/volume] in Blood^LN||292.7|10*3/uL|150.0-400.0|||F|||20180903
+OBR|3|ORD00003|FIL00003|718-7^Hemoglobin [Mass/volume] in Blood^LN||20180903|20180903||||||||F
+OBX|1|NM|718-7^Hemoglobin [Mass/volume] in Blood^LN||16.2|g/dL|12.0-17.5|||F|||20180903
+OBR|4|ORD00004|FIL00004|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||20180903|20180903||||||||F
+OBX|1|NM|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||2.1|mg/dL|0.6-1.2|||F|||20180903
+OBR|5|ORD00005|FIL00005|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||20180903|20180903||||||||F
+OBX|1|NM|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||72.2|U/L|7.0-56.0|||F|||20180903
+OBR|6|ORD00006|FIL00006|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||20180903|20180903||||||||F
+OBX|1|NM|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||4.0|g/dL|3.5-5.0|||F|||20180903
+OBR|7|ORD00007|FIL00007|26464-8^Leukocytes [#/volume] in Blood^LN||20181018|20181018||||||||F
+OBX|1|NM|26464-8^Leukocytes [#/volume] in Blood^LN||8.4|10*3/uL|5.0-10.5|||F|||20181018
+OBR|8|ORD00008|FIL00008|26515-7^Platelets [#/volume] in Blood^LN||20181018|20181018||||||||F
+OBX|1|NM|26515-7^Platelets [#/volume] in Blood^LN||366.8|10*3/uL|150.0-400.0|||F|||20181018
+OBR|9|ORD00009|FIL00009|718-7^Hemoglobin [Mass/volume] in Blood^LN||20181018|20181018||||||||F
+OBX|1|NM|718-7^Hemoglobin [Mass/volume] in Blood^LN||8.1|g/dL|12.0-17.5|||F|||20181018
+OBR|10|ORD00010|FIL00010|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||20181018|20181018||||||||F
+OBX|1|NM|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||1.7|mg/dL|0.6-1.2|||F|||20181018
+OBR|11|ORD00011|FIL00011|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||20181018|20181018||||||||F
+OBX|1|NM|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||30.8|U/L|7.0-56.0|||F|||20181018
+OBR|12|ORD00012|FIL00012|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||20181018|20181018||||||||F
+OBX|1|NM|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||2.6|g/dL|3.5-5.0|||F|||20181018
+OBR|13|ORD00013|FIL00013|26464-8^Leukocytes [#/volume] in Blood^LN||20181127|20181127||||||||F
+OBX|1|NM|26464-8^Leukocytes [#/volume] in Blood^LN||10.0|10*3/uL|5.0-10.5|||F|||20181127
+OBR|14|ORD00014|FIL00014|26515-7^Platelets [#/volume] in Blood^LN||20181127|20181127||||||||F
+OBX|1|NM|26515-7^Platelets [#/volume] in Blood^LN||227.3|10*3/uL|150.0-400.0|||F|||20181127
+OBR|15|ORD00015|FIL00015|718-7^Hemoglobin [Mass/volume] in Blood^LN||20181127|20181127||||||||F
+OBX|1|NM|718-7^Hemoglobin [Mass/volume] in Blood^LN||9.2|g/dL|12.0-17.5|||F|||20181127
+OBR|16|ORD00016|FIL00016|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||20181127|20181127||||||||F
+OBX|1|NM|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||2.2|mg/dL|0.6-1.2|||F|||20181127
+OBR|17|ORD00017|FIL00017|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||20181127|20181127||||||||F
+OBX|1|NM|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||53.9|U/L|7.0-56.0|||F|||20181127
+OBR|18|ORD00018|FIL00018|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||20181127|20181127||||||||F
+OBX|1|NM|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||3.5|g/dL|3.5-5.0|||F|||20181127
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ORU^R01^ORU_R01|EHRZ0000048|P|2.5.1
+PID|1||pat_e0983fe8||Phillips^Jennifer||196505|F||White|66299 Sullivan Village^^West Justinchester^CO^76520^USA|||||H||||pat_e0983fe8
+OBR|1|ORD00001|FIL00001|53041-0^EGFR gene mutations found [Identifier] in Blood or Tissue^LN||20180910|20180910||||||||F
+OBX|1|ST|53041-0^EGFR gene mutations found [Identifier] in Blood or Tissue^LN||negative|||||F|||20180910
+OBR|2|ORD00002|FIL00002|76042-8^ALK gene rearrangements [Presence] in Tissue by FISH^LN||20180912|20180912||||||||F
+OBX|1|ST|76042-8^ALK gene rearrangements [Presence] in Tissue by FISH^LN||negative|||||F|||20180912
+OBR|3|ORD00003|FIL00003|81202-7^ROS1 gene rearrangements [Presence] in Tissue by FISH^LN||20180912|20180912||||||||F
+OBX|1|ST|81202-7^ROS1 gene rearrangements [Presence] in Tissue by FISH^LN||negative|||||F|||20180912
+OBR|4|ORD00004|FIL00004|21704-5^KRAS gene mutations found [Identifier] in Blood or Tissue^LN||20180910|20180910||||||||F
+OBX|1|ST|21704-5^KRAS gene mutations found [Identifier] in Blood or Tissue^LN||negative|||||F|||20180910
+OBR|5|ORD00005|FIL00005|21702-9^BRAF gene mutations found [Identifier] in Blood or Tissue^LN||20180912|20180912||||||||F
+OBX|1|ST|21702-9^BRAF gene mutations found [Identifier] in Blood or Tissue^LN||negative|||||F|||20180912
+OBR|6|ORD00006|FIL00006|85337-4^PD-L1 (CD274) [Presence] in Tissue by Immune stain^LN||20180911|20180911||||||||F
+OBX|1|ST|85337-4^PD-L1 (CD274) [Presence] in Tissue by Immune stain^LN||0%|||||F|||20180911
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||RDE^O11^RDE_O11|EHRZ0000049|P|2.5.1
+PID|1||pat_e0983fe8||Phillips^Jennifer||196505|F||White|66299 Sullivan Village^^West Justinchester^CO^76520^USA|||||H||||pat_e0983fe8
+RXA|0|1|20181017|20181018|2555^carboplatin^RXN|450.0|mg||IV|||||||A|||reg_9199877f_l1
+RXA|0|1|20181017|20181018|56946^paclitaxel^RXN|175.0|mg/m2||IV|||||||A|||reg_9199877f_l1
+RXA|0|1|20181017|20181018|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_9199877f_l1
+RXA|0|1|20181107|20181108|2555^carboplatin^RXN|450.0|mg||IV|||||||A|||reg_9199877f_l1
+RXA|0|1|20181107|20181108|56946^paclitaxel^RXN|175.0|mg/m2||IV|||||||A|||reg_9199877f_l1
+RXA|0|1|20181107|20181108|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_9199877f_l1
+RXA|0|1|20181128|20181129|2555^carboplatin^RXN|450.0|mg||IV|||||||A|||reg_9199877f_l1
+RXA|0|1|20181128|20181129|56946^paclitaxel^RXN|175.0|mg/m2||IV|||||||A|||reg_9199877f_l1
+RXA|0|1|20181128|20181129|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_9199877f_l1
+RXA|0|1|20181219|20181220|2555^carboplatin^RXN|450.0|mg||IV|||||||A|||reg_9199877f_l1
+RXA|0|1|20181219|20181220|56946^paclitaxel^RXN|175.0|mg/m2||IV|||||||A|||reg_9199877f_l1
+RXA|0|1|20181219|20181220|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_9199877f_l1
+RXA|0|1|20190109|20190110|2555^carboplatin^RXN|450.0|mg||IV|||||||A|||reg_9199877f_l1
+RXA|0|1|20190109|20190110|56946^paclitaxel^RXN|175.0|mg/m2||IV|||||||A|||reg_9199877f_l1
+RXA|0|1|20190109|20190110|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_9199877f_l1
+RXA|0|1|20190130|20190131|2555^carboplatin^RXN|450.0|mg||IV|||||||A|||reg_9199877f_l1
+RXA|0|1|20190130|20190131|56946^paclitaxel^RXN|175.0|mg/m2||IV|||||||A|||reg_9199877f_l1
+RXA|0|1|20190130|20190131|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_9199877f_l1
+RXA|0|1|20190220|20190221|2555^carboplatin^RXN|450.0|mg||IV|||||||A|||reg_9199877f_l1
+RXA|0|1|20190220|20190221|56946^paclitaxel^RXN|175.0|mg/m2||IV|||||||A|||reg_9199877f_l1
+RXA|0|1|20190220|20190221|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_9199877f_l1
+RXA|0|1|20190313|20190314|2555^carboplatin^RXN|450.0|mg||IV|||||||A|||reg_9199877f_l1
+RXA|0|1|20190313|20190314|56946^paclitaxel^RXN|175.0|mg/m2||IV|||||||A|||reg_9199877f_l1
+RXA|0|1|20190313|20190314|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_9199877f_l1
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||MDM^T02^MDM_T02|EHRZ0000050|P|2.5.1
+PID|1||pat_e0983fe8||Phillips^Jennifer||196505|F||White|66299 Sullivan Village^^West Justinchester^CO^76520^USA|||||H||||pat_e0983fe8
+TXA|1|11529-5|TX|20180903|DR9999^ONCOLOGIST^SYNTHETIC^MD|20180903|||doc_pat_e0983fe8_pathology||||||AU||||pat_e0983fe8
+TXA|1|18748-4|TX|20180903|DR9999^ONCOLOGIST^SYNTHETIC^MD|20180903|||doc_pat_e0983fe8_radiology||||||AU||||pat_e0983fe8
+TXA|1|11488-4|TX|20180903|DR9999^ONCOLOGIST^SYNTHETIC^MD|20180903|||doc_pat_e0983fe8_consult||||||AU||||pat_e0983fe8

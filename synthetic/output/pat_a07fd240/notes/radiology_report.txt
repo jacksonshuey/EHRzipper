@@ -1,0 +1,34 @@
+RADIOLOGY REPORT — CT CHEST WITH CONTRAST
+Study Date: 2016-12-14
+Patient: Taylor, Marvin | MRN: pat_a07fd240
+Ordering Provider: Medical Oncology
+
+INDICATION:
+adenocarcinoma lung cancer, stage IVB. Staging evaluation.
+
+COMPARISON:
+No prior CT available.
+
+TECHNIQUE:
+Helical CT acquisition through the chest with IV contrast.
+
+FINDINGS:
+Primary tumor: right lower lobe mass measuring 4.6 cm in greatest dimension,
+with spiculated margins. No evidence of chest wall invasion.
+
+Mediastinum/Hilar: Enlarged mediastinal lymph nodes measuring up to 1.8 cm,
+most prominent in the right paratracheal station (4R). Mediastinal nodes mildly enlarged.
+
+Pleural spaces: No pleural effusion.
+
+Pulmonary vasculature: Normal.
+
+Bones: Lytic lesion noted in T7 vertebral body, concerning for metastasis.
+
+IMPRESSION:
+1. 4.6 cm right lower lobe primary lung mass consistent with known adenocarcinoma,
+   stage IVB.
+2. Mediastinal lymphadenopathy as described above.
+3. Pleural effusion as above, may warrant thoracentesis.
+
+Disease progression documented on 2018-10-27 with new involvement at: liver, adrenal.

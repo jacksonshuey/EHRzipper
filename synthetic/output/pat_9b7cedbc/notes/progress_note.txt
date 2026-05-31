@@ -1,0 +1,21 @@
+ONCOLOGY PROGRESS NOTE
+Date: 2017-03-23
+Patient: Campos, Katherine | MRN: pat_9b7cedbc
+
+SUBJECTIVE:
+Patient returns for cycle 5 of carboplatin, paclitaxel, pembrolizumab, adagrasib. Reports mild cough and dyspnea on exertion; otherwise tolerating treatment.
+
+OBJECTIVE:
+ECOG performance status: 0
+Weight: 58.8 kg
+Laboratory values within acceptable parameters for treatment continuation.
+
+ASSESSMENT:
+squamous cell carcinoma NSCLC, stage IIIC.
+Treatment: carboplatin, paclitaxel, pembrolizumab, adagrasib (initiated 2017-01-15).
+Stable disease per RECIST 1.1. Continuing current regimen.
+
+PLAN:
+Disease progression identified. Discontinue current carboplatin, paclitaxel, pembrolizumab, adagrasib. Referral to clinical trial team. Consider second-line therapy options.
+
+Disease progression documented on 2017-08-08 with new involvement at: brain, adrenal.

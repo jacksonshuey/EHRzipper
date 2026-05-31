@@ -1,0 +1,40 @@
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ADT^A01^ADT_A01|EHRZ0000070|P|2.5.1
+PID|1||pat_117f639e||Petersen^Julie||196105|F||White|3147 Karen Port Suite 507^^Hunterborough^CO^47008^USA|||||N||||pat_117f639e
+PV1|1|O|prac_0006^ONCOLOGY^^^||||DR9999^ONCOLOGIST^SYNTHETIC^MD|||||||||||||20221223|20221223
+DG1|1|I10|C34.30|NSCLC Adenocarcinoma|20221223|F|||||||STAGE_IIIB|||||||8140.3
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ORU^R01^ORU_R01|EHRZ0000071|P|2.5.1
+PID|1||pat_117f639e||Petersen^Julie||196105|F||White|3147 Karen Port Suite 507^^Hunterborough^CO^47008^USA|||||N||||pat_117f639e
+OBR|1|ORD00001|FIL00001|26464-8^Leukocytes [#/volume] in Blood^LN||20221224|20221224||||||||F
+OBX|1|NM|26464-8^Leukocytes [#/volume] in Blood^LN||4.3|10*3/uL|5.0-10.5|||F|||20221224
+OBR|2|ORD00002|FIL00002|26515-7^Platelets [#/volume] in Blood^LN||20221224|20221224||||||||F
+OBX|1|NM|26515-7^Platelets [#/volume] in Blood^LN||161.8|10*3/uL|150.0-400.0|||F|||20221224
+OBR|3|ORD00003|FIL00003|718-7^Hemoglobin [Mass/volume] in Blood^LN||20221224|20221224||||||||F
+OBX|1|NM|718-7^Hemoglobin [Mass/volume] in Blood^LN||11.1|g/dL|12.0-17.5|||F|||20221224
+OBR|4|ORD00004|FIL00004|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||20221224|20221224||||||||F
+OBX|1|NM|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||1.4|mg/dL|0.6-1.2|||F|||20221224
+OBR|5|ORD00005|FIL00005|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||20221224|20221224||||||||F
+OBX|1|NM|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||77.3|U/L|7.0-56.0|||F|||20221224
+OBR|6|ORD00006|FIL00006|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||20221224|20221224||||||||F
+OBX|1|NM|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||3.1|g/dL|3.5-5.0|||F|||20221224
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ORU^R01^ORU_R01|EHRZ0000072|P|2.5.1
+PID|1||pat_117f639e||Petersen^Julie||196105|F||White|3147 Karen Port Suite 507^^Hunterborough^CO^47008^USA|||||N||||pat_117f639e
+OBR|1|ORD00001|FIL00001|53041-0^EGFR gene mutations found [Identifier] in Blood or Tissue^LN||20230110|20230110||||||||F
+OBX|1|ST|53041-0^EGFR gene mutations found [Identifier] in Blood or Tissue^LN||negative|||||F|||20230110
+OBR|2|ORD00002|FIL00002|76042-8^ALK gene rearrangements [Presence] in Tissue by FISH^LN||20230111|20230111||||||||F
+OBX|1|ST|76042-8^ALK gene rearrangements [Presence] in Tissue by FISH^LN||negative|||||F|||20230111
+OBR|3|ORD00003|FIL00003|81202-7^ROS1 gene rearrangements [Presence] in Tissue by FISH^LN||20230110|20230110||||||||F
+OBX|1|ST|81202-7^ROS1 gene rearrangements [Presence] in Tissue by FISH^LN||negative|||||F|||20230110
+OBR|4|ORD00004|FIL00004|21704-5^KRAS gene mutations found [Identifier] in Blood or Tissue^LN||20230109|20230109||||||||F
+OBX|1|ST|21704-5^KRAS gene mutations found [Identifier] in Blood or Tissue^LN||KRAS G12C|||||F|||20230109
+OBR|5|ORD00005|FIL00005|21702-9^BRAF gene mutations found [Identifier] in Blood or Tissue^LN||20230108|20230108||||||||F
+OBX|1|ST|21702-9^BRAF gene mutations found [Identifier] in Blood or Tissue^LN||negative|||||F|||20230108
+OBR|6|ORD00006|FIL00006|85337-4^PD-L1 (CD274) [Presence] in Tissue by Immune stain^LN||20230111|20230111||||||||F
+OBX|1|ST|85337-4^PD-L1 (CD274) [Presence] in Tissue by Immune stain^LN||92%|||||F|||20230111
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||MDM^T02^MDM_T02|EHRZ0000073|P|2.5.1
+PID|1||pat_117f639e||Petersen^Julie||196105|F||White|3147 Karen Port Suite 507^^Hunterborough^CO^47008^USA|||||N||||pat_117f639e
+TXA|1|11529-5|TX|20221223|DR9999^ONCOLOGIST^SYNTHETIC^MD|20221223|||doc_pat_117f639e_pathology||||||AU||||pat_117f639e
+TXA|1|18748-4|TX|20221223|DR9999^ONCOLOGIST^SYNTHETIC^MD|20221223|||doc_pat_117f639e_radiology||||||AU||||pat_117f639e
+TXA|1|11488-4|TX|20221223|DR9999^ONCOLOGIST^SYNTHETIC^MD|20221223|||doc_pat_117f639e_consult||||||AU||||pat_117f639e

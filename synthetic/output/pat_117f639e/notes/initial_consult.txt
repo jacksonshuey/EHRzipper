@@ -1,0 +1,26 @@
+ONCOLOGY INITIAL CONSULTATION NOTE
+Date: 2022-12-23
+Patient: Petersen, Julie | DOB: 1961-05 | MRN: pat_117f639e
+Practice: prac_0006
+
+REASON FOR CONSULTATION:
+New diagnosis of advanced non-small cell lung cancer, stage IIIB.
+
+HISTORY OF PRESENT ILLNESS:
+Julie Petersen is a 61-year-old female with a 79-pack-year smoking history
+who presents with a new diagnosis of adenocarcinoma of the lung, stage IIIB per
+AJCC 8th edition. Initial symptoms included progressive dyspnea and a 6-week
+history of hemoptysis. CT of the chest revealed a right lower lobe mass with mediastinal
+lymphadenopathy. PET/CT confirmed IIIB disease.
+
+PERFORMANCE STATUS:
+ECOG performance status: 0
+
+MOLECULAR TESTING:
+EGFR: negative; ALK: negative; ROS1: negative; KRAS: positive; BRAF: negative; PD-L1: high (TPS 92.1%)
+
+ASSESSMENT AND PLAN:
+Diagnosis: adenocarcinoma, stage IIIB, de novo stage iiib plus.
+Treatment options discussed; plan for watchful waiting vs. clinical trial enrollment.
+
+Follow-up in 6 weeks for treatment monitoring.

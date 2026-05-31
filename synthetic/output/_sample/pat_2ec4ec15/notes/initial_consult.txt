@@ -1,0 +1,26 @@
+ONCOLOGY INITIAL CONSULTATION NOTE
+Date: 2020-02-28
+Patient: Herrera, Monica | DOB: 1950-01 | MRN: pat_2ec4ec15
+Practice: prac_0006
+
+REASON FOR CONSULTATION:
+New diagnosis of advanced non-small cell lung cancer, stage IVA.
+
+HISTORY OF PRESENT ILLNESS:
+Monica Herrera is a 70-year-old female with a 13-pack-year smoking history
+who presents with a new diagnosis of sarcomatoid carcinoma of the lung, stage IVA per
+AJCC 8th edition. Initial symptoms included progressive dyspnea and a 6-week
+history of hemoptysis. CT of the chest revealed a right middle lobe mass with mediastinal
+lymphadenopathy. PET/CT confirmed IVA disease.
+
+PERFORMANCE STATUS:
+ECOG performance status: 2
+
+MOLECULAR TESTING:
+EGFR: negative; ALK: negative; ROS1: negative; KRAS: positive; BRAF: negative; PD-L1: low (TPS 15.6%)
+
+ASSESSMENT AND PLAN:
+Diagnosis: sarcomatoid carcinoma, stage IVA, de novo stage iiib plus.
+Will initiate carboplatin + paclitaxel + pembrolizumab per guideline-concordant approach.
+
+Follow-up in 3 weeks for treatment monitoring.

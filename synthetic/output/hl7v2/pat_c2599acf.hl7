@@ -1,0 +1,38 @@
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ADT^A01^ADT_A01|EHRZ0000001|P|2.5.1
+PID|1||pat_c2599acf||Johnson^Mark||194112|M||White|32181 Johnson Course Apt. 389^^New Jamesside^WI^55488^USA|||||N||||pat_c2599acf
+PV1|1|O|prac_0007^ONCOLOGY^^^||||DR9999^ONCOLOGIST^SYNTHETIC^MD|||||||||||||20181007|20181007
+DG1|1|I10|C34.30|NSCLC Adenocarcinoma|20181007|F|||||||STAGE_IVA|||||||8140.3
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ORU^R01^ORU_R01|EHRZ0000002|P|2.5.1
+PID|1||pat_c2599acf||Johnson^Mark||194112|M||White|32181 Johnson Course Apt. 389^^New Jamesside^WI^55488^USA|||||N||||pat_c2599acf
+OBR|1|ORD00001|FIL00001|26464-8^Leukocytes [#/volume] in Blood^LN||20181005|20181005||||||||F
+OBX|1|NM|26464-8^Leukocytes [#/volume] in Blood^LN||8.0|10*3/uL|5.0-10.5|||F|||20181005
+OBR|2|ORD00002|FIL00002|26515-7^Platelets [#/volume] in Blood^LN||20181005|20181005||||||||F
+OBX|1|NM|26515-7^Platelets [#/volume] in Blood^LN||330.6|10*3/uL|150.0-400.0|||F|||20181005
+OBR|3|ORD00003|FIL00003|718-7^Hemoglobin [Mass/volume] in Blood^LN||20181005|20181005||||||||F
+OBX|1|NM|718-7^Hemoglobin [Mass/volume] in Blood^LN||12.1|g/dL|12.0-17.5|||F|||20181005
+OBR|4|ORD00004|FIL00004|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||20181005|20181005||||||||F
+OBX|1|NM|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||0.8|mg/dL|0.6-1.2|||F|||20181005
+OBR|5|ORD00005|FIL00005|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||20181005|20181005||||||||F
+OBX|1|NM|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||22.3|U/L|7.0-56.0|||F|||20181005
+OBR|6|ORD00006|FIL00006|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||20181005|20181005||||||||F
+OBX|1|NM|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||4.3|g/dL|3.5-5.0|||F|||20181005
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ORU^R01^ORU_R01|EHRZ0000003|P|2.5.1
+PID|1||pat_c2599acf||Johnson^Mark||194112|M||White|32181 Johnson Course Apt. 389^^New Jamesside^WI^55488^USA|||||N||||pat_c2599acf
+OBR|1|ORD00001|FIL00001|53041-0^EGFR gene mutations found [Identifier] in Blood or Tissue^LN||20181016|20181016||||||||F
+OBX|1|ST|53041-0^EGFR gene mutations found [Identifier] in Blood or Tissue^LN||negative|||||F|||20181016
+OBR|2|ORD00002|FIL00002|76042-8^ALK gene rearrangements [Presence] in Tissue by FISH^LN||20181016|20181016||||||||F
+OBX|1|ST|76042-8^ALK gene rearrangements [Presence] in Tissue by FISH^LN||negative|||||F|||20181016
+OBR|3|ORD00003|FIL00003|81202-7^ROS1 gene rearrangements [Presence] in Tissue by FISH^LN||20181017|20181017||||||||F
+OBX|1|ST|81202-7^ROS1 gene rearrangements [Presence] in Tissue by FISH^LN||negative|||||F|||20181017
+OBR|4|ORD00004|FIL00004|21704-5^KRAS gene mutations found [Identifier] in Blood or Tissue^LN||20181016|20181016||||||||F
+OBX|1|ST|21704-5^KRAS gene mutations found [Identifier] in Blood or Tissue^LN||KRAS G12C|||||F|||20181016
+OBR|5|ORD00005|FIL00005|21702-9^BRAF gene mutations found [Identifier] in Blood or Tissue^LN||20181017|20181017||||||||F
+OBX|1|ST|21702-9^BRAF gene mutations found [Identifier] in Blood or Tissue^LN||negative|||||F|||20181017
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||MDM^T02^MDM_T02|EHRZ0000004|P|2.5.1
+PID|1||pat_c2599acf||Johnson^Mark||194112|M||White|32181 Johnson Course Apt. 389^^New Jamesside^WI^55488^USA|||||N||||pat_c2599acf
+TXA|1|11529-5|TX|20181007|DR9999^ONCOLOGIST^SYNTHETIC^MD|20181007|||doc_pat_c2599acf_pathology||||||AU||||pat_c2599acf
+TXA|1|18748-4|TX|20181007|DR9999^ONCOLOGIST^SYNTHETIC^MD|20181007|||doc_pat_c2599acf_radiology||||||AU||||pat_c2599acf
+TXA|1|11488-4|TX|20181007|DR9999^ONCOLOGIST^SYNTHETIC^MD|20181007|||doc_pat_c2599acf_consult||||||AU||||pat_c2599acf

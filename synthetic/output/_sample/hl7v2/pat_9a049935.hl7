@@ -1,0 +1,40 @@
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ADT^A01^ADT_A01|EHRZ0000001|P|2.5.1
+PID|1||pat_9a049935||Johnson^Mark||194801|M||Black Or African American|32181 Johnson Course Apt. 389^^New Jamesside^CT^55488^USA|||||N||||pat_9a049935
+PV1|1|O|prac_0005^ONCOLOGY^^^||||DR9999^ONCOLOGIST^SYNTHETIC^MD|||||||||||||20141014|20141014
+DG1|1|I10|C78.02|NSCLC Adenocarcinoma|20141014|F|||||||STAGE_IVB|||||||8140.3
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ORU^R01^ORU_R01|EHRZ0000002|P|2.5.1
+PID|1||pat_9a049935||Johnson^Mark||194801|M||Black Or African American|32181 Johnson Course Apt. 389^^New Jamesside^CT^55488^USA|||||N||||pat_9a049935
+OBR|1|ORD00001|FIL00001|26464-8^Leukocytes [#/volume] in Blood^LN||20141016|20141016||||||||F
+OBX|1|NM|26464-8^Leukocytes [#/volume] in Blood^LN||4.6|10*3/uL|5.0-10.5|||F|||20141016
+OBR|2|ORD00002|FIL00002|26515-7^Platelets [#/volume] in Blood^LN||20141016|20141016||||||||F
+OBX|1|NM|26515-7^Platelets [#/volume] in Blood^LN||208.6|10*3/uL|150.0-400.0|||F|||20141016
+OBR|3|ORD00003|FIL00003|718-7^Hemoglobin [Mass/volume] in Blood^LN||20141016|20141016||||||||F
+OBX|1|NM|718-7^Hemoglobin [Mass/volume] in Blood^LN||9.4|g/dL|12.0-17.5|||F|||20141016
+OBR|4|ORD00004|FIL00004|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||20141016|20141016||||||||F
+OBX|1|NM|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||1.7|mg/dL|0.6-1.2|||F|||20141016
+OBR|5|ORD00005|FIL00005|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||20141016|20141016||||||||F
+OBX|1|NM|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||94.5|U/L|7.0-56.0|||F|||20141016
+OBR|6|ORD00006|FIL00006|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||20141016|20141016||||||||F
+OBX|1|NM|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||3.4|g/dL|3.5-5.0|||F|||20141016
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ORU^R01^ORU_R01|EHRZ0000003|P|2.5.1
+PID|1||pat_9a049935||Johnson^Mark||194801|M||Black Or African American|32181 Johnson Course Apt. 389^^New Jamesside^CT^55488^USA|||||N||||pat_9a049935
+OBR|1|ORD00001|FIL00001|53041-0^EGFR gene mutations found [Identifier] in Blood or Tissue^LN||20141027|20141027||||||||F
+OBX|1|ST|53041-0^EGFR gene mutations found [Identifier] in Blood or Tissue^LN||negative|||||F|||20141027
+OBR|2|ORD00002|FIL00002|76042-8^ALK gene rearrangements [Presence] in Tissue by FISH^LN||20141025|20141025||||||||F
+OBX|1|ST|76042-8^ALK gene rearrangements [Presence] in Tissue by FISH^LN||negative|||||F|||20141025
+OBR|3|ORD00003|FIL00003|81202-7^ROS1 gene rearrangements [Presence] in Tissue by FISH^LN||20141026|20141026||||||||F
+OBX|1|ST|81202-7^ROS1 gene rearrangements [Presence] in Tissue by FISH^LN||negative|||||F|||20141026
+OBR|4|ORD00004|FIL00004|21704-5^KRAS gene mutations found [Identifier] in Blood or Tissue^LN||20141028|20141028||||||||F
+OBX|1|ST|21704-5^KRAS gene mutations found [Identifier] in Blood or Tissue^LN||negative|||||F|||20141028
+OBR|5|ORD00005|FIL00005|21702-9^BRAF gene mutations found [Identifier] in Blood or Tissue^LN||20141027|20141027||||||||F
+OBX|1|ST|21702-9^BRAF gene mutations found [Identifier] in Blood or Tissue^LN||negative|||||F|||20141027
+OBR|6|ORD00006|FIL00006|85337-4^PD-L1 (CD274) [Presence] in Tissue by Immune stain^LN||20141028|20141028||||||||F
+OBX|1|ST|85337-4^PD-L1 (CD274) [Presence] in Tissue by Immune stain^LN||14%|||||F|||20141028
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||MDM^T02^MDM_T02|EHRZ0000004|P|2.5.1
+PID|1||pat_9a049935||Johnson^Mark||194801|M||Black Or African American|32181 Johnson Course Apt. 389^^New Jamesside^CT^55488^USA|||||N||||pat_9a049935
+TXA|1|11529-5|TX|20141014|DR9999^ONCOLOGIST^SYNTHETIC^MD|20141014|||doc_pat_9a049935_pathology||||||AU||||pat_9a049935
+TXA|1|18748-4|TX|20141014|DR9999^ONCOLOGIST^SYNTHETIC^MD|20141014|||doc_pat_9a049935_radiology||||||AU||||pat_9a049935
+TXA|1|11488-4|TX|20141014|DR9999^ONCOLOGIST^SYNTHETIC^MD|20141014|||doc_pat_9a049935_consult||||||AU||||pat_9a049935

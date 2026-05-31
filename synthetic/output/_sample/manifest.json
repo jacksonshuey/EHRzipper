@@ -1,0 +1,17 @@
+{
+  "seed": 42,
+  "n_patients": 3,
+  "data_cutoff_date": "2024-12-31",
+  "format_distribution": {
+    "fhir": 1,
+    "hl7v2": 1,
+    "csv": 1
+  },
+  "output_dir": "/Users/jacksonshuey/Desktop/EHRzipper/synthetic/output/_sample",
+  "llm_notes": false,
+  "patient_ids": [
+    "pat_9a049935",
+    "pat_74b85b9a",
+    "pat_2ec4ec15"
+  ]
+}

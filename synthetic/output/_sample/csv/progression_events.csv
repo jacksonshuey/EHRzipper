@@ -1,0 +1,2 @@
+progression_id,patient_id,event_date,progression_type,evidence_source,new_metastatic_sites
+prg_d25c5759,pat_2ec4ec15,2020-12-13,on_treatment_progression,radiology_anchored,lung_contralateral

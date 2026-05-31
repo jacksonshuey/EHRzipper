@@ -1,0 +1,21 @@
+ONCOLOGY PROGRESS NOTE
+Date: 2020-11-14
+Patient: Humphrey, Amy | MRN: pat_9db0cb46
+
+SUBJECTIVE:
+Patient returns for cycle 4 of pembrolizumab. Patient reports mild fatigue, grade 1. No nausea or vomiting.
+
+OBJECTIVE:
+ECOG performance status: 2
+Weight: 73.6 kg
+Laboratory values within acceptable parameters for treatment continuation.
+
+ASSESSMENT:
+adenocarcinoma NSCLC, stage IVB.
+Treatment: pembrolizumab (initiated 2020-09-23).
+CT imaging shows stable disease. No new lesions identified.
+
+PLAN:
+Disease progression identified. Discontinue current pembrolizumab. Referral to clinical trial team. Consider second-line therapy options.
+
+Disease progression documented on 2021-08-29 with new involvement at: lymph_node_distant.

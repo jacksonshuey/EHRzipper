@@ -1,0 +1,40 @@
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ADT^A01^ADT_A01|EHRZ0000042|P|2.5.1
+PID|1||pat_cd438a2b||Lee^Allison||194405|F||White|1458 Frazier Ville Suite 014^^New Sydney^MO^35296^USA|||||N||||pat_cd438a2b
+PV1|1|O|prac_0006^ONCOLOGY^^^||||DR9999^ONCOLOGIST^SYNTHETIC^MD|||||||||||||20160123|20160123
+DG1|1|I10|C34.10|NSCLC Adenocarcinoma|20160123|F|||||||STAGE_IIIB|||||||8140.3
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ORU^R01^ORU_R01|EHRZ0000043|P|2.5.1
+PID|1||pat_cd438a2b||Lee^Allison||194405|F||White|1458 Frazier Ville Suite 014^^New Sydney^MO^35296^USA|||||N||||pat_cd438a2b
+OBR|1|ORD00001|FIL00001|26464-8^Leukocytes [#/volume] in Blood^LN||20160122|20160122||||||||F
+OBX|1|NM|26464-8^Leukocytes [#/volume] in Blood^LN||6.8|10*3/uL|5.0-10.5|||F|||20160122
+OBR|2|ORD00002|FIL00002|26515-7^Platelets [#/volume] in Blood^LN||20160122|20160122||||||||F
+OBX|1|NM|26515-7^Platelets [#/volume] in Blood^LN||374.4|10*3/uL|150.0-400.0|||F|||20160122
+OBR|3|ORD00003|FIL00003|718-7^Hemoglobin [Mass/volume] in Blood^LN||20160122|20160122||||||||F
+OBX|1|NM|718-7^Hemoglobin [Mass/volume] in Blood^LN||13.1|g/dL|12.0-17.5|||F|||20160122
+OBR|4|ORD00004|FIL00004|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||20160122|20160122||||||||F
+OBX|1|NM|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||2.1|mg/dL|0.6-1.2|||F|||20160122
+OBR|5|ORD00005|FIL00005|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||20160122|20160122||||||||F
+OBX|1|NM|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||56.3|U/L|7.0-56.0|||F|||20160122
+OBR|6|ORD00006|FIL00006|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||20160122|20160122||||||||F
+OBX|1|NM|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||2.5|g/dL|3.5-5.0|||F|||20160122
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ORU^R01^ORU_R01|EHRZ0000044|P|2.5.1
+PID|1||pat_cd438a2b||Lee^Allison||194405|F||White|1458 Frazier Ville Suite 014^^New Sydney^MO^35296^USA|||||N||||pat_cd438a2b
+OBR|1|ORD00001|FIL00001|53041-0^EGFR gene mutations found [Identifier] in Blood or Tissue^LN||20160201|20160201||||||||F
+OBX|1|ST|53041-0^EGFR gene mutations found [Identifier] in Blood or Tissue^LN||negative|||||F|||20160201
+OBR|2|ORD00002|FIL00002|76042-8^ALK gene rearrangements [Presence] in Tissue by FISH^LN||20160131|20160131||||||||F
+OBX|1|ST|76042-8^ALK gene rearrangements [Presence] in Tissue by FISH^LN||negative|||||F|||20160131
+OBR|3|ORD00003|FIL00003|81202-7^ROS1 gene rearrangements [Presence] in Tissue by FISH^LN||20160131|20160131||||||||F
+OBX|1|ST|81202-7^ROS1 gene rearrangements [Presence] in Tissue by FISH^LN||negative|||||F|||20160131
+OBR|4|ORD00004|FIL00004|21704-5^KRAS gene mutations found [Identifier] in Blood or Tissue^LN||20160202|20160202||||||||F
+OBX|1|ST|21704-5^KRAS gene mutations found [Identifier] in Blood or Tissue^LN||KRAS G12C|||||F|||20160202
+OBR|5|ORD00005|FIL00005|21702-9^BRAF gene mutations found [Identifier] in Blood or Tissue^LN||20160130|20160130||||||||F
+OBX|1|ST|21702-9^BRAF gene mutations found [Identifier] in Blood or Tissue^LN||negative|||||F|||20160130
+OBR|6|ORD00006|FIL00006|85337-4^PD-L1 (CD274) [Presence] in Tissue by Immune stain^LN||20160201|20160201||||||||F
+OBX|1|ST|85337-4^PD-L1 (CD274) [Presence] in Tissue by Immune stain^LN||1%|||||F|||20160201
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||MDM^T02^MDM_T02|EHRZ0000045|P|2.5.1
+PID|1||pat_cd438a2b||Lee^Allison||194405|F||White|1458 Frazier Ville Suite 014^^New Sydney^MO^35296^USA|||||N||||pat_cd438a2b
+TXA|1|11529-5|TX|20160123|DR9999^ONCOLOGIST^SYNTHETIC^MD|20160123|||doc_pat_cd438a2b_pathology||||||AU||||pat_cd438a2b
+TXA|1|18748-4|TX|20160123|DR9999^ONCOLOGIST^SYNTHETIC^MD|20160123|||doc_pat_cd438a2b_radiology||||||AU||||pat_cd438a2b
+TXA|1|11488-4|TX|20160123|DR9999^ONCOLOGIST^SYNTHETIC^MD|20160123|||doc_pat_cd438a2b_consult||||||AU||||pat_cd438a2b

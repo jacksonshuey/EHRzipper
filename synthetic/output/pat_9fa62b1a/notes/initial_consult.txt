@@ -1,0 +1,26 @@
+ONCOLOGY INITIAL CONSULTATION NOTE
+Date: 2016-05-23
+Patient: Herrera, Nicholas | DOB: 1948-05 | MRN: pat_9fa62b1a
+Practice: prac_0001
+
+REASON FOR CONSULTATION:
+New diagnosis of advanced non-small cell lung cancer, stage IVA.
+
+HISTORY OF PRESENT ILLNESS:
+Nicholas Herrera is a 68-year-old male with a never-smoking history
+who presents with a new diagnosis of adenocarcinoma of the lung, stage IVA per
+AJCC 8th edition. Initial symptoms included progressive dyspnea and a 6-week
+history of hemoptysis. CT of the chest revealed a right lower lobe mass with mediastinal
+lymphadenopathy. PET/CT confirmed IVA disease.
+
+PERFORMANCE STATUS:
+ECOG performance status: 1
+
+MOLECULAR TESTING:
+EGFR: negative; ALK: negative; ROS1: negative; KRAS: positive; BRAF: negative; PD-L1: high (TPS 53.0%)
+
+ASSESSMENT AND PLAN:
+Diagnosis: adenocarcinoma, stage IVA, progression from earlier stage.
+Will initiate pembrolizumab per guideline-concordant approach.
+
+Follow-up in 6 weeks for treatment monitoring.

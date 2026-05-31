@@ -1,0 +1,21 @@
+ONCOLOGY PROGRESS NOTE
+Date: 2014-03-21
+Patient: Carlson, Andrew | MRN: pat_a5bec111
+
+SUBJECTIVE:
+Patient returns for cycle 4 of carboplatin, pemetrexed, pembrolizumab. Patient tolerating therapy well. Mild peripheral neuropathy, grade 1.
+
+OBJECTIVE:
+ECOG performance status: 2
+Weight: 74.4 kg
+Laboratory values within acceptable parameters for treatment continuation.
+
+ASSESSMENT:
+adenocarcinoma NSCLC, stage IIIB.
+Treatment: carboplatin, pemetrexed, pembrolizumab (initiated 2014-02-09).
+Partial response to therapy. Primary tumor decreased 30% in size.
+
+PLAN:
+Continue carboplatin, pemetrexed, pembrolizumab per current dosing schedule. Repeat CT chest in 6 weeks. CBC and CMP prior to next cycle.
+
+

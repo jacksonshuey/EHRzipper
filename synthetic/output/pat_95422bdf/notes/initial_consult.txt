@@ -1,0 +1,26 @@
+ONCOLOGY INITIAL CONSULTATION NOTE
+Date: 2021-07-17
+Patient: Hall, Elizabeth | DOB: 1942-02 | MRN: pat_95422bdf
+Practice: prac_0002
+
+REASON FOR CONSULTATION:
+New diagnosis of advanced non-small cell lung cancer, stage IVA.
+
+HISTORY OF PRESENT ILLNESS:
+Elizabeth Hall is a 79-year-old female with a never-smoking history
+who presents with a new diagnosis of adenocarcinoma of the lung, stage IVA per
+AJCC 8th edition. Initial symptoms included progressive dyspnea and a 6-week
+history of hemoptysis. CT of the chest revealed a left lower lobe mass with mediastinal
+lymphadenopathy. PET/CT confirmed IVA disease.
+
+PERFORMANCE STATUS:
+ECOG performance status: 1
+
+MOLECULAR TESTING:
+EGFR: positive; ALK: negative; ROS1: negative; KRAS: negative; BRAF: negative; PD-L1: high (TPS 62.3%)
+
+ASSESSMENT AND PLAN:
+Diagnosis: adenocarcinoma, stage IVA, de novo stage iiib plus.
+Will initiate osimertinib per guideline-concordant approach.
+
+Follow-up in 6 weeks for treatment monitoring.

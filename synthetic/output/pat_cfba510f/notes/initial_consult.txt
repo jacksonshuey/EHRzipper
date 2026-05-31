@@ -1,0 +1,26 @@
+ONCOLOGY INITIAL CONSULTATION NOTE
+Date: 2019-08-20
+Patient: Clark, Jacob | DOB: 1951-08 | MRN: pat_cfba510f
+Practice: prac_0004
+
+REASON FOR CONSULTATION:
+New diagnosis of advanced non-small cell lung cancer, stage IVA.
+
+HISTORY OF PRESENT ILLNESS:
+Jacob Clark is a 68-year-old male with a 72-pack-year smoking history
+who presents with a new diagnosis of adenocarcinoma of the lung, stage IVA per
+AJCC 8th edition. Initial symptoms included progressive dyspnea and a 6-week
+history of hemoptysis. CT of the chest revealed a right lower lobe mass with mediastinal
+lymphadenopathy. PET/CT confirmed IVA disease.
+
+PERFORMANCE STATUS:
+ECOG performance status: 1
+
+MOLECULAR TESTING:
+EGFR: negative; ALK: positive; ROS1: negative; KRAS: negative; BRAF: negative; PD-L1: low (TPS 1.4%)
+
+ASSESSMENT AND PLAN:
+Diagnosis: adenocarcinoma, stage IVA, de novo stage iiib plus.
+Treatment options discussed; plan for watchful waiting vs. clinical trial enrollment.
+
+Follow-up in 3 weeks for treatment monitoring.

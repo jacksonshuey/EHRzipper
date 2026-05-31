@@ -1,0 +1,26 @@
+ONCOLOGY INITIAL CONSULTATION NOTE
+Date: 2016-01-23
+Patient: Lee, Allison | DOB: 1944-05 | MRN: pat_cd438a2b
+Practice: prac_0006
+
+REASON FOR CONSULTATION:
+New diagnosis of advanced non-small cell lung cancer, stage IIIB.
+
+HISTORY OF PRESENT ILLNESS:
+Allison Lee is a 72-year-old female with a 14-pack-year smoking history
+who presents with a new diagnosis of adenocarcinoma of the lung, stage IIIB per
+AJCC 8th edition. Initial symptoms included progressive dyspnea and a 6-week
+history of hemoptysis. CT of the chest revealed a left lower lobe mass with mediastinal
+lymphadenopathy. PET/CT confirmed IIIB disease.
+
+PERFORMANCE STATUS:
+ECOG performance status: 1
+
+MOLECULAR TESTING:
+EGFR: negative; ALK: negative; ROS1: negative; KRAS: positive; BRAF: negative; PD-L1: negative (TPS 0.6%)
+
+ASSESSMENT AND PLAN:
+Diagnosis: adenocarcinoma, stage IIIB, de novo stage iiib plus.
+Treatment options discussed; plan for watchful waiting vs. clinical trial enrollment.
+
+Follow-up in 4 weeks for treatment monitoring.

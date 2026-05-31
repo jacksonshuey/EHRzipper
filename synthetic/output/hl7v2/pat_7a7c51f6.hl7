@@ -1,0 +1,40 @@
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ADT^A01^ADT_A01|EHRZ0000028|P|2.5.1
+PID|1||pat_7a7c51f6||Walls^Brandi||195012|F||Native Hawaiian Or Pacific Islander|76311 Gomez Loop Suite 010^^Chandlerville^NY^33092^USA|||||N||||pat_7a7c51f6
+PV1|1|O|prac_0002^ONCOLOGY^^^||||DR9999^ONCOLOGIST^SYNTHETIC^MD|||||||||||||20201016|20201016
+DG1|1|I10|C78.00|NSCLC Squamous Cell Carcinoma|20171231|F|||||||STAGE_IVA|||||||8070.3
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ORU^R01^ORU_R01|EHRZ0000029|P|2.5.1
+PID|1||pat_7a7c51f6||Walls^Brandi||195012|F||Native Hawaiian Or Pacific Islander|76311 Gomez Loop Suite 010^^Chandlerville^NY^33092^USA|||||N||||pat_7a7c51f6
+OBR|1|ORD00001|FIL00001|26464-8^Leukocytes [#/volume] in Blood^LN||20201018|20201018||||||||F
+OBX|1|NM|26464-8^Leukocytes [#/volume] in Blood^LN||7.6|10*3/uL|5.0-10.5|||F|||20201018
+OBR|2|ORD00002|FIL00002|26515-7^Platelets [#/volume] in Blood^LN||20201018|20201018||||||||F
+OBX|1|NM|26515-7^Platelets [#/volume] in Blood^LN||360.6|10*3/uL|150.0-400.0|||F|||20201018
+OBR|3|ORD00003|FIL00003|718-7^Hemoglobin [Mass/volume] in Blood^LN||20201018|20201018||||||||F
+OBX|1|NM|718-7^Hemoglobin [Mass/volume] in Blood^LN||14.6|g/dL|12.0-17.5|||F|||20201018
+OBR|4|ORD00004|FIL00004|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||20201018|20201018||||||||F
+OBX|1|NM|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||2.4|mg/dL|0.6-1.2|||F|||20201018
+OBR|5|ORD00005|FIL00005|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||20201018|20201018||||||||F
+OBX|1|NM|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||104.1|U/L|7.0-56.0|||F|||20201018
+OBR|6|ORD00006|FIL00006|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||20201018|20201018||||||||F
+OBX|1|NM|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||3.4|g/dL|3.5-5.0|||F|||20201018
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ORU^R01^ORU_R01|EHRZ0000030|P|2.5.1
+PID|1||pat_7a7c51f6||Walls^Brandi||195012|F||Native Hawaiian Or Pacific Islander|76311 Gomez Loop Suite 010^^Chandlerville^NY^33092^USA|||||N||||pat_7a7c51f6
+OBR|1|ORD00001|FIL00001|53041-0^EGFR gene mutations found [Identifier] in Blood or Tissue^LN||20201024|20201024||||||||F
+OBX|1|ST|53041-0^EGFR gene mutations found [Identifier] in Blood or Tissue^LN||negative|||||F|||20201024
+OBR|2|ORD00002|FIL00002|76042-8^ALK gene rearrangements [Presence] in Tissue by FISH^LN||20201027|20201027||||||||F
+OBX|1|ST|76042-8^ALK gene rearrangements [Presence] in Tissue by FISH^LN||negative|||||F|||20201027
+OBR|3|ORD00003|FIL00003|81202-7^ROS1 gene rearrangements [Presence] in Tissue by FISH^LN||20201024|20201024||||||||F
+OBX|1|ST|81202-7^ROS1 gene rearrangements [Presence] in Tissue by FISH^LN||negative|||||F|||20201024
+OBR|4|ORD00004|FIL00004|21704-5^KRAS gene mutations found [Identifier] in Blood or Tissue^LN||20201025|20201025||||||||F
+OBX|1|ST|21704-5^KRAS gene mutations found [Identifier] in Blood or Tissue^LN||negative|||||F|||20201025
+OBR|5|ORD00005|FIL00005|21702-9^BRAF gene mutations found [Identifier] in Blood or Tissue^LN||20201024|20201024||||||||F
+OBX|1|ST|21702-9^BRAF gene mutations found [Identifier] in Blood or Tissue^LN||negative|||||F|||20201024
+OBR|6|ORD00006|FIL00006|85337-4^PD-L1 (CD274) [Presence] in Tissue by Immune stain^LN||20201026|20201026||||||||F
+OBX|1|ST|85337-4^PD-L1 (CD274) [Presence] in Tissue by Immune stain^LN||0%|||||F|||20201026
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||MDM^T02^MDM_T02|EHRZ0000031|P|2.5.1
+PID|1||pat_7a7c51f6||Walls^Brandi||195012|F||Native Hawaiian Or Pacific Islander|76311 Gomez Loop Suite 010^^Chandlerville^NY^33092^USA|||||N||||pat_7a7c51f6
+TXA|1|11529-5|TX|20201016|DR9999^ONCOLOGIST^SYNTHETIC^MD|20201016|||doc_pat_7a7c51f6_pathology||||||AU||||pat_7a7c51f6
+TXA|1|18748-4|TX|20201016|DR9999^ONCOLOGIST^SYNTHETIC^MD|20201016|||doc_pat_7a7c51f6_radiology||||||AU||||pat_7a7c51f6
+TXA|1|11488-4|TX|20201016|DR9999^ONCOLOGIST^SYNTHETIC^MD|20201016|||doc_pat_7a7c51f6_consult||||||AU||||pat_7a7c51f6

@@ -1,0 +1,21 @@
+ONCOLOGY PROGRESS NOTE
+Date: 2017-03-17
+Patient: Jones, Samantha | MRN: pat_2d1f24de
+
+SUBJECTIVE:
+Patient returns for cycle 5 of pembrolizumab, docetaxel. No significant side effects. Appetite improved since last visit.
+
+OBJECTIVE:
+ECOG performance status: 1
+Weight: 78.4 kg
+Laboratory values within acceptable parameters for treatment continuation.
+
+ASSESSMENT:
+squamous cell carcinoma NSCLC, stage IVA.
+Treatment: pembrolizumab, docetaxel (initiated 2017-01-01).
+CT imaging shows stable disease. No new lesions identified.
+
+PLAN:
+Disease progression identified. Discontinue current pembrolizumab, docetaxel. Referral to clinical trial team. Consider second-line therapy options.
+
+Disease progression documented on 2017-05-20 with new involvement at: adrenal, lymph_node_distant, bone.

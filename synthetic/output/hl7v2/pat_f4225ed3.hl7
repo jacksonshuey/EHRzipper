@@ -1,0 +1,40 @@
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ADT^A01^ADT_A01|EHRZ0000061|P|2.5.1
+PID|1||pat_f4225ed3||Brock^Colleen||193409|F||White|83172 Contreras Points Suite 798^^Rivasside^CA^58947^USA|||||N||||pat_f4225ed3
+PV1|1|O|prac_0003^ONCOLOGY^^^||||DR9999^ONCOLOGIST^SYNTHETIC^MD|||||||||||||20141012|20141012
+DG1|1|I10|C78.02|NSCLC Large Cell Carcinoma|20141012|F|||||||STAGE_IVB|||||||8012.3
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ORU^R01^ORU_R01|EHRZ0000062|P|2.5.1
+PID|1||pat_f4225ed3||Brock^Colleen||193409|F||White|83172 Contreras Points Suite 798^^Rivasside^CA^58947^USA|||||N||||pat_f4225ed3
+OBR|1|ORD00001|FIL00001|26464-8^Leukocytes [#/volume] in Blood^LN||20141015|20141015||||||||F
+OBX|1|NM|26464-8^Leukocytes [#/volume] in Blood^LN||5.8|10*3/uL|5.0-10.5|||F|||20141015
+OBR|2|ORD00002|FIL00002|26515-7^Platelets [#/volume] in Blood^LN||20141015|20141015||||||||F
+OBX|1|NM|26515-7^Platelets [#/volume] in Blood^LN||164.6|10*3/uL|150.0-400.0|||F|||20141015
+OBR|3|ORD00003|FIL00003|718-7^Hemoglobin [Mass/volume] in Blood^LN||20141015|20141015||||||||F
+OBX|1|NM|718-7^Hemoglobin [Mass/volume] in Blood^LN||11.8|g/dL|12.0-17.5|||F|||20141015
+OBR|4|ORD00004|FIL00004|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||20141015|20141015||||||||F
+OBX|1|NM|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||0.8|mg/dL|0.6-1.2|||F|||20141015
+OBR|5|ORD00005|FIL00005|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||20141015|20141015||||||||F
+OBX|1|NM|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||29.2|U/L|7.0-56.0|||F|||20141015
+OBR|6|ORD00006|FIL00006|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||20141015|20141015||||||||F
+OBX|1|NM|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||3.0|g/dL|3.5-5.0|||F|||20141015
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ORU^R01^ORU_R01|EHRZ0000063|P|2.5.1
+PID|1||pat_f4225ed3||Brock^Colleen||193409|F||White|83172 Contreras Points Suite 798^^Rivasside^CA^58947^USA|||||N||||pat_f4225ed3
+OBR|1|ORD00001|FIL00001|53041-0^EGFR gene mutations found [Identifier] in Blood or Tissue^LN||20141021|20141021||||||||F
+OBX|1|ST|53041-0^EGFR gene mutations found [Identifier] in Blood or Tissue^LN||negative|||||F|||20141021
+OBR|2|ORD00002|FIL00002|76042-8^ALK gene rearrangements [Presence] in Tissue by FISH^LN||20141021|20141021||||||||F
+OBX|1|ST|76042-8^ALK gene rearrangements [Presence] in Tissue by FISH^LN||negative|||||F|||20141021
+OBR|3|ORD00003|FIL00003|81202-7^ROS1 gene rearrangements [Presence] in Tissue by FISH^LN||20141020|20141020||||||||F
+OBX|1|ST|81202-7^ROS1 gene rearrangements [Presence] in Tissue by FISH^LN||negative|||||F|||20141020
+OBR|4|ORD00004|FIL00004|21704-5^KRAS gene mutations found [Identifier] in Blood or Tissue^LN||20141020|20141020||||||||F
+OBX|1|ST|21704-5^KRAS gene mutations found [Identifier] in Blood or Tissue^LN||negative|||||F|||20141020
+OBR|5|ORD00005|FIL00005|21702-9^BRAF gene mutations found [Identifier] in Blood or Tissue^LN||20141022|20141022||||||||F
+OBX|1|ST|21702-9^BRAF gene mutations found [Identifier] in Blood or Tissue^LN||negative|||||F|||20141022
+OBR|6|ORD00006|FIL00006|85337-4^PD-L1 (CD274) [Presence] in Tissue by Immune stain^LN||20141021|20141021||||||||F
+OBX|1|ST|85337-4^PD-L1 (CD274) [Presence] in Tissue by Immune stain^LN||14%|||||F|||20141021
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||MDM^T02^MDM_T02|EHRZ0000064|P|2.5.1
+PID|1||pat_f4225ed3||Brock^Colleen||193409|F||White|83172 Contreras Points Suite 798^^Rivasside^CA^58947^USA|||||N||||pat_f4225ed3
+TXA|1|11529-5|TX|20141012|DR9999^ONCOLOGIST^SYNTHETIC^MD|20141012|||doc_pat_f4225ed3_pathology||||||AU||||pat_f4225ed3
+TXA|1|18748-4|TX|20141012|DR9999^ONCOLOGIST^SYNTHETIC^MD|20141012|||doc_pat_f4225ed3_radiology||||||AU||||pat_f4225ed3
+TXA|1|11488-4|TX|20141012|DR9999^ONCOLOGIST^SYNTHETIC^MD|20141012|||doc_pat_f4225ed3_consult||||||AU||||pat_f4225ed3

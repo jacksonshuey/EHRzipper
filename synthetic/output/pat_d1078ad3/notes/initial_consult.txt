@@ -1,0 +1,26 @@
+ONCOLOGY INITIAL CONSULTATION NOTE
+Date: 2020-04-19
+Patient: Hall, Leah | DOB: 1953-03 | MRN: pat_d1078ad3
+Practice: prac_0006
+
+REASON FOR CONSULTATION:
+New diagnosis of advanced non-small cell lung cancer, stage IVA.
+
+HISTORY OF PRESENT ILLNESS:
+Leah Hall is a 67-year-old female with a 62-pack-year smoking history
+who presents with a new diagnosis of squamous cell carcinoma of the lung, stage IVA per
+AJCC 8th edition. Initial symptoms included progressive dyspnea and a 6-week
+history of hemoptysis. CT of the chest revealed a right upper lobe mass with mediastinal
+lymphadenopathy. PET/CT confirmed IVA disease.
+
+PERFORMANCE STATUS:
+ECOG performance status: 0
+
+MOLECULAR TESTING:
+EGFR: negative; ALK: negative; ROS1: negative; KRAS: positive; BRAF: negative; PD-L1: low (TPS 9.9%)
+
+ASSESSMENT AND PLAN:
+Diagnosis: squamous cell carcinoma, stage IVA, de novo stage iiib plus.
+Treatment options discussed; plan for watchful waiting vs. clinical trial enrollment.
+
+Follow-up in 4 weeks for treatment monitoring.

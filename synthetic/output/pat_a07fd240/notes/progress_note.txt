@@ -1,0 +1,21 @@
+ONCOLOGY PROGRESS NOTE
+Date: 2017-03-08
+Patient: Taylor, Marvin | MRN: pat_a07fd240
+
+SUBJECTIVE:
+Patient returns for cycle 4 of carboplatin, pemetrexed, pembrolizumab, docetaxel. Patient tolerating therapy well. Mild peripheral neuropathy, grade 1.
+
+OBJECTIVE:
+ECOG performance status: 1
+Weight: 86.3 kg
+Laboratory values within acceptable parameters for treatment continuation.
+
+ASSESSMENT:
+adenocarcinoma NSCLC, stage IVB.
+Treatment: carboplatin, pemetrexed, pembrolizumab, docetaxel (initiated 2017-01-03).
+Partial response to therapy. Primary tumor decreased 30% in size.
+
+PLAN:
+Disease progression identified. Discontinue current carboplatin, pemetrexed, pembrolizumab, docetaxel. Referral to clinical trial team. Consider second-line therapy options.
+
+Disease progression documented on 2018-10-27 with new involvement at: liver, adrenal.

@@ -1,0 +1,2 @@
+condition_id,patient_id,condition_code,onset_date,histology,stage_at_advanced_diagnosis,is_primary_cancer
+cond_pat_2ec4ec15,pat_2ec4ec15,C34.31,2020-02-28,sarcomatoid_carcinoma,IVA,true

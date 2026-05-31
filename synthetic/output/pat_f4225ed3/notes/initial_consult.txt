@@ -1,0 +1,26 @@
+ONCOLOGY INITIAL CONSULTATION NOTE
+Date: 2014-10-12
+Patient: Brock, Colleen | DOB: 1934-09 | MRN: pat_f4225ed3
+Practice: prac_0003
+
+REASON FOR CONSULTATION:
+New diagnosis of advanced non-small cell lung cancer, stage IVB.
+
+HISTORY OF PRESENT ILLNESS:
+Colleen Brock is a 80-year-old female with a 52-pack-year smoking history
+who presents with a new diagnosis of large cell carcinoma of the lung, stage IVB per
+AJCC 8th edition. Initial symptoms included progressive dyspnea and a 6-week
+history of hemoptysis. CT of the chest revealed a right lower lobe mass with mediastinal
+lymphadenopathy. PET/CT confirmed IVB disease.
+
+PERFORMANCE STATUS:
+ECOG performance status: 1
+
+MOLECULAR TESTING:
+EGFR: negative; ALK: negative; ROS1: negative; KRAS: negative; BRAF: negative; PD-L1: low (TPS 13.5%)
+
+ASSESSMENT AND PLAN:
+Diagnosis: large cell carcinoma, stage IVB, de novo stage iiib plus.
+Treatment options discussed; plan for watchful waiting vs. clinical trial enrollment.
+
+Follow-up in 3 weeks for treatment monitoring.

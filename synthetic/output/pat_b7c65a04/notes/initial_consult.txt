@@ -1,0 +1,26 @@
+ONCOLOGY INITIAL CONSULTATION NOTE
+Date: 2021-08-24
+Patient: Jones, Sarah | DOB: 1950-02 | MRN: pat_b7c65a04
+Practice: prac_0007
+
+REASON FOR CONSULTATION:
+New diagnosis of advanced non-small cell lung cancer, stage IVA.
+
+HISTORY OF PRESENT ILLNESS:
+Sarah Jones is a 71-year-old female with a never-smoking history
+who presents with a new diagnosis of squamous cell carcinoma of the lung, stage IVA per
+AJCC 8th edition. Initial symptoms included progressive dyspnea and a 6-week
+history of hemoptysis. CT of the chest revealed a right lower lobe mass with mediastinal
+lymphadenopathy. PET/CT confirmed IVA disease.
+
+PERFORMANCE STATUS:
+ECOG performance status: 3
+
+MOLECULAR TESTING:
+EGFR: negative; ALK: negative; ROS1: negative; KRAS: negative; BRAF: negative; PD-L1: high (TPS 85.8%)
+
+ASSESSMENT AND PLAN:
+Diagnosis: squamous cell carcinoma, stage IVA, progression from earlier stage.
+Treatment options discussed; plan for watchful waiting vs. clinical trial enrollment.
+
+Follow-up in 4 weeks for treatment monitoring.

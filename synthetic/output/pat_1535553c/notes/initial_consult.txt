@@ -1,0 +1,26 @@
+ONCOLOGY INITIAL CONSULTATION NOTE
+Date: 2016-06-19
+Patient: Bernard, Jay | DOB: 1953-11 | MRN: pat_1535553c
+Practice: prac_0004
+
+REASON FOR CONSULTATION:
+New diagnosis of advanced non-small cell lung cancer, stage IVA.
+
+HISTORY OF PRESENT ILLNESS:
+Jay Bernard is a 63-year-old male with a 54-pack-year smoking history
+who presents with a new diagnosis of adenocarcinoma of the lung, stage IVA per
+AJCC 8th edition. Initial symptoms included progressive dyspnea and a 6-week
+history of hemoptysis. CT of the chest revealed a right upper lobe mass with mediastinal
+lymphadenopathy. PET/CT confirmed IVA disease.
+
+PERFORMANCE STATUS:
+ECOG performance status: 1
+
+MOLECULAR TESTING:
+EGFR: negative; ALK: negative; ROS1: negative; KRAS: positive; BRAF: negative; PD-L1: low (TPS 12.3%)
+
+ASSESSMENT AND PLAN:
+Diagnosis: adenocarcinoma, stage IVA, de novo stage iiib plus.
+Treatment options discussed; plan for watchful waiting vs. clinical trial enrollment.
+
+Follow-up in 3 weeks for treatment monitoring.

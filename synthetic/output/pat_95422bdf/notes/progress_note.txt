@@ -1,0 +1,21 @@
+ONCOLOGY PROGRESS NOTE
+Date: 2021-11-20
+Patient: Hall, Elizabeth | MRN: pat_95422bdf
+
+SUBJECTIVE:
+Patient returns for cycle 6 of osimertinib, docetaxel. Patient tolerating therapy well. Mild peripheral neuropathy, grade 1.
+
+OBJECTIVE:
+ECOG performance status: 1
+Weight: 68.6 kg
+Laboratory values within acceptable parameters for treatment continuation.
+
+ASSESSMENT:
+adenocarcinoma NSCLC, stage IVA.
+Treatment: osimertinib, docetaxel (initiated 2021-08-03).
+CT imaging shows stable disease. No new lesions identified.
+
+PLAN:
+Disease progression identified. Discontinue current osimertinib, docetaxel. Referral to clinical trial team. Consider second-line therapy options.
+
+Disease progression documented on 2022-04-08 with new involvement at: bone.

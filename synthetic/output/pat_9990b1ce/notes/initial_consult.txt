@@ -1,0 +1,26 @@
+ONCOLOGY INITIAL CONSULTATION NOTE
+Date: 2018-04-03
+Patient: Green, Eugene | DOB: 1941-10 | MRN: pat_9990b1ce
+Practice: prac_0006
+
+REASON FOR CONSULTATION:
+New diagnosis of advanced non-small cell lung cancer, stage IVA.
+
+HISTORY OF PRESENT ILLNESS:
+Eugene Green is a 77-year-old male with a 31-pack-year smoking history
+who presents with a new diagnosis of adenocarcinoma of the lung, stage IVA per
+AJCC 8th edition. Initial symptoms included progressive dyspnea and a 6-week
+history of hemoptysis. CT of the chest revealed a right lower lobe mass with mediastinal
+lymphadenopathy. PET/CT confirmed IVA disease.
+
+PERFORMANCE STATUS:
+ECOG performance status: 0
+
+MOLECULAR TESTING:
+EGFR: positive; ALK: negative; ROS1: negative; KRAS: negative; BRAF: negative
+
+ASSESSMENT AND PLAN:
+Diagnosis: adenocarcinoma, stage IVA, de novo stage iiib plus.
+Will initiate osimertinib per guideline-concordant approach.
+
+Follow-up in 6 weeks for treatment monitoring.

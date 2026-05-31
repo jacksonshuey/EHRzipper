@@ -1,0 +1,7 @@
+biomarker_id,patient_id,biomarker_name,result,result_value,result_date,test_method,specimen_type,lab_vendor,loinc_code
+bm_3cd573c2,pat_2ec4ec15,egfr,negative,,2020-03-14,ngs,tissue,Caris Life Sciences,53041-0
+bm_db9c1e32,pat_2ec4ec15,alk,negative,,2020-03-12,ngs,tissue,Caris Life Sciences,76042-8
+bm_29507a58,pat_2ec4ec15,ros1,negative,,2020-03-12,ngs,tissue,Foundation Medicine,81202-7
+bm_d1e6f095,pat_2ec4ec15,kras,positive,KRAS G12C,2020-03-12,ngs,tissue,Caris Life Sciences,21704-5
+bm_90e82477,pat_2ec4ec15,braf,negative,,2020-03-12,ngs,tissue,Caris Life Sciences,21702-9
+bm_3a734c88,pat_2ec4ec15,pdl1,low,16%,2020-03-11,ihc,tissue,Foundation Medicine,85337-4

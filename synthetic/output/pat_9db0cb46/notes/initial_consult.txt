@@ -1,0 +1,26 @@
+ONCOLOGY INITIAL CONSULTATION NOTE
+Date: 2020-08-22
+Patient: Humphrey, Amy | DOB: 1944-10 | MRN: pat_9db0cb46
+Practice: prac_0001
+
+REASON FOR CONSULTATION:
+New diagnosis of advanced non-small cell lung cancer, stage IVB.
+
+HISTORY OF PRESENT ILLNESS:
+Amy Humphrey is a 76-year-old female with a 70-pack-year smoking history
+who presents with a new diagnosis of adenocarcinoma of the lung, stage IVB per
+AJCC 8th edition. Initial symptoms included progressive dyspnea and a 6-week
+history of hemoptysis. CT of the chest revealed a right lower lobe mass with mediastinal
+lymphadenopathy. PET/CT confirmed IVB disease.
+
+PERFORMANCE STATUS:
+ECOG performance status: 2
+
+MOLECULAR TESTING:
+EGFR: negative; ALK: negative; ROS1: negative; KRAS: positive; BRAF: negative; PD-L1: high (TPS 82.9%)
+
+ASSESSMENT AND PLAN:
+Diagnosis: adenocarcinoma, stage IVB, de novo stage iiib plus.
+Will initiate pembrolizumab per guideline-concordant approach.
+
+Follow-up in 4 weeks for treatment monitoring.

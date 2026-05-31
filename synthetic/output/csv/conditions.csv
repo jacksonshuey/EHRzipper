@@ -1,0 +1,17 @@
+condition_id,patient_id,condition_code,onset_date,histology,stage_at_advanced_diagnosis,is_primary_cancer
+cond_pat_9b7cedbc,pat_9b7cedbc,C34.10,2016-04-12,squamous_cell_carcinoma,IIIC,true
+cond_pat_1535553c,pat_1535553c,C78.02,2016-06-19,adenocarcinoma,IVA,true
+cond_pat_b7c65a04,pat_b7c65a04,C34.91,2020-05-01,squamous_cell_carcinoma,IVA,true
+cond_pat_36ad2b67,pat_36ad2b67,C78.01,2019-05-21,adenocarcinoma,IVA,true
+cond_pat_9607e814,pat_9607e814,C34.91,2012-06-17,adenosquamous_carcinoma,IVA,true
+cond_pat_a5bec111,pat_a5bec111,C78.00,2012-07-05,adenocarcinoma,IIIB,true
+cond_pat_b6ffeb06,pat_b6ffeb06,C34.91,2014-03-12,squamous_cell_carcinoma,IVA,true
+cond_pat_c9701516,pat_c9701516,C34.10,2018-04-17,adenocarcinoma,IVB,true
+cond_pat_c78a52f5,pat_c78a52f5,C34.91,2019-09-19,adenocarcinoma,IIIB,true
+cond_pat_57506e4b,pat_57506e4b,C78.02,2017-09-25,adenocarcinoma,IVB,true
+cond_pat_a07fd240,pat_a07fd240,C78.01,2014-05-29,adenocarcinoma,IVB,true
+cond_pat_20249930,pat_20249930,C34.92,2018-02-04,adenocarcinoma,IVB,true
+cond_pat_cd89ab66,pat_cd89ab66,C34.91,2016-06-22,adenocarcinoma,IVA,true
+cond_pat_0b01ea9d,pat_0b01ea9d,C34.90,2017-04-22,squamous_cell_carcinoma,IVB,true
+cond_pat_95422bdf,pat_95422bdf,C34.32,2021-07-17,adenocarcinoma,IVA,true
+cond_pat_9ec9aa87,pat_9ec9aa87,C34.10,2021-07-07,adenocarcinoma,IIIB,true

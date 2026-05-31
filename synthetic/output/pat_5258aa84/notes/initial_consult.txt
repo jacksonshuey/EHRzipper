@@ -1,0 +1,26 @@
+ONCOLOGY INITIAL CONSULTATION NOTE
+Date: 2019-10-24
+Patient: White, Darren | DOB: 1965-11 | MRN: pat_5258aa84
+Practice: prac_0002
+
+REASON FOR CONSULTATION:
+New diagnosis of advanced non-small cell lung cancer, stage IIIC.
+
+HISTORY OF PRESENT ILLNESS:
+Darren White is a 54-year-old male with a 10-pack-year smoking history
+who presents with a new diagnosis of adenocarcinoma of the lung, stage IIIC per
+AJCC 8th edition. Initial symptoms included progressive dyspnea and a 6-week
+history of hemoptysis. CT of the chest revealed a right lower lobe mass with mediastinal
+lymphadenopathy. PET/CT confirmed IIIC disease.
+
+PERFORMANCE STATUS:
+ECOG performance status: 1
+
+MOLECULAR TESTING:
+EGFR: negative; ALK: negative; ROS1: negative; KRAS: negative; BRAF: negative; PD-L1: low (TPS 8.1%)
+
+ASSESSMENT AND PLAN:
+Diagnosis: adenocarcinoma, stage IIIC, progression from earlier stage.
+Will initiate carboplatin + pemetrexed + pembrolizumab per guideline-concordant approach.
+
+Follow-up in 6 weeks for treatment monitoring.

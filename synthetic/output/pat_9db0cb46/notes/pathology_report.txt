@@ -1,0 +1,32 @@
+SURGICAL PATHOLOGY REPORT
+Accession Number: PATH-pat_9db0cb46
+Specimen Date: 2020-08-22
+Patient: Humphrey, Amy | MRN: pat_9db0cb46
+
+CLINICAL HISTORY:
+Right upper lobe mass, suspicious for malignancy. Rule out primary lung carcinoma.
+
+SPECIMENS SUBMITTED:
+A. CT-guided core needle biopsy, right upper lobe mass (3 cores)
+B. Bronchial washings
+
+GROSS DESCRIPTION:
+A. Three tan-white cores measuring 0.5-1.2 cm in aggregate length.
+
+MICROSCOPIC DESCRIPTION:
+Sections show fragments of lung parenchyma with infiltrating carcinoma.
+The tumor demonstrates glandular architecture with mucin production, consistent with adenocarcinoma..
+
+DIAGNOSIS:
+A-B. Invasive adenocarcinoma of the lung, 8140/3
+   - Stage at diagnosis: IVB (AJCC 8th edition)
+   - Lymphovascular invasion: present
+   - Ki-67 proliferative index: approximately 35%
+
+MOLECULAR ANCILLARY STUDIES:
+EGFR: negative; ALK: negative; ROS1: negative; KRAS: positive; BRAF: negative; PD-L1: high (TPS 82.9%)
+
+COMMENT:
+This case was reviewed at multidisciplinary tumor board. Molecular testing was recommended per NCCN guidelines for advanced NSCLC. PD-L1 TPS ≥50%; immunotherapy monotherapy is a first-line option.
+
+Electronically signed: Synthetic Pathologist, MD

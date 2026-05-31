@@ -1,0 +1,34 @@
+RADIOLOGY REPORT — CT CHEST WITH CONTRAST
+Study Date: 2020-08-22
+Patient: Humphrey, Amy | MRN: pat_9db0cb46
+Ordering Provider: Medical Oncology
+
+INDICATION:
+adenocarcinoma lung cancer, stage IVB. Staging evaluation.
+
+COMPARISON:
+No prior CT available.
+
+TECHNIQUE:
+Helical CT acquisition through the chest with IV contrast.
+
+FINDINGS:
+Primary tumor: left lower lobe mass measuring 4.3 cm in greatest dimension,
+with spiculated margins. No evidence of chest wall invasion.
+
+Mediastinum/Hilar: Enlarged mediastinal lymph nodes measuring up to 1.8 cm,
+most prominent in the right paratracheal station (4R). Mediastinal nodes mildly enlarged.
+
+Pleural spaces: Small right pleural effusion present.
+
+Pulmonary vasculature: Normal.
+
+Bones: No bone lesions identified on current study.
+
+IMPRESSION:
+1. 4.3 cm left lower lobe primary lung mass consistent with known adenocarcinoma,
+   stage IVB.
+2. Mediastinal lymphadenopathy as described above.
+3. Pleural effusion as above, may warrant thoracentesis.
+
+Disease progression documented on 2021-08-29 with new involvement at: lymph_node_distant.

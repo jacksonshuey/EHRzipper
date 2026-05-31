@@ -1,0 +1,26 @@
+ONCOLOGY INITIAL CONSULTATION NOTE
+Date: 2013-12-27
+Patient: Carlson, Andrew | DOB: 1935-09 | MRN: pat_a5bec111
+Practice: prac_0001
+
+REASON FOR CONSULTATION:
+New diagnosis of advanced non-small cell lung cancer, stage IIIB.
+
+HISTORY OF PRESENT ILLNESS:
+Andrew Carlson is a 78-year-old male with a never-smoking history
+who presents with a new diagnosis of adenocarcinoma of the lung, stage IIIB per
+AJCC 8th edition. Initial symptoms included progressive dyspnea and a 6-week
+history of hemoptysis. CT of the chest revealed a right middle lobe mass with mediastinal
+lymphadenopathy. PET/CT confirmed IIIB disease.
+
+PERFORMANCE STATUS:
+ECOG performance status: 2
+
+MOLECULAR TESTING:
+EGFR: negative; ALK: negative; ROS1: negative; KRAS: negative; BRAF: negative
+
+ASSESSMENT AND PLAN:
+Diagnosis: adenocarcinoma, stage IIIB, metastatic recurrence after ned.
+Will initiate carboplatin + pemetrexed + pembrolizumab per guideline-concordant approach.
+
+Follow-up in 3 weeks for treatment monitoring.

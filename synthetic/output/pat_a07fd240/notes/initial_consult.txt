@@ -1,0 +1,26 @@
+ONCOLOGY INITIAL CONSULTATION NOTE
+Date: 2016-12-14
+Patient: Taylor, Marvin | DOB: 1940-03 | MRN: pat_a07fd240
+Practice: prac_0005
+
+REASON FOR CONSULTATION:
+New diagnosis of advanced non-small cell lung cancer, stage IVB.
+
+HISTORY OF PRESENT ILLNESS:
+Marvin Taylor is a 76-year-old male with a 23-pack-year smoking history
+who presents with a new diagnosis of adenocarcinoma of the lung, stage IVB per
+AJCC 8th edition. Initial symptoms included progressive dyspnea and a 6-week
+history of hemoptysis. CT of the chest revealed a right middle lobe mass with mediastinal
+lymphadenopathy. PET/CT confirmed IVB disease.
+
+PERFORMANCE STATUS:
+ECOG performance status: 1
+
+MOLECULAR TESTING:
+EGFR: negative; ALK: negative; ROS1: negative; KRAS: negative; BRAF: negative; PD-L1: low (TPS 43.9%)
+
+ASSESSMENT AND PLAN:
+Diagnosis: adenocarcinoma, stage IVB, progression from earlier stage.
+Will initiate carboplatin + pemetrexed + pembrolizumab per guideline-concordant approach.
+
+Follow-up in 4 weeks for treatment monitoring.

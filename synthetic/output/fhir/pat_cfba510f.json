@@ -1,0 +1,2864 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle_pat_cfba510f",
+  "type": "transaction",
+  "timestamp": "2024-12-31T00:00:00Z",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:pat_cfba510f",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "pat_cfba510f",
+        "meta": {
+          "source": "synthetic/fhir"
+        },
+        "identifier": [
+          {
+            "system": "urn:ehrzipper:patient-id",
+            "value": "pat_cfba510f"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Clark",
+            "given": [
+              "Jacob"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1951-08",
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "192 Frank Light Suite 835"
+            ],
+            "city": "East Lydiamouth",
+            "state": "NC",
+            "postalCode": "53082",
+            "country": "US"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "display": "white"
+                }
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "display": "not_hispanic_or_latino"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/pat_cfba510f"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cond_pat_cfba510f",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cond_pat_cfba510f",
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "C34.31",
+              "display": "Malignant neoplasm of lung"
+            },
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/icd-o-3",
+              "code": "8140/3",
+              "display": "Adenocarcinoma"
+            }
+          ],
+          "text": "NSCLC - Adenocarcinoma"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ],
+          "text": "Active"
+        },
+        "onsetDateTime": "2019-08-20T00:00:00Z",
+        "stage": [
+          {
+            "summary": {
+              "coding": [
+                {
+                  "system": "http://cancerstaging.org",
+                  "code": "IVA",
+                  "display": "Stage IVA"
+                }
+              ],
+              "text": "Stage IVA"
+            }
+          }
+        ],
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/cond_pat_cfba510f"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_ecog_pat_cfba510f",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_ecog_pat_cfba510f",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "89247-1",
+              "display": "ECOG performance status score"
+            }
+          ],
+          "text": "ECOG performance status score"
+        },
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "effectiveDateTime": "2019-08-20T00:00:00Z",
+        "valueInteger": 1
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_ecog_pat_cfba510f"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_smoking_pat_cfba510f",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_smoking_pat_cfba510f",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72166-2",
+              "display": "Tobacco smoking status"
+            }
+          ],
+          "text": "Tobacco smoking status"
+        },
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "effectiveDateTime": "2019-08-20T00:00:00Z",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "former",
+              "display": "Former"
+            }
+          ],
+          "text": "Former"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8663-7",
+                  "display": "Cigarette pack-years"
+                }
+              ],
+              "text": "Cigarette pack-years"
+            },
+            "valueQuantity": {
+              "value": 72,
+              "unit": "{PackYears}"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_smoking_pat_cfba510f"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:proc_biopsy_pat_cfba510f",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "proc_biopsy_pat_cfba510f",
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "32408",
+              "display": "Core needle biopsy, lung or mediastinum, percutaneous"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "performedDateTime": "2019-08-13T00:00:00Z",
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "44029006",
+                "display": "Lung structure"
+              }
+            ],
+            "text": "Lung structure"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/proc_biopsy_pat_cfba510f"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:dr_pat_cfba510f",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "dr_pat_cfba510f",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "PAT",
+                "display": "Pathology"
+              }
+            ],
+            "text": "Pathology"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11529-5",
+              "display": "Surgical pathology study"
+            }
+          ],
+          "text": "Surgical pathology study"
+        },
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "effectiveDateTime": "2019-08-20T00:00:00Z",
+        "conclusion": "Adenocarcinoma, stage IVA, ECOG 1. EGFR: negative. ALK: positive. ROS1: negative. KRAS: negative. PD-L1: low (TPS 1.4%)."
+      },
+      "request": {
+        "method": "PUT",
+        "url": "DiagnosticReport/dr_pat_cfba510f"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_aa56273a",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_aa56273a",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "26464-8",
+              "display": "Leukocytes [#/volume] in Blood"
+            }
+          ],
+          "text": "Leukocytes [#/volume] in Blood"
+        },
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "effectiveDateTime": "2019-08-18T00:00:00Z",
+        "valueQuantity": {
+          "value": 10.3,
+          "unit": "10*3/uL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 5.0,
+              "unit": "10*3/uL"
+            },
+            "high": {
+              "value": 10.5,
+              "unit": "10*3/uL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_aa56273a"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_b2b34b78",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_b2b34b78",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "26515-7",
+              "display": "Platelets [#/volume] in Blood"
+            }
+          ],
+          "text": "Platelets [#/volume] in Blood"
+        },
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "effectiveDateTime": "2019-08-18T00:00:00Z",
+        "valueQuantity": {
+          "value": 143.9,
+          "unit": "10*3/uL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 150.0,
+              "unit": "10*3/uL"
+            },
+            "high": {
+              "value": 400.0,
+              "unit": "10*3/uL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_b2b34b78"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_65584e26",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_65584e26",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "718-7",
+              "display": "Hemoglobin [Mass/volume] in Blood"
+            }
+          ],
+          "text": "Hemoglobin [Mass/volume] in Blood"
+        },
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "effectiveDateTime": "2019-08-18T00:00:00Z",
+        "valueQuantity": {
+          "value": 16.6,
+          "unit": "g/dL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 12.0,
+              "unit": "g/dL"
+            },
+            "high": {
+              "value": 17.5,
+              "unit": "g/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_65584e26"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_fcede5a5",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_fcede5a5",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Creatinine [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "effectiveDateTime": "2019-08-18T00:00:00Z",
+        "valueQuantity": {
+          "value": 0.8,
+          "unit": "mg/dL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0.6,
+              "unit": "mg/dL"
+            },
+            "high": {
+              "value": 1.2,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_fcede5a5"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_22f0e29b",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_22f0e29b",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1742-6",
+              "display": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "effectiveDateTime": "2019-08-18T00:00:00Z",
+        "valueQuantity": {
+          "value": 75.1,
+          "unit": "U/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 7.0,
+              "unit": "U/L"
+            },
+            "high": {
+              "value": 56.0,
+              "unit": "U/L"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_22f0e29b"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_b4259eec",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_b4259eec",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1751-7",
+              "display": "Albumin [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Albumin [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "effectiveDateTime": "2019-08-18T00:00:00Z",
+        "valueQuantity": {
+          "value": 2.6,
+          "unit": "g/dL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 3.5,
+              "unit": "g/dL"
+            },
+            "high": {
+              "value": 5.0,
+              "unit": "g/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_b4259eec"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bm_6c468294",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "bm_6c468294",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "53041-0",
+              "display": "EGFR gene mutations found [Identifier] in Blood or Tissue"
+            }
+          ],
+          "text": "EGFR test"
+        },
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "effectiveDateTime": "2019-09-03T00:00:00Z",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "negative",
+              "display": "Negative"
+            }
+          ],
+          "text": "Negative"
+        },
+        "method": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "ngs",
+              "display": "NGS"
+            }
+          ],
+          "text": "NGS"
+        },
+        "specimen": {
+          "display": "tissue"
+        },
+        "performer": [
+          {
+            "display": "Foundation Medicine"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/bm_6c468294"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bm_fedc5942",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "bm_fedc5942",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "76042-8",
+              "display": "ALK gene rearrangements [Presence] in Tissue by FISH"
+            }
+          ],
+          "text": "ALK test"
+        },
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "effectiveDateTime": "2019-09-04T00:00:00Z",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "positive",
+              "display": "Positive"
+            }
+          ],
+          "text": "Positive"
+        },
+        "method": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "ngs",
+              "display": "NGS"
+            }
+          ],
+          "text": "NGS"
+        },
+        "specimen": {
+          "display": "tissue"
+        },
+        "performer": [
+          {
+            "display": "Guardant Health"
+          }
+        ],
+        "note": [
+          {
+            "text": "ALK rearrangement detected"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/bm_fedc5942"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bm_b524cb15",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "bm_b524cb15",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "81202-7",
+              "display": "ROS1 gene rearrangements [Presence] in Tissue by FISH"
+            }
+          ],
+          "text": "ROS1 test"
+        },
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "effectiveDateTime": "2019-09-03T00:00:00Z",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "negative",
+              "display": "Negative"
+            }
+          ],
+          "text": "Negative"
+        },
+        "method": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "ngs",
+              "display": "NGS"
+            }
+          ],
+          "text": "NGS"
+        },
+        "specimen": {
+          "display": "tissue"
+        },
+        "performer": [
+          {
+            "display": "Caris Life Sciences"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/bm_b524cb15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bm_27a0dbcf",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "bm_27a0dbcf",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "21704-5",
+              "display": "KRAS gene mutations found [Identifier] in Blood or Tissue"
+            }
+          ],
+          "text": "KRAS test"
+        },
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "effectiveDateTime": "2019-09-05T00:00:00Z",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "negative",
+              "display": "Negative"
+            }
+          ],
+          "text": "Negative"
+        },
+        "method": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "ngs",
+              "display": "NGS"
+            }
+          ],
+          "text": "NGS"
+        },
+        "specimen": {
+          "display": "tissue"
+        },
+        "performer": [
+          {
+            "display": "Foundation Medicine"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/bm_27a0dbcf"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bm_cf0aa657",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "bm_cf0aa657",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "21702-9",
+              "display": "BRAF gene mutations found [Identifier] in Blood or Tissue"
+            }
+          ],
+          "text": "BRAF test"
+        },
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "effectiveDateTime": "2019-09-05T00:00:00Z",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "negative",
+              "display": "Negative"
+            }
+          ],
+          "text": "Negative"
+        },
+        "method": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "ngs",
+              "display": "NGS"
+            }
+          ],
+          "text": "NGS"
+        },
+        "specimen": {
+          "display": "tissue"
+        },
+        "performer": [
+          {
+            "display": "Foundation Medicine"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/bm_cf0aa657"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bm_df367cdf",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "bm_df367cdf",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "85337-4",
+              "display": "PD-L1 (CD274) [Presence] in Tissue by Immune stain"
+            }
+          ],
+          "text": "PDL1 test"
+        },
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "effectiveDateTime": "2019-09-03T00:00:00Z",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "low",
+              "display": "Low"
+            }
+          ],
+          "text": "Low"
+        },
+        "method": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "ihc",
+              "display": "IHC"
+            }
+          ],
+          "text": "IHC"
+        },
+        "specimen": {
+          "display": "tissue"
+        },
+        "performer": [
+          {
+            "display": "Caris Life Sciences"
+          }
+        ],
+        "note": [
+          {
+            "text": "1%"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/bm_df367cdf"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_4d1fe634",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_4d1fe634",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2019-08-20T00:00:00Z",
+          "end": "2019-08-20T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_4d1fe634"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_58147ee0",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_58147ee0",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2019-09-13T00:00:00Z",
+          "end": "2019-09-13T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_58147ee0"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_51babe90",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_51babe90",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2019-10-18T00:00:00Z",
+          "end": "2019-10-18T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_51babe90"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_1aab21a8",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_1aab21a8",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2019-11-13T00:00:00Z",
+          "end": "2019-11-13T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_1aab21a8"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_91814caa",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_91814caa",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2019-12-13T00:00:00Z",
+          "end": "2019-12-13T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_91814caa"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_b39ec842",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_b39ec842",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2020-01-11T00:00:00Z",
+          "end": "2020-01-11T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_b39ec842"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_a8412fd8",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_a8412fd8",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2020-02-03T00:00:00Z",
+          "end": "2020-02-03T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_a8412fd8"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_5c6daef8",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_5c6daef8",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2020-02-27T00:00:00Z",
+          "end": "2020-02-27T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_5c6daef8"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_4f279733",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_4f279733",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2020-03-29T00:00:00Z",
+          "end": "2020-03-29T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_4f279733"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_43c04e53",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_43c04e53",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2020-05-03T00:00:00Z",
+          "end": "2020-05-03T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_43c04e53"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_54e016d2",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_54e016d2",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2020-05-30T00:00:00Z",
+          "end": "2020-05-30T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_54e016d2"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_e391e577",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_e391e577",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2020-06-28T00:00:00Z",
+          "end": "2020-06-28T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_e391e577"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_f063bce1",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_f063bce1",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2020-07-20T00:00:00Z",
+          "end": "2020-07-20T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_f063bce1"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_d6526646",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_d6526646",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2020-08-17T00:00:00Z",
+          "end": "2020-08-17T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_d6526646"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_be343f91",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_be343f91",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2020-09-10T00:00:00Z",
+          "end": "2020-09-10T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_be343f91"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_4bdf2e71",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_4bdf2e71",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2020-10-10T00:00:00Z",
+          "end": "2020-10-10T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_4bdf2e71"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_d41bcabf",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_d41bcabf",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2020-11-10T00:00:00Z",
+          "end": "2020-11-10T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_d41bcabf"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_bf720ea3",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_bf720ea3",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2020-12-09T00:00:00Z",
+          "end": "2020-12-09T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_bf720ea3"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_4a461392",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_4a461392",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2021-01-10T00:00:00Z",
+          "end": "2021-01-10T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_4a461392"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_f0e50228",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_f0e50228",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2021-01-30T00:00:00Z",
+          "end": "2021-01-30T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_f0e50228"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_4cd83893",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_4cd83893",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2021-03-01T00:00:00Z",
+          "end": "2021-03-01T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_4cd83893"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_7ad6ea20",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_7ad6ea20",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2021-03-29T00:00:00Z",
+          "end": "2021-03-29T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_7ad6ea20"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_087b4995",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_087b4995",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2021-04-29T00:00:00Z",
+          "end": "2021-04-29T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_087b4995"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_7bd55f2b",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_7bd55f2b",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2021-05-20T00:00:00Z",
+          "end": "2021-05-20T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_7bd55f2b"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_0ac7f016",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_0ac7f016",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2021-06-18T00:00:00Z",
+          "end": "2021-06-18T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_0ac7f016"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_08b622b0",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_08b622b0",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2021-07-20T00:00:00Z",
+          "end": "2021-07-20T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_08b622b0"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_aa4416b4",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_aa4416b4",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2021-08-22T00:00:00Z",
+          "end": "2021-08-22T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_aa4416b4"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_edf55d45",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_edf55d45",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2021-09-19T00:00:00Z",
+          "end": "2021-09-19T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_edf55d45"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_67166615",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_67166615",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2021-10-14T00:00:00Z",
+          "end": "2021-10-14T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_67166615"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_f2811261",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_f2811261",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2021-11-08T00:00:00Z",
+          "end": "2021-11-08T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_f2811261"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_18a98b3f",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_18a98b3f",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2021-12-07T00:00:00Z",
+          "end": "2021-12-07T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_18a98b3f"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_e1c5ad5f",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_e1c5ad5f",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2022-01-05T00:00:00Z",
+          "end": "2022-01-05T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_e1c5ad5f"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_882ad928",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_882ad928",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2022-02-03T00:00:00Z",
+          "end": "2022-02-03T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_882ad928"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_5c96a434",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_5c96a434",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2022-03-05T00:00:00Z",
+          "end": "2022-03-05T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_5c96a434"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_9ce4da55",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_9ce4da55",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2022-03-29T00:00:00Z",
+          "end": "2022-03-29T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_9ce4da55"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_b4de8c1d",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_b4de8c1d",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_cfba510f"
+        },
+        "period": {
+          "start": "2022-04-26T00:00:00Z",
+          "end": "2022-04-26T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0004"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_b4de8c1d"
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+ONCOLOGY PROGRESS NOTE
+Date: 2017-05-19
+Patient: Freeman, Steven | MRN: pat_65e26f5f
+
+SUBJECTIVE:
+Patient returns for cycle 3 of carboplatin, paclitaxel, pembrolizumab, docetaxel. Patient reports mild fatigue, grade 1. No nausea or vomiting.
+
+OBJECTIVE:
+ECOG performance status: 0
+Weight: 73.3 kg
+Laboratory values within acceptable parameters for treatment continuation.
+
+ASSESSMENT:
+squamous cell carcinoma NSCLC, stage IVB.
+Treatment: carboplatin, paclitaxel, pembrolizumab, docetaxel (initiated 2017-04-08).
+Partial response to therapy. Primary tumor decreased 30% in size.
+
+PLAN:
+Disease progression identified. Discontinue current carboplatin, paclitaxel, pembrolizumab, docetaxel. Referral to clinical trial team. Consider second-line therapy options.
+
+Disease progression documented on 2019-05-26 with new involvement at: adrenal, brain.

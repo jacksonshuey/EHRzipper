@@ -1,0 +1,21 @@
+ONCOLOGY PROGRESS NOTE
+Date: 2020-06-12
+Patient: Herrera, Monica | MRN: pat_2ec4ec15
+
+SUBJECTIVE:
+Patient returns for cycle 5 of carboplatin, paclitaxel, pembrolizumab. Patient reports mild fatigue, grade 1. No nausea or vomiting.
+
+OBJECTIVE:
+ECOG performance status: 2
+Weight: 93.0 kg
+Laboratory values within acceptable parameters for treatment continuation.
+
+ASSESSMENT:
+sarcomatoid carcinoma NSCLC, stage IVA.
+Treatment: carboplatin, paclitaxel, pembrolizumab (initiated 2020-04-01).
+Stable disease per RECIST 1.1. Continuing current regimen.
+
+PLAN:
+Disease progression identified. Discontinue current carboplatin, paclitaxel, pembrolizumab. Referral to clinical trial team. Consider second-line therapy options.
+
+Disease progression documented on 2020-12-13 with new involvement at: lung_contralateral.

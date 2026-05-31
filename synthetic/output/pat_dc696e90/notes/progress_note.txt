@@ -1,0 +1,21 @@
+ONCOLOGY PROGRESS NOTE
+Date: 2017-08-20
+Patient: House, Wayne | MRN: pat_dc696e90
+
+SUBJECTIVE:
+Patient returns for cycle 6 of pembrolizumab, carboplatin, pemetrexed, docetaxel. Patient reports mild fatigue, grade 1. No nausea or vomiting.
+
+OBJECTIVE:
+ECOG performance status: 1
+Weight: 63.6 kg
+Laboratory values within acceptable parameters for treatment continuation.
+
+ASSESSMENT:
+adenocarcinoma NSCLC, stage IVA.
+Treatment: pembrolizumab, carboplatin, pemetrexed, docetaxel (initiated 2017-05-12).
+Stable disease per RECIST 1.1. Continuing current regimen.
+
+PLAN:
+Disease progression identified. Discontinue current pembrolizumab, carboplatin, pemetrexed, docetaxel. Referral to clinical trial team. Consider second-line therapy options.
+
+Disease progression documented on 2019-10-01 with new involvement at: adrenal.

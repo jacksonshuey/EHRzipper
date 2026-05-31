@@ -1,0 +1,108 @@
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ADT^A01^ADT_A01|EHRZ0000032|P|2.5.1
+PID|1||pat_7bcbfa9a||Bailey^Brandi||195204|F||Black Or African American|54278 Carr Valley^^Lake Lisaport^CO^87452^USA|||||H||||pat_7bcbfa9a
+PV1|1|O|prac_0005^ONCOLOGY^^^||||DR9999^ONCOLOGIST^SYNTHETIC^MD|||||||||||||20150708|20150708
+DG1|1|I10|C34.91|NSCLC Squamous Cell Carcinoma|20131016|F|||||||STAGE_IVB|||||||8070.3
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ORU^R01^ORU_R01|EHRZ0000033|P|2.5.1
+PID|1||pat_7bcbfa9a||Bailey^Brandi||195204|F||Black Or African American|54278 Carr Valley^^Lake Lisaport^CO^87452^USA|||||H||||pat_7bcbfa9a
+OBR|1|ORD00001|FIL00001|26464-8^Leukocytes [#/volume] in Blood^LN||20150706|20150706||||||||F
+OBX|1|NM|26464-8^Leukocytes [#/volume] in Blood^LN||6.7|10*3/uL|5.0-10.5|||F|||20150706
+OBR|2|ORD00002|FIL00002|26515-7^Platelets [#/volume] in Blood^LN||20150706|20150706||||||||F
+OBX|1|NM|26515-7^Platelets [#/volume] in Blood^LN||227.2|10*3/uL|150.0-400.0|||F|||20150706
+OBR|3|ORD00003|FIL00003|718-7^Hemoglobin [Mass/volume] in Blood^LN||20150706|20150706||||||||F
+OBX|1|NM|718-7^Hemoglobin [Mass/volume] in Blood^LN||10.4|g/dL|12.0-17.5|||F|||20150706
+OBR|4|ORD00004|FIL00004|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||20150706|20150706||||||||F
+OBX|1|NM|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||0.8|mg/dL|0.6-1.2|||F|||20150706
+OBR|5|ORD00005|FIL00005|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||20150706|20150706||||||||F
+OBX|1|NM|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||12.2|U/L|7.0-56.0|||F|||20150706
+OBR|6|ORD00006|FIL00006|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||20150706|20150706||||||||F
+OBX|1|NM|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||3.6|g/dL|3.5-5.0|||F|||20150706
+OBR|7|ORD00007|FIL00007|26464-8^Leukocytes [#/volume] in Blood^LN||20150817|20150817||||||||F
+OBX|1|NM|26464-8^Leukocytes [#/volume] in Blood^LN||5.6|10*3/uL|5.0-10.5|||F|||20150817
+OBR|8|ORD00008|FIL00008|26515-7^Platelets [#/volume] in Blood^LN||20150817|20150817||||||||F
+OBX|1|NM|26515-7^Platelets [#/volume] in Blood^LN||158.7|10*3/uL|150.0-400.0|||F|||20150817
+OBR|9|ORD00009|FIL00009|718-7^Hemoglobin [Mass/volume] in Blood^LN||20150817|20150817||||||||F
+OBX|1|NM|718-7^Hemoglobin [Mass/volume] in Blood^LN||11.6|g/dL|12.0-17.5|||F|||20150817
+OBR|10|ORD00010|FIL00010|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||20150817|20150817||||||||F
+OBX|1|NM|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||1.1|mg/dL|0.6-1.2|||F|||20150817
+OBR|11|ORD00011|FIL00011|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||20150817|20150817||||||||F
+OBX|1|NM|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||112.5|U/L|7.0-56.0|||F|||20150817
+OBR|12|ORD00012|FIL00012|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||20150817|20150817||||||||F
+OBX|1|NM|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||3.5|g/dL|3.5-5.0|||F|||20150817
+OBR|13|ORD00013|FIL00013|26464-8^Leukocytes [#/volume] in Blood^LN||20150930|20150930||||||||F
+OBX|1|NM|26464-8^Leukocytes [#/volume] in Blood^LN||5.3|10*3/uL|5.0-10.5|||F|||20150930
+OBR|14|ORD00014|FIL00014|26515-7^Platelets [#/volume] in Blood^LN||20150930|20150930||||||||F
+OBX|1|NM|26515-7^Platelets [#/volume] in Blood^LN||281.6|10*3/uL|150.0-400.0|||F|||20150930
+OBR|15|ORD00015|FIL00015|718-7^Hemoglobin [Mass/volume] in Blood^LN||20150930|20150930||||||||F
+OBX|1|NM|718-7^Hemoglobin [Mass/volume] in Blood^LN||9.1|g/dL|12.0-17.5|||F|||20150930
+OBR|16|ORD00016|FIL00016|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||20150930|20150930||||||||F
+OBX|1|NM|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||2.3|mg/dL|0.6-1.2|||F|||20150930
+OBR|17|ORD00017|FIL00017|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||20150930|20150930||||||||F
+OBX|1|NM|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||74.5|U/L|7.0-56.0|||F|||20150930
+OBR|18|ORD00018|FIL00018|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||20150930|20150930||||||||F
+OBX|1|NM|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||3.0|g/dL|3.5-5.0|||F|||20150930
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ORU^R01^ORU_R01|EHRZ0000034|P|2.5.1
+PID|1||pat_7bcbfa9a||Bailey^Brandi||195204|F||Black Or African American|54278 Carr Valley^^Lake Lisaport^CO^87452^USA|||||H||||pat_7bcbfa9a
+OBR|1|ORD00001|FIL00001|53041-0^EGFR gene mutations found [Identifier] in Blood or Tissue^LN||20150726|20150726||||||||F
+OBX|1|ST|53041-0^EGFR gene mutations found [Identifier] in Blood or Tissue^LN||negative|||||F|||20150726
+OBR|2|ORD00002|FIL00002|76042-8^ALK gene rearrangements [Presence] in Tissue by FISH^LN||20150726|20150726||||||||F
+OBX|1|ST|76042-8^ALK gene rearrangements [Presence] in Tissue by FISH^LN||negative|||||F|||20150726
+OBR|3|ORD00003|FIL00003|81202-7^ROS1 gene rearrangements [Presence] in Tissue by FISH^LN||20150727|20150727||||||||F
+OBX|1|ST|81202-7^ROS1 gene rearrangements [Presence] in Tissue by FISH^LN||negative|||||F|||20150727
+OBR|4|ORD00004|FIL00004|21704-5^KRAS gene mutations found [Identifier] in Blood or Tissue^LN||20150727|20150727||||||||F
+OBX|1|ST|21704-5^KRAS gene mutations found [Identifier] in Blood or Tissue^LN||negative|||||F|||20150727
+OBR|5|ORD00005|FIL00005|21702-9^BRAF gene mutations found [Identifier] in Blood or Tissue^LN||20150724|20150724||||||||F
+OBX|1|ST|21702-9^BRAF gene mutations found [Identifier] in Blood or Tissue^LN||negative|||||F|||20150724
+OBR|6|ORD00006|FIL00006|85337-4^PD-L1 (CD274) [Presence] in Tissue by Immune stain^LN||20150725|20150725||||||||F
+OBX|1|ST|85337-4^PD-L1 (CD274) [Presence] in Tissue by Immune stain^LN||28%|||||F|||20150725
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||RDE^O11^RDE_O11|EHRZ0000035|P|2.5.1
+PID|1||pat_7bcbfa9a||Bailey^Brandi||195204|F||Black Or African American|54278 Carr Valley^^Lake Lisaport^CO^87452^USA|||||H||||pat_7bcbfa9a
+RXA|0|1|20150804|20150805|2555^carboplatin^RXN|450.0|mg||IV|||||||A|||reg_779523e8_l1
+RXA|0|1|20150804|20150805|56946^paclitaxel^RXN|175.0|mg/m2||IV|||||||A|||reg_779523e8_l1
+RXA|0|1|20150804|20150805|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_779523e8_l1
+RXA|0|1|20150825|20150826|2555^carboplatin^RXN|450.0|mg||IV|||||||A|||reg_779523e8_l1
+RXA|0|1|20150825|20150826|56946^paclitaxel^RXN|175.0|mg/m2||IV|||||||A|||reg_779523e8_l1
+RXA|0|1|20150825|20150826|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_779523e8_l1
+RXA|0|1|20150915|20150916|2555^carboplatin^RXN|450.0|mg||IV|||||||A|||reg_779523e8_l1
+RXA|0|1|20150915|20150916|56946^paclitaxel^RXN|175.0|mg/m2||IV|||||||A|||reg_779523e8_l1
+RXA|0|1|20150915|20150916|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_779523e8_l1
+RXA|0|1|20151006|20151007|2555^carboplatin^RXN|450.0|mg||IV|||||||A|||reg_779523e8_l1
+RXA|0|1|20151006|20151007|56946^paclitaxel^RXN|175.0|mg/m2||IV|||||||A|||reg_779523e8_l1
+RXA|0|1|20151006|20151007|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_779523e8_l1
+RXA|0|1|20151027|20151028|2555^carboplatin^RXN|450.0|mg||IV|||||||A|||reg_779523e8_l1
+RXA|0|1|20151027|20151028|56946^paclitaxel^RXN|175.0|mg/m2||IV|||||||A|||reg_779523e8_l1
+RXA|0|1|20151027|20151028|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_779523e8_l1
+RXA|0|1|20151117|20151118|2555^carboplatin^RXN|450.0|mg||IV|||||||A|||reg_779523e8_l1
+RXA|0|1|20151117|20151118|56946^paclitaxel^RXN|175.0|mg/m2||IV|||||||A|||reg_779523e8_l1
+RXA|0|1|20151117|20151118|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_779523e8_l1
+RXA|0|1|20151208|20151209|2555^carboplatin^RXN|450.0|mg||IV|||||||A|||reg_779523e8_l1
+RXA|0|1|20151208|20151209|56946^paclitaxel^RXN|175.0|mg/m2||IV|||||||A|||reg_779523e8_l1
+RXA|0|1|20151208|20151209|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_779523e8_l1
+RXA|0|1|20151229|20151230|2555^carboplatin^RXN|450.0|mg||IV|||||||A|||reg_779523e8_l1
+RXA|0|1|20151229|20151230|56946^paclitaxel^RXN|175.0|mg/m2||IV|||||||A|||reg_779523e8_l1
+RXA|0|1|20151229|20151230|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_779523e8_l1
+RXA|0|1|20160119|20160120|2555^carboplatin^RXN|450.0|mg||IV|||||||A|||reg_779523e8_l1
+RXA|0|1|20160119|20160120|56946^paclitaxel^RXN|175.0|mg/m2||IV|||||||A|||reg_779523e8_l1
+RXA|0|1|20160119|20160120|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_779523e8_l1
+RXA|0|1|20160424|20160425|134350^docetaxel^RXN|75.0|mg/m2||IV|||||||A|||reg_616acadb_l2
+RXA|0|1|20160424|20160425|1535996^ramucirumab^RXN|10.0|mg/kg||IV|||||||A|||reg_616acadb_l2
+RXA|0|1|20160515|20160516|134350^docetaxel^RXN|75.0|mg/m2||IV|||||||A|||reg_616acadb_l2
+RXA|0|1|20160515|20160516|1535996^ramucirumab^RXN|10.0|mg/kg||IV|||||||A|||reg_616acadb_l2
+RXA|0|1|20160605|20160606|134350^docetaxel^RXN|75.0|mg/m2||IV|||||||A|||reg_616acadb_l2
+RXA|0|1|20160605|20160606|1535996^ramucirumab^RXN|10.0|mg/kg||IV|||||||A|||reg_616acadb_l2
+RXA|0|1|20160626|20160627|134350^docetaxel^RXN|75.0|mg/m2||IV|||||||A|||reg_616acadb_l2
+RXA|0|1|20160626|20160627|1535996^ramucirumab^RXN|10.0|mg/kg||IV|||||||A|||reg_616acadb_l2
+RXA|0|1|20160717|20160718|134350^docetaxel^RXN|75.0|mg/m2||IV|||||||A|||reg_616acadb_l2
+RXA|0|1|20160717|20160718|1535996^ramucirumab^RXN|10.0|mg/kg||IV|||||||A|||reg_616acadb_l2
+RXA|0|1|20160807|20160808|134350^docetaxel^RXN|75.0|mg/m2||IV|||||||A|||reg_616acadb_l2
+RXA|0|1|20160807|20160808|1535996^ramucirumab^RXN|10.0|mg/kg||IV|||||||A|||reg_616acadb_l2
+RXA|0|1|20160828|20160829|134350^docetaxel^RXN|75.0|mg/m2||IV|||||||A|||reg_616acadb_l2
+RXA|0|1|20160828|20160829|1535996^ramucirumab^RXN|10.0|mg/kg||IV|||||||A|||reg_616acadb_l2
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||MDM^T02^MDM_T02|EHRZ0000036|P|2.5.1
+PID|1||pat_7bcbfa9a||Bailey^Brandi||195204|F||Black Or African American|54278 Carr Valley^^Lake Lisaport^CO^87452^USA|||||H||||pat_7bcbfa9a
+TXA|1|11529-5|TX|20150708|DR9999^ONCOLOGIST^SYNTHETIC^MD|20150708|||doc_pat_7bcbfa9a_pathology||||||AU||||pat_7bcbfa9a
+TXA|1|18748-4|TX|20150708|DR9999^ONCOLOGIST^SYNTHETIC^MD|20150708|||doc_pat_7bcbfa9a_radiology||||||AU||||pat_7bcbfa9a
+TXA|1|11488-4|TX|20150708|DR9999^ONCOLOGIST^SYNTHETIC^MD|20150708|||doc_pat_7bcbfa9a_consult||||||AU||||pat_7bcbfa9a

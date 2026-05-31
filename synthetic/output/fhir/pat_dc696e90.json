@@ -1,0 +1,5546 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle_pat_dc696e90",
+  "type": "transaction",
+  "timestamp": "2024-12-31T00:00:00Z",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:pat_dc696e90",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "pat_dc696e90",
+        "meta": {
+          "source": "synthetic/fhir"
+        },
+        "identifier": [
+          {
+            "system": "urn:ehrzipper:patient-id",
+            "value": "pat_dc696e90"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "House",
+            "given": [
+              "Wayne"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1935-06",
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "67736 Franklin Alley"
+            ],
+            "city": "Bakermouth",
+            "state": "MI",
+            "postalCode": "37889",
+            "country": "US"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "display": "white"
+                }
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "display": "not_hispanic_or_latino"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/pat_dc696e90"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cond_pat_dc696e90",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cond_pat_dc696e90",
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "C34.12",
+              "display": "Malignant neoplasm of lung"
+            },
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/icd-o-3",
+              "code": "8140/3",
+              "display": "Adenocarcinoma"
+            }
+          ],
+          "text": "NSCLC - Adenocarcinoma"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ],
+          "text": "Active"
+        },
+        "onsetDateTime": "2016-09-18T00:00:00Z",
+        "stage": [
+          {
+            "summary": {
+              "coding": [
+                {
+                  "system": "http://cancerstaging.org",
+                  "code": "IVA",
+                  "display": "Stage IVA"
+                }
+              ],
+              "text": "Stage IVA"
+            }
+          }
+        ],
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/cond_pat_dc696e90"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_ecog_pat_dc696e90",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_ecog_pat_dc696e90",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "89247-1",
+              "display": "ECOG performance status score"
+            }
+          ],
+          "text": "ECOG performance status score"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectiveDateTime": "2017-04-16T00:00:00Z",
+        "valueInteger": 1
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_ecog_pat_dc696e90"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_smoking_pat_dc696e90",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_smoking_pat_dc696e90",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72166-2",
+              "display": "Tobacco smoking status"
+            }
+          ],
+          "text": "Tobacco smoking status"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectiveDateTime": "2017-04-16T00:00:00Z",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "current",
+              "display": "Current"
+            }
+          ],
+          "text": "Current"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8663-7",
+                  "display": "Cigarette pack-years"
+                }
+              ],
+              "text": "Cigarette pack-years"
+            },
+            "valueQuantity": {
+              "value": 73,
+              "unit": "{PackYears}"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_smoking_pat_dc696e90"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:proc_biopsy_pat_dc696e90",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "proc_biopsy_pat_dc696e90",
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "32408",
+              "display": "Core needle biopsy, lung or mediastinum, percutaneous"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "performedDateTime": "2017-04-09T00:00:00Z",
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "44029006",
+                "display": "Lung structure"
+              }
+            ],
+            "text": "Lung structure"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/proc_biopsy_pat_dc696e90"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:dr_pat_dc696e90",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "dr_pat_dc696e90",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "PAT",
+                "display": "Pathology"
+              }
+            ],
+            "text": "Pathology"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11529-5",
+              "display": "Surgical pathology study"
+            }
+          ],
+          "text": "Surgical pathology study"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectiveDateTime": "2017-04-16T00:00:00Z",
+        "conclusion": "Adenocarcinoma, stage IVA, ECOG 1. EGFR: negative. ALK: negative. ROS1: negative. KRAS: negative. PD-L1: high (TPS 61.9%)."
+      },
+      "request": {
+        "method": "PUT",
+        "url": "DiagnosticReport/dr_pat_dc696e90"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_e02b3d49",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_e02b3d49",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "26464-8",
+              "display": "Leukocytes [#/volume] in Blood"
+            }
+          ],
+          "text": "Leukocytes [#/volume] in Blood"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectiveDateTime": "2017-04-16T00:00:00Z",
+        "valueQuantity": {
+          "value": 6.5,
+          "unit": "10*3/uL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 5.0,
+              "unit": "10*3/uL"
+            },
+            "high": {
+              "value": 10.5,
+              "unit": "10*3/uL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_e02b3d49"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_345621ba",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_345621ba",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "26515-7",
+              "display": "Platelets [#/volume] in Blood"
+            }
+          ],
+          "text": "Platelets [#/volume] in Blood"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectiveDateTime": "2017-04-16T00:00:00Z",
+        "valueQuantity": {
+          "value": 201.6,
+          "unit": "10*3/uL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 150.0,
+              "unit": "10*3/uL"
+            },
+            "high": {
+              "value": 400.0,
+              "unit": "10*3/uL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_345621ba"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_ce3e77d9",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_ce3e77d9",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "718-7",
+              "display": "Hemoglobin [Mass/volume] in Blood"
+            }
+          ],
+          "text": "Hemoglobin [Mass/volume] in Blood"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectiveDateTime": "2017-04-16T00:00:00Z",
+        "valueQuantity": {
+          "value": 10.5,
+          "unit": "g/dL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 12.0,
+              "unit": "g/dL"
+            },
+            "high": {
+              "value": 17.5,
+              "unit": "g/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_ce3e77d9"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_8bccb6f3",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_8bccb6f3",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Creatinine [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectiveDateTime": "2017-04-16T00:00:00Z",
+        "valueQuantity": {
+          "value": 2.5,
+          "unit": "mg/dL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0.6,
+              "unit": "mg/dL"
+            },
+            "high": {
+              "value": 1.2,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_8bccb6f3"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_8e4be837",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_8e4be837",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1742-6",
+              "display": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectiveDateTime": "2017-04-16T00:00:00Z",
+        "valueQuantity": {
+          "value": 37.6,
+          "unit": "U/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 7.0,
+              "unit": "U/L"
+            },
+            "high": {
+              "value": 56.0,
+              "unit": "U/L"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_8e4be837"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_fe76440f",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_fe76440f",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1751-7",
+              "display": "Albumin [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Albumin [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectiveDateTime": "2017-04-16T00:00:00Z",
+        "valueQuantity": {
+          "value": 4.0,
+          "unit": "g/dL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 3.5,
+              "unit": "g/dL"
+            },
+            "high": {
+              "value": 5.0,
+              "unit": "g/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_fe76440f"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_22ff0d5b",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_22ff0d5b",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "26464-8",
+              "display": "Leukocytes [#/volume] in Blood"
+            }
+          ],
+          "text": "Leukocytes [#/volume] in Blood"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectiveDateTime": "2017-05-31T00:00:00Z",
+        "valueQuantity": {
+          "value": 8.0,
+          "unit": "10*3/uL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 5.0,
+              "unit": "10*3/uL"
+            },
+            "high": {
+              "value": 10.5,
+              "unit": "10*3/uL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_22ff0d5b"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_a74e9b31",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_a74e9b31",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "26515-7",
+              "display": "Platelets [#/volume] in Blood"
+            }
+          ],
+          "text": "Platelets [#/volume] in Blood"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectiveDateTime": "2017-05-31T00:00:00Z",
+        "valueQuantity": {
+          "value": 298.3,
+          "unit": "10*3/uL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 150.0,
+              "unit": "10*3/uL"
+            },
+            "high": {
+              "value": 400.0,
+              "unit": "10*3/uL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_a74e9b31"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_fcee6796",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_fcee6796",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "718-7",
+              "display": "Hemoglobin [Mass/volume] in Blood"
+            }
+          ],
+          "text": "Hemoglobin [Mass/volume] in Blood"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectiveDateTime": "2017-05-31T00:00:00Z",
+        "valueQuantity": {
+          "value": 12.4,
+          "unit": "g/dL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 12.0,
+              "unit": "g/dL"
+            },
+            "high": {
+              "value": 17.5,
+              "unit": "g/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_fcee6796"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_85af0910",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_85af0910",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Creatinine [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectiveDateTime": "2017-05-31T00:00:00Z",
+        "valueQuantity": {
+          "value": 2.3,
+          "unit": "mg/dL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0.6,
+              "unit": "mg/dL"
+            },
+            "high": {
+              "value": 1.2,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_85af0910"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_3cc4e6a1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_3cc4e6a1",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1742-6",
+              "display": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectiveDateTime": "2017-05-31T00:00:00Z",
+        "valueQuantity": {
+          "value": 58.7,
+          "unit": "U/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 7.0,
+              "unit": "U/L"
+            },
+            "high": {
+              "value": 56.0,
+              "unit": "U/L"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_3cc4e6a1"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_12105a9b",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_12105a9b",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1751-7",
+              "display": "Albumin [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Albumin [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectiveDateTime": "2017-05-31T00:00:00Z",
+        "valueQuantity": {
+          "value": 3.5,
+          "unit": "g/dL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 3.5,
+              "unit": "g/dL"
+            },
+            "high": {
+              "value": 5.0,
+              "unit": "g/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_12105a9b"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_9fc7f938",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_9fc7f938",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "26464-8",
+              "display": "Leukocytes [#/volume] in Blood"
+            }
+          ],
+          "text": "Leukocytes [#/volume] in Blood"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectiveDateTime": "2017-07-07T00:00:00Z",
+        "valueQuantity": {
+          "value": 8.5,
+          "unit": "10*3/uL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 5.0,
+              "unit": "10*3/uL"
+            },
+            "high": {
+              "value": 10.5,
+              "unit": "10*3/uL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_9fc7f938"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_f0f3501c",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_f0f3501c",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "26515-7",
+              "display": "Platelets [#/volume] in Blood"
+            }
+          ],
+          "text": "Platelets [#/volume] in Blood"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectiveDateTime": "2017-07-07T00:00:00Z",
+        "valueQuantity": {
+          "value": 179.0,
+          "unit": "10*3/uL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 150.0,
+              "unit": "10*3/uL"
+            },
+            "high": {
+              "value": 400.0,
+              "unit": "10*3/uL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_f0f3501c"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_c1b491a4",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_c1b491a4",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "718-7",
+              "display": "Hemoglobin [Mass/volume] in Blood"
+            }
+          ],
+          "text": "Hemoglobin [Mass/volume] in Blood"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectiveDateTime": "2017-07-07T00:00:00Z",
+        "valueQuantity": {
+          "value": 8.3,
+          "unit": "g/dL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 12.0,
+              "unit": "g/dL"
+            },
+            "high": {
+              "value": 17.5,
+              "unit": "g/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_c1b491a4"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_1741bbb2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_1741bbb2",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Creatinine [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectiveDateTime": "2017-07-07T00:00:00Z",
+        "valueQuantity": {
+          "value": 2.0,
+          "unit": "mg/dL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0.6,
+              "unit": "mg/dL"
+            },
+            "high": {
+              "value": 1.2,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_1741bbb2"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_aec231db",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_aec231db",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1742-6",
+              "display": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectiveDateTime": "2017-07-07T00:00:00Z",
+        "valueQuantity": {
+          "value": 119.1,
+          "unit": "U/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 7.0,
+              "unit": "U/L"
+            },
+            "high": {
+              "value": 56.0,
+              "unit": "U/L"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_aec231db"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs_d2b31c7d",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs_d2b31c7d",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1751-7",
+              "display": "Albumin [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Albumin [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectiveDateTime": "2017-07-07T00:00:00Z",
+        "valueQuantity": {
+          "value": 3.0,
+          "unit": "g/dL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 3.5,
+              "unit": "g/dL"
+            },
+            "high": {
+              "value": 5.0,
+              "unit": "g/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs_d2b31c7d"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bm_a240e185",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "bm_a240e185",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "53041-0",
+              "display": "EGFR gene mutations found [Identifier] in Blood or Tissue"
+            }
+          ],
+          "text": "EGFR test"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectiveDateTime": "2017-04-23T00:00:00Z",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "negative",
+              "display": "Negative"
+            }
+          ],
+          "text": "Negative"
+        },
+        "method": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "ngs",
+              "display": "NGS"
+            }
+          ],
+          "text": "NGS"
+        },
+        "specimen": {
+          "display": "tissue"
+        },
+        "performer": [
+          {
+            "display": "Foundation Medicine"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/bm_a240e185"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bm_11a2b04b",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "bm_11a2b04b",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "76042-8",
+              "display": "ALK gene rearrangements [Presence] in Tissue by FISH"
+            }
+          ],
+          "text": "ALK test"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectiveDateTime": "2017-04-25T00:00:00Z",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "negative",
+              "display": "Negative"
+            }
+          ],
+          "text": "Negative"
+        },
+        "method": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "ngs",
+              "display": "NGS"
+            }
+          ],
+          "text": "NGS"
+        },
+        "specimen": {
+          "display": "tissue"
+        },
+        "performer": [
+          {
+            "display": "Guardant Health"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/bm_11a2b04b"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bm_539a3e0c",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "bm_539a3e0c",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "81202-7",
+              "display": "ROS1 gene rearrangements [Presence] in Tissue by FISH"
+            }
+          ],
+          "text": "ROS1 test"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectiveDateTime": "2017-04-25T00:00:00Z",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "negative",
+              "display": "Negative"
+            }
+          ],
+          "text": "Negative"
+        },
+        "method": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "ngs",
+              "display": "NGS"
+            }
+          ],
+          "text": "NGS"
+        },
+        "specimen": {
+          "display": "tissue"
+        },
+        "performer": [
+          {
+            "display": "Foundation Medicine"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/bm_539a3e0c"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bm_eaa34f02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "bm_eaa34f02",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "21704-5",
+              "display": "KRAS gene mutations found [Identifier] in Blood or Tissue"
+            }
+          ],
+          "text": "KRAS test"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectiveDateTime": "2017-04-24T00:00:00Z",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "negative",
+              "display": "Negative"
+            }
+          ],
+          "text": "Negative"
+        },
+        "method": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "ngs",
+              "display": "NGS"
+            }
+          ],
+          "text": "NGS"
+        },
+        "specimen": {
+          "display": "tissue"
+        },
+        "performer": [
+          {
+            "display": "Caris Life Sciences"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/bm_eaa34f02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bm_944be2ad",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "bm_944be2ad",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "21702-9",
+              "display": "BRAF gene mutations found [Identifier] in Blood or Tissue"
+            }
+          ],
+          "text": "BRAF test"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectiveDateTime": "2017-04-25T00:00:00Z",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "negative",
+              "display": "Negative"
+            }
+          ],
+          "text": "Negative"
+        },
+        "method": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "ngs",
+              "display": "NGS"
+            }
+          ],
+          "text": "NGS"
+        },
+        "specimen": {
+          "display": "tissue"
+        },
+        "performer": [
+          {
+            "display": "Foundation Medicine"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/bm_944be2ad"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bm_473b9d0c",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "bm_473b9d0c",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "85337-4",
+              "display": "PD-L1 (CD274) [Presence] in Tissue by Immune stain"
+            }
+          ],
+          "text": "PDL1 test"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectiveDateTime": "2017-04-23T00:00:00Z",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "high",
+              "display": "High"
+            }
+          ],
+          "text": "High"
+        },
+        "method": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "ihc",
+              "display": "IHC"
+            }
+          ],
+          "text": "IHC"
+        },
+        "specimen": {
+          "display": "tissue"
+        },
+        "performer": [
+          {
+            "display": "Caris Life Sciences"
+          }
+        ],
+        "note": [
+          {
+            "text": "62%"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/bm_473b9d0c"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_e42cc963",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_e42cc963",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "1719765",
+              "display": "pembrolizumab"
+            }
+          ],
+          "text": "pembrolizumab"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2017-05-12T00:00:00Z",
+          "end": "2017-05-13T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 200.0,
+            "unit": "mg"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "io_pd1"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_718e640b_l1"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 1
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_e42cc963"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_a21cb8cb",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_a21cb8cb",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "1719765",
+              "display": "pembrolizumab"
+            }
+          ],
+          "text": "pembrolizumab"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2017-06-02T00:00:00Z",
+          "end": "2017-06-03T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 200.0,
+            "unit": "mg"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "io_pd1"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_718e640b_l1"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 2
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_a21cb8cb"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_dabdc5be",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_dabdc5be",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "1719765",
+              "display": "pembrolizumab"
+            }
+          ],
+          "text": "pembrolizumab"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2017-06-23T00:00:00Z",
+          "end": "2017-06-24T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 200.0,
+            "unit": "mg"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "io_pd1"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_718e640b_l1"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 3
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_dabdc5be"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_91b0b39d",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_91b0b39d",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "1719765",
+              "display": "pembrolizumab"
+            }
+          ],
+          "text": "pembrolizumab"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2017-07-14T00:00:00Z",
+          "end": "2017-07-15T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 200.0,
+            "unit": "mg"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "io_pd1"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_718e640b_l1"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 4
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_91b0b39d"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_2c6ee3d4",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_2c6ee3d4",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "1719765",
+              "display": "pembrolizumab"
+            }
+          ],
+          "text": "pembrolizumab"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2017-08-04T00:00:00Z",
+          "end": "2017-08-05T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 200.0,
+            "unit": "mg"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "io_pd1"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_718e640b_l1"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 5
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_2c6ee3d4"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_9353d9d4",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_9353d9d4",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "1719765",
+              "display": "pembrolizumab"
+            }
+          ],
+          "text": "pembrolizumab"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2017-08-25T00:00:00Z",
+          "end": "2017-08-26T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 200.0,
+            "unit": "mg"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "io_pd1"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_718e640b_l1"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 6
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_9353d9d4"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_2c496a9b",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_2c496a9b",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "1719765",
+              "display": "pembrolizumab"
+            }
+          ],
+          "text": "pembrolizumab"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2017-09-15T00:00:00Z",
+          "end": "2017-09-16T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 200.0,
+            "unit": "mg"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "io_pd1"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_718e640b_l1"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 7
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_2c496a9b"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_ab21c02d",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_ab21c02d",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "1719765",
+              "display": "pembrolizumab"
+            }
+          ],
+          "text": "pembrolizumab"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2017-10-06T00:00:00Z",
+          "end": "2017-10-07T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 200.0,
+            "unit": "mg"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "io_pd1"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_718e640b_l1"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 8
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_ab21c02d"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_d18bd459",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_d18bd459",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "1719765",
+              "display": "pembrolizumab"
+            }
+          ],
+          "text": "pembrolizumab"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2017-10-27T00:00:00Z",
+          "end": "2017-10-28T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 200.0,
+            "unit": "mg"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "io_pd1"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_718e640b_l1"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 9
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_d18bd459"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_46665fc3",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_46665fc3",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "1719765",
+              "display": "pembrolizumab"
+            }
+          ],
+          "text": "pembrolizumab"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2017-11-17T00:00:00Z",
+          "end": "2017-11-18T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 200.0,
+            "unit": "mg"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "io_pd1"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_718e640b_l1"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 10
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_46665fc3"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_fb159a9b",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_fb159a9b",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "1719765",
+              "display": "pembrolizumab"
+            }
+          ],
+          "text": "pembrolizumab"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2017-12-08T00:00:00Z",
+          "end": "2017-12-09T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 200.0,
+            "unit": "mg"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "io_pd1"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_718e640b_l1"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 11
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_fb159a9b"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_ed720d01",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_ed720d01",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "1719765",
+              "display": "pembrolizumab"
+            }
+          ],
+          "text": "pembrolizumab"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2017-12-29T00:00:00Z",
+          "end": "2017-12-30T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 200.0,
+            "unit": "mg"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "io_pd1"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_718e640b_l1"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 12
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_ed720d01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_f33dbf08",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_f33dbf08",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "2555",
+              "display": "carboplatin"
+            }
+          ],
+          "text": "carboplatin"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2018-05-23T00:00:00Z",
+          "end": "2018-05-24T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 450.0,
+            "unit": "mg"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "chemotherapy_platinum"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_fc22b9f6_l2"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 1
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_f33dbf08"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_531d4aa3",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_531d4aa3",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "358274",
+              "display": "pemetrexed"
+            }
+          ],
+          "text": "pemetrexed"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2018-05-23T00:00:00Z",
+          "end": "2018-05-24T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 500.0,
+            "unit": "mg/m2"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "chemotherapy_pemetrexed"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_fc22b9f6_l2"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 1
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_531d4aa3"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_45b6531b",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_45b6531b",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "2555",
+              "display": "carboplatin"
+            }
+          ],
+          "text": "carboplatin"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2018-06-13T00:00:00Z",
+          "end": "2018-06-14T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 450.0,
+            "unit": "mg"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "chemotherapy_platinum"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_fc22b9f6_l2"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 2
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_45b6531b"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_b8d6b618",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_b8d6b618",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "358274",
+              "display": "pemetrexed"
+            }
+          ],
+          "text": "pemetrexed"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2018-06-13T00:00:00Z",
+          "end": "2018-06-14T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 500.0,
+            "unit": "mg/m2"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "chemotherapy_pemetrexed"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_fc22b9f6_l2"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 2
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_b8d6b618"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_9527635d",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_9527635d",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "2555",
+              "display": "carboplatin"
+            }
+          ],
+          "text": "carboplatin"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2018-07-04T00:00:00Z",
+          "end": "2018-07-05T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 450.0,
+            "unit": "mg"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "chemotherapy_platinum"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_fc22b9f6_l2"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 3
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_9527635d"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_55a5a19a",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_55a5a19a",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "358274",
+              "display": "pemetrexed"
+            }
+          ],
+          "text": "pemetrexed"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2018-07-04T00:00:00Z",
+          "end": "2018-07-05T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 500.0,
+            "unit": "mg/m2"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "chemotherapy_pemetrexed"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_fc22b9f6_l2"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 3
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_55a5a19a"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_b931b449",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_b931b449",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "2555",
+              "display": "carboplatin"
+            }
+          ],
+          "text": "carboplatin"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2018-07-25T00:00:00Z",
+          "end": "2018-07-26T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 450.0,
+            "unit": "mg"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "chemotherapy_platinum"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_fc22b9f6_l2"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 4
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_b931b449"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_4690bef8",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_4690bef8",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "358274",
+              "display": "pemetrexed"
+            }
+          ],
+          "text": "pemetrexed"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2018-07-25T00:00:00Z",
+          "end": "2018-07-26T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 500.0,
+            "unit": "mg/m2"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "chemotherapy_pemetrexed"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_fc22b9f6_l2"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 4
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_4690bef8"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_ae53346f",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_ae53346f",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "2555",
+              "display": "carboplatin"
+            }
+          ],
+          "text": "carboplatin"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2018-08-15T00:00:00Z",
+          "end": "2018-08-16T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 450.0,
+            "unit": "mg"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "chemotherapy_platinum"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_fc22b9f6_l2"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 5
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_ae53346f"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_71603ad5",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_71603ad5",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "358274",
+              "display": "pemetrexed"
+            }
+          ],
+          "text": "pemetrexed"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2018-08-15T00:00:00Z",
+          "end": "2018-08-16T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 500.0,
+            "unit": "mg/m2"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "chemotherapy_pemetrexed"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_fc22b9f6_l2"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 5
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_71603ad5"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_273b4308",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_273b4308",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "2555",
+              "display": "carboplatin"
+            }
+          ],
+          "text": "carboplatin"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2018-09-05T00:00:00Z",
+          "end": "2018-09-06T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 450.0,
+            "unit": "mg"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "chemotherapy_platinum"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_fc22b9f6_l2"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 6
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_273b4308"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_b29fb947",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_b29fb947",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "358274",
+              "display": "pemetrexed"
+            }
+          ],
+          "text": "pemetrexed"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2018-09-05T00:00:00Z",
+          "end": "2018-09-06T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 500.0,
+            "unit": "mg/m2"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "chemotherapy_pemetrexed"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_fc22b9f6_l2"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 6
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_b29fb947"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_af589b0e",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_af589b0e",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "2555",
+              "display": "carboplatin"
+            }
+          ],
+          "text": "carboplatin"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2018-09-26T00:00:00Z",
+          "end": "2018-09-27T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 450.0,
+            "unit": "mg"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "chemotherapy_platinum"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_fc22b9f6_l2"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 7
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_af589b0e"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_71414874",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_71414874",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "358274",
+              "display": "pemetrexed"
+            }
+          ],
+          "text": "pemetrexed"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2018-09-26T00:00:00Z",
+          "end": "2018-09-27T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 500.0,
+            "unit": "mg/m2"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "chemotherapy_pemetrexed"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_fc22b9f6_l2"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 7
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_71414874"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_406b4228",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_406b4228",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "2555",
+              "display": "carboplatin"
+            }
+          ],
+          "text": "carboplatin"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2018-10-17T00:00:00Z",
+          "end": "2018-10-18T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 450.0,
+            "unit": "mg"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "chemotherapy_platinum"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_fc22b9f6_l2"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 8
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_406b4228"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_392709f7",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_392709f7",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "358274",
+              "display": "pemetrexed"
+            }
+          ],
+          "text": "pemetrexed"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2018-10-17T00:00:00Z",
+          "end": "2018-10-18T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 500.0,
+            "unit": "mg/m2"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "chemotherapy_pemetrexed"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_fc22b9f6_l2"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 8
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_392709f7"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_0e2e4a8e",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_0e2e4a8e",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "134350",
+              "display": "docetaxel"
+            }
+          ],
+          "text": "docetaxel"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2018-12-31T00:00:00Z",
+          "end": "2019-01-01T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 75.0,
+            "unit": "mg/m2"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "chemotherapy_taxane"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_313f6966_l3"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 1
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_0e2e4a8e"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_b4527b22",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_b4527b22",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "134350",
+              "display": "docetaxel"
+            }
+          ],
+          "text": "docetaxel"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2019-01-21T00:00:00Z",
+          "end": "2019-01-22T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 75.0,
+            "unit": "mg/m2"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "chemotherapy_taxane"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_313f6966_l3"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 2
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_b4527b22"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_076f6290",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_076f6290",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "134350",
+              "display": "docetaxel"
+            }
+          ],
+          "text": "docetaxel"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2019-02-11T00:00:00Z",
+          "end": "2019-02-12T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 75.0,
+            "unit": "mg/m2"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "chemotherapy_taxane"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_313f6966_l3"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 3
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_076f6290"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_02326df3",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_02326df3",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "134350",
+              "display": "docetaxel"
+            }
+          ],
+          "text": "docetaxel"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2019-03-04T00:00:00Z",
+          "end": "2019-03-05T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 75.0,
+            "unit": "mg/m2"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "chemotherapy_taxane"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_313f6966_l3"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 4
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_02326df3"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_5ee1365c",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_5ee1365c",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "134350",
+              "display": "docetaxel"
+            }
+          ],
+          "text": "docetaxel"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2019-03-25T00:00:00Z",
+          "end": "2019-03-26T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 75.0,
+            "unit": "mg/m2"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "chemotherapy_taxane"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_313f6966_l3"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 5
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_5ee1365c"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_c2d96d74",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_c2d96d74",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "134350",
+              "display": "docetaxel"
+            }
+          ],
+          "text": "docetaxel"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2019-04-15T00:00:00Z",
+          "end": "2019-04-16T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 75.0,
+            "unit": "mg/m2"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "chemotherapy_taxane"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_313f6966_l3"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 6
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_c2d96d74"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_39a03fee",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_39a03fee",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "134350",
+              "display": "docetaxel"
+            }
+          ],
+          "text": "docetaxel"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2019-05-06T00:00:00Z",
+          "end": "2019-05-07T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 75.0,
+            "unit": "mg/m2"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "chemotherapy_taxane"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_313f6966_l3"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 7
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_39a03fee"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_45fdb893",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_45fdb893",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "134350",
+              "display": "docetaxel"
+            }
+          ],
+          "text": "docetaxel"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2019-05-27T00:00:00Z",
+          "end": "2019-05-28T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 75.0,
+            "unit": "mg/m2"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "chemotherapy_taxane"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_313f6966_l3"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 8
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_45fdb893"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med_2aa7fc3b",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "med_2aa7fc3b",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "134350",
+              "display": "docetaxel"
+            }
+          ],
+          "text": "docetaxel"
+        },
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "effectivePeriod": {
+          "start": "2019-06-17T00:00:00Z",
+          "end": "2019-06-18T00:00:00Z"
+        },
+        "dosage": {
+          "dose": {
+            "value": 75.0,
+            "unit": "mg/m2"
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "intravenous",
+                "display": "Intravenous"
+              }
+            ],
+            "text": "Intravenous"
+          }
+        },
+        "extension": [
+          {
+            "url": "urn:ehrzipper:drug-class",
+            "valueString": "chemotherapy_taxane"
+          },
+          {
+            "url": "urn:ehrzipper:regimen-id",
+            "valueString": "reg_313f6966_l3"
+          },
+          {
+            "url": "urn:ehrzipper:cycle",
+            "valueInteger": 9
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationAdministration/med_2aa7fc3b"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_a2c1c7a5",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_a2c1c7a5",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2017-04-16T00:00:00Z",
+          "end": "2017-04-16T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_a2c1c7a5"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_69acfead",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_69acfead",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2017-05-16T00:00:00Z",
+          "end": "2017-05-16T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_69acfead"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_df67fe26",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_df67fe26",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2017-06-15T00:00:00Z",
+          "end": "2017-06-15T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_df67fe26"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_98cd732f",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_98cd732f",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2017-07-08T00:00:00Z",
+          "end": "2017-07-08T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_98cd732f"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_22f3da6b",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_22f3da6b",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2017-08-10T00:00:00Z",
+          "end": "2017-08-10T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_22f3da6b"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_9a99dda0",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_9a99dda0",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2017-08-30T00:00:00Z",
+          "end": "2017-08-30T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_9a99dda0"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_e85c095f",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_e85c095f",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2017-10-02T00:00:00Z",
+          "end": "2017-10-02T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_e85c095f"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_ef89de1e",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_ef89de1e",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2017-10-27T00:00:00Z",
+          "end": "2017-10-27T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_ef89de1e"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_7b4d99de",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_7b4d99de",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2017-11-26T00:00:00Z",
+          "end": "2017-11-26T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_7b4d99de"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_2068d388",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_2068d388",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2017-12-24T00:00:00Z",
+          "end": "2017-12-24T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_2068d388"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_78cf7a3a",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_78cf7a3a",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2018-01-26T00:00:00Z",
+          "end": "2018-01-26T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_78cf7a3a"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_9eedf8df",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_9eedf8df",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2018-02-16T00:00:00Z",
+          "end": "2018-02-16T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_9eedf8df"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_67518b45",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_67518b45",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2018-03-23T00:00:00Z",
+          "end": "2018-03-23T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_67518b45"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_8e5a15f8",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_8e5a15f8",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2018-04-14T00:00:00Z",
+          "end": "2018-04-14T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_8e5a15f8"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_2aa09820",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_2aa09820",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2018-05-08T00:00:00Z",
+          "end": "2018-05-08T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_2aa09820"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_2ecb4778",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_2ecb4778",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2018-06-10T00:00:00Z",
+          "end": "2018-06-10T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_2ecb4778"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_3d80fe2e",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_3d80fe2e",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2018-07-12T00:00:00Z",
+          "end": "2018-07-12T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_3d80fe2e"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_a0a8c778",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_a0a8c778",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2018-08-09T00:00:00Z",
+          "end": "2018-08-09T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_a0a8c778"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_596d8ce1",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_596d8ce1",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2018-08-31T00:00:00Z",
+          "end": "2018-08-31T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_596d8ce1"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_1cfbbf39",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_1cfbbf39",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2018-09-29T00:00:00Z",
+          "end": "2018-09-29T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_1cfbbf39"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_7e8e4ab9",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_7e8e4ab9",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2018-10-31T00:00:00Z",
+          "end": "2018-10-31T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_7e8e4ab9"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_0a111b7a",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_0a111b7a",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2018-11-25T00:00:00Z",
+          "end": "2018-11-25T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_0a111b7a"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_b93e79e2",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_b93e79e2",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2018-12-26T00:00:00Z",
+          "end": "2018-12-26T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_b93e79e2"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_c9829a2e",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_c9829a2e",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2019-01-15T00:00:00Z",
+          "end": "2019-01-15T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_c9829a2e"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_52e0a2d0",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_52e0a2d0",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2019-02-16T00:00:00Z",
+          "end": "2019-02-16T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_52e0a2d0"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_fbf1d3aa",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_fbf1d3aa",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2019-03-16T00:00:00Z",
+          "end": "2019-03-16T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_fbf1d3aa"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_8521b4d7",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_8521b4d7",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2019-04-10T00:00:00Z",
+          "end": "2019-04-10T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_8521b4d7"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_1a5ee345",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_1a5ee345",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2019-05-14T00:00:00Z",
+          "end": "2019-05-14T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_1a5ee345"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_9ca02a38",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_9ca02a38",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2019-06-10T00:00:00Z",
+          "end": "2019-06-10T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_9ca02a38"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_42d2a3e7",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_42d2a3e7",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2019-07-05T00:00:00Z",
+          "end": "2019-07-05T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_42d2a3e7"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_a790652b",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_a790652b",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2019-08-01T00:00:00Z",
+          "end": "2019-08-01T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_a790652b"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_c1720a0b",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_c1720a0b",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2019-09-01T00:00:00Z",
+          "end": "2019-09-01T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_c1720a0b"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_65865619",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_65865619",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "office_visit",
+                "display": "Office Visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2019-09-25T00:00:00Z",
+          "end": "2019-09-25T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_65865619"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_854c2dbc",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_854c2dbc",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2019-10-31T00:00:00Z",
+          "end": "2019-10-31T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_854c2dbc"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_dee8fd3c",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_dee8fd3c",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2019-11-28T00:00:00Z",
+          "end": "2019-11-28T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_dee8fd3c"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:enc_8893fdc3",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc_8893fdc3",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:ehrzipper:encounter-type",
+                "code": "infusion",
+                "display": "Infusion"
+              }
+            ],
+            "text": "Infusion"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/pat_dc696e90"
+        },
+        "period": {
+          "start": "2019-12-20T00:00:00Z",
+          "end": "2019-12-20T00:00:00Z"
+        },
+        "serviceProvider": {
+          "display": "prac_0002"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:ehrzipper:specialty",
+                    "code": "medical_oncology",
+                    "display": "Medical Oncology"
+                  }
+                ],
+                "text": "Medical Oncology"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/enc_8893fdc3"
+      }
+    }
+  ]
+}

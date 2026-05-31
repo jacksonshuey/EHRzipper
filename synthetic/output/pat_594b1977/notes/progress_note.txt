@@ -1,0 +1,21 @@
+ONCOLOGY PROGRESS NOTE
+Date: 2019-10-26
+Patient: Johnson, Stanley | MRN: pat_594b1977
+
+SUBJECTIVE:
+Patient returns for cycle 6 of pembrolizumab. Reports mild cough and dyspnea on exertion; otherwise tolerating treatment.
+
+OBJECTIVE:
+ECOG performance status: 3
+Weight: 62.6 kg
+Laboratory values within acceptable parameters for treatment continuation.
+
+ASSESSMENT:
+large cell carcinoma NSCLC, stage IVA.
+Treatment: pembrolizumab (initiated 2019-07-25).
+Partial response to therapy. Primary tumor decreased 30% in size.
+
+PLAN:
+Continue pembrolizumab per current dosing schedule. Repeat CT chest in 6 weeks. CBC and CMP prior to next cycle.
+
+

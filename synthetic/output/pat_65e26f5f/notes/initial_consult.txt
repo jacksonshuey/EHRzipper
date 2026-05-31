@@ -1,0 +1,26 @@
+ONCOLOGY INITIAL CONSULTATION NOTE
+Date: 2017-03-17
+Patient: Freeman, Steven | DOB: 1951-09 | MRN: pat_65e26f5f
+Practice: prac_0006
+
+REASON FOR CONSULTATION:
+New diagnosis of advanced non-small cell lung cancer, stage IVB.
+
+HISTORY OF PRESENT ILLNESS:
+Steven Freeman is a 66-year-old male with a never-smoking history
+who presents with a new diagnosis of squamous cell carcinoma of the lung, stage IVB per
+AJCC 8th edition. Initial symptoms included progressive dyspnea and a 6-week
+history of hemoptysis. CT of the chest revealed a left lower lobe mass with mediastinal
+lymphadenopathy. PET/CT confirmed IVB disease.
+
+PERFORMANCE STATUS:
+ECOG performance status: 0
+
+MOLECULAR TESTING:
+EGFR: negative; ALK: negative; ROS1: negative; KRAS: negative; BRAF: negative; PD-L1: negative (TPS 0.4%)
+
+ASSESSMENT AND PLAN:
+Diagnosis: squamous cell carcinoma, stage IVB, metastatic recurrence after ned.
+Will initiate carboplatin + paclitaxel + pembrolizumab per guideline-concordant approach.
+
+Follow-up in 6 weeks for treatment monitoring.

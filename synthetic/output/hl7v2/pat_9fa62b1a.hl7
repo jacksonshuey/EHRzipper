@@ -1,0 +1,72 @@
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ADT^A01^ADT_A01|EHRZ0000010|P|2.5.1
+PID|1||pat_9fa62b1a||Herrera^Nicholas||194805|M||White|84959 Janet Cape Apt. 413^^South Joshuastad^MI^21820^USA|||||N||||pat_9fa62b1a
+PV1|1|O|prac_0001^ONCOLOGY^^^||||DR9999^ONCOLOGIST^SYNTHETIC^MD|||||||||||||20160523|20160523
+DG1|1|I10|C78.01|NSCLC Adenocarcinoma|20150926|F|||||||STAGE_IVA|||||||8140.3
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ORU^R01^ORU_R01|EHRZ0000011|P|2.5.1
+PID|1||pat_9fa62b1a||Herrera^Nicholas||194805|M||White|84959 Janet Cape Apt. 413^^South Joshuastad^MI^21820^USA|||||N||||pat_9fa62b1a
+OBR|1|ORD00001|FIL00001|26464-8^Leukocytes [#/volume] in Blood^LN||20160525|20160525||||||||F
+OBX|1|NM|26464-8^Leukocytes [#/volume] in Blood^LN||5.3|10*3/uL|5.0-10.5|||F|||20160525
+OBR|2|ORD00002|FIL00002|26515-7^Platelets [#/volume] in Blood^LN||20160525|20160525||||||||F
+OBX|1|NM|26515-7^Platelets [#/volume] in Blood^LN||182.9|10*3/uL|150.0-400.0|||F|||20160525
+OBR|3|ORD00003|FIL00003|718-7^Hemoglobin [Mass/volume] in Blood^LN||20160525|20160525||||||||F
+OBX|1|NM|718-7^Hemoglobin [Mass/volume] in Blood^LN||14.5|g/dL|12.0-17.5|||F|||20160525
+OBR|4|ORD00004|FIL00004|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||20160525|20160525||||||||F
+OBX|1|NM|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||1.2|mg/dL|0.6-1.2|||F|||20160525
+OBR|5|ORD00005|FIL00005|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||20160525|20160525||||||||F
+OBX|1|NM|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||72.9|U/L|7.0-56.0|||F|||20160525
+OBR|6|ORD00006|FIL00006|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||20160525|20160525||||||||F
+OBX|1|NM|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||3.9|g/dL|3.5-5.0|||F|||20160525
+OBR|7|ORD00007|FIL00007|26464-8^Leukocytes [#/volume] in Blood^LN||20160707|20160707||||||||F
+OBX|1|NM|26464-8^Leukocytes [#/volume] in Blood^LN||4.4|10*3/uL|5.0-10.5|||F|||20160707
+OBR|8|ORD00008|FIL00008|26515-7^Platelets [#/volume] in Blood^LN||20160707|20160707||||||||F
+OBX|1|NM|26515-7^Platelets [#/volume] in Blood^LN||104.6|10*3/uL|150.0-400.0|||F|||20160707
+OBR|9|ORD00009|FIL00009|718-7^Hemoglobin [Mass/volume] in Blood^LN||20160707|20160707||||||||F
+OBX|1|NM|718-7^Hemoglobin [Mass/volume] in Blood^LN||15.0|g/dL|12.0-17.5|||F|||20160707
+OBR|10|ORD00010|FIL00010|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||20160707|20160707||||||||F
+OBX|1|NM|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||2.2|mg/dL|0.6-1.2|||F|||20160707
+OBR|11|ORD00011|FIL00011|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||20160707|20160707||||||||F
+OBX|1|NM|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||35.8|U/L|7.0-56.0|||F|||20160707
+OBR|12|ORD00012|FIL00012|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||20160707|20160707||||||||F
+OBX|1|NM|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||4.0|g/dL|3.5-5.0|||F|||20160707
+OBR|13|ORD00013|FIL00013|26464-8^Leukocytes [#/volume] in Blood^LN||20160817|20160817||||||||F
+OBX|1|NM|26464-8^Leukocytes [#/volume] in Blood^LN||3.8|10*3/uL|5.0-10.5|||F|||20160817
+OBR|14|ORD00014|FIL00014|26515-7^Platelets [#/volume] in Blood^LN||20160817|20160817||||||||F
+OBX|1|NM|26515-7^Platelets [#/volume] in Blood^LN||143.7|10*3/uL|150.0-400.0|||F|||20160817
+OBR|15|ORD00015|FIL00015|718-7^Hemoglobin [Mass/volume] in Blood^LN||20160817|20160817||||||||F
+OBX|1|NM|718-7^Hemoglobin [Mass/volume] in Blood^LN||13.5|g/dL|12.0-17.5|||F|||20160817
+OBR|16|ORD00016|FIL00016|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||20160817|20160817||||||||F
+OBX|1|NM|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||1.4|mg/dL|0.6-1.2|||F|||20160817
+OBR|17|ORD00017|FIL00017|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||20160817|20160817||||||||F
+OBX|1|NM|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||109.1|U/L|7.0-56.0|||F|||20160817
+OBR|18|ORD00018|FIL00018|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||20160817|20160817||||||||F
+OBX|1|NM|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||3.8|g/dL|3.5-5.0|||F|||20160817
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ORU^R01^ORU_R01|EHRZ0000012|P|2.5.1
+PID|1||pat_9fa62b1a||Herrera^Nicholas||194805|M||White|84959 Janet Cape Apt. 413^^South Joshuastad^MI^21820^USA|||||N||||pat_9fa62b1a
+OBR|1|ORD00001|FIL00001|53041-0^EGFR gene mutations found [Identifier] in Blood or Tissue^LN||20160609|20160609||||||||F
+OBX|1|ST|53041-0^EGFR gene mutations found [Identifier] in Blood or Tissue^LN||negative|||||F|||20160609
+OBR|2|ORD00002|FIL00002|76042-8^ALK gene rearrangements [Presence] in Tissue by FISH^LN||20160608|20160608||||||||F
+OBX|1|ST|76042-8^ALK gene rearrangements [Presence] in Tissue by FISH^LN||negative|||||F|||20160608
+OBR|3|ORD00003|FIL00003|81202-7^ROS1 gene rearrangements [Presence] in Tissue by FISH^LN||20160608|20160608||||||||F
+OBX|1|ST|81202-7^ROS1 gene rearrangements [Presence] in Tissue by FISH^LN||negative|||||F|||20160608
+OBR|4|ORD00004|FIL00004|21704-5^KRAS gene mutations found [Identifier] in Blood or Tissue^LN||20160607|20160607||||||||F
+OBX|1|ST|21704-5^KRAS gene mutations found [Identifier] in Blood or Tissue^LN||KRAS G12C|||||F|||20160607
+OBR|5|ORD00005|FIL00005|21702-9^BRAF gene mutations found [Identifier] in Blood or Tissue^LN||20160609|20160609||||||||F
+OBX|1|ST|21702-9^BRAF gene mutations found [Identifier] in Blood or Tissue^LN||negative|||||F|||20160609
+OBR|6|ORD00006|FIL00006|85337-4^PD-L1 (CD274) [Presence] in Tissue by Immune stain^LN||20160609|20160609||||||||F
+OBX|1|ST|85337-4^PD-L1 (CD274) [Presence] in Tissue by Immune stain^LN||53%|||||F|||20160609
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||RDE^O11^RDE_O11|EHRZ0000013|P|2.5.1
+PID|1||pat_9fa62b1a||Herrera^Nicholas||194805|M||White|84959 Janet Cape Apt. 413^^South Joshuastad^MI^21820^USA|||||N||||pat_9fa62b1a
+RXA|0|1|20160608|20160609|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_e82da181_l1
+RXA|0|1|20160629|20160630|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_e82da181_l1
+RXA|0|1|20160720|20160721|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_e82da181_l1
+RXA|0|1|20160810|20160811|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_e82da181_l1
+RXA|0|1|20160831|20160901|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_e82da181_l1
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||MDM^T02^MDM_T02|EHRZ0000014|P|2.5.1
+PID|1||pat_9fa62b1a||Herrera^Nicholas||194805|M||White|84959 Janet Cape Apt. 413^^South Joshuastad^MI^21820^USA|||||N||||pat_9fa62b1a
+TXA|1|11529-5|TX|20160523|DR9999^ONCOLOGIST^SYNTHETIC^MD|20160523|||doc_pat_9fa62b1a_pathology||||||AU||||pat_9fa62b1a
+TXA|1|18748-4|TX|20160523|DR9999^ONCOLOGIST^SYNTHETIC^MD|20160523|||doc_pat_9fa62b1a_radiology||||||AU||||pat_9fa62b1a
+TXA|1|11488-4|TX|20160523|DR9999^ONCOLOGIST^SYNTHETIC^MD|20160523|||doc_pat_9fa62b1a_consult||||||AU||||pat_9fa62b1a

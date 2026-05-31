@@ -1,0 +1,26 @@
+ONCOLOGY INITIAL CONSULTATION NOTE
+Date: 2019-10-27
+Patient: Gould, Ashley | DOB: 1942-10 | MRN: pat_20249930
+Practice: prac_0001
+
+REASON FOR CONSULTATION:
+New diagnosis of advanced non-small cell lung cancer, stage IVB.
+
+HISTORY OF PRESENT ILLNESS:
+Ashley Gould is a 77-year-old female with a 75-pack-year smoking history
+who presents with a new diagnosis of adenocarcinoma of the lung, stage IVB per
+AJCC 8th edition. Initial symptoms included progressive dyspnea and a 6-week
+history of hemoptysis. CT of the chest revealed a right middle lobe mass with mediastinal
+lymphadenopathy. PET/CT confirmed IVB disease.
+
+PERFORMANCE STATUS:
+ECOG performance status: 1
+
+MOLECULAR TESTING:
+EGFR: negative; ALK: negative; ROS1: negative; KRAS: negative; BRAF: negative; PD-L1: low (TPS 19.6%)
+
+ASSESSMENT AND PLAN:
+Diagnosis: adenocarcinoma, stage IVB, progression from earlier stage.
+Treatment options discussed; plan for watchful waiting vs. clinical trial enrollment.
+
+Follow-up in 6 weeks for treatment monitoring.

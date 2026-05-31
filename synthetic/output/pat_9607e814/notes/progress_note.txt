@@ -1,0 +1,21 @@
+ONCOLOGY PROGRESS NOTE
+Date: 2015-03-28
+Patient: Fitzpatrick, Jacob | MRN: pat_9607e814
+
+SUBJECTIVE:
+Patient returns for cycle 4 of carboplatin, pemetrexed, pembrolizumab, gemcitabine. Patient tolerating therapy well. Mild peripheral neuropathy, grade 1.
+
+OBJECTIVE:
+ECOG performance status: 1
+Weight: 75.5 kg
+Laboratory values within acceptable parameters for treatment continuation.
+
+ASSESSMENT:
+adenosquamous carcinoma NSCLC, stage IVA.
+Treatment: carboplatin, pemetrexed, pembrolizumab, gemcitabine (initiated 2015-02-07).
+Stable disease per RECIST 1.1. Continuing current regimen.
+
+PLAN:
+Disease progression identified. Discontinue current carboplatin, pemetrexed, pembrolizumab, gemcitabine. Referral to clinical trial team. Consider second-line therapy options.
+
+Disease progression documented on 2015-07-23 with new involvement at: lung_contralateral, brain, lymph_node_distant.

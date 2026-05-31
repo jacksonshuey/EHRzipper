@@ -1,0 +1,21 @@
+ONCOLOGY PROGRESS NOTE
+Date: 2021-06-18
+Patient: Riggs, Amber | MRN: pat_0994fc0c
+
+SUBJECTIVE:
+Patient returns for cycle 5 of carboplatin, pemetrexed, pembrolizumab. Reports mild cough and dyspnea on exertion; otherwise tolerating treatment.
+
+OBJECTIVE:
+ECOG performance status: 1
+Weight: 64.8 kg
+Laboratory values within acceptable parameters for treatment continuation.
+
+ASSESSMENT:
+adenocarcinoma NSCLC, stage IVA.
+Treatment: carboplatin, pemetrexed, pembrolizumab (initiated 2021-04-16).
+Stable disease per RECIST 1.1. Continuing current regimen.
+
+PLAN:
+Continue carboplatin, pemetrexed, pembrolizumab per current dosing schedule. Repeat CT chest in 6 weeks. CBC and CMP prior to next cycle.
+
+

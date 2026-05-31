@@ -1,0 +1,21 @@
+ONCOLOGY PROGRESS NOTE
+Date: 2015-09-09
+Patient: Bailey, Brandi | MRN: pat_7bcbfa9a
+
+SUBJECTIVE:
+Patient returns for cycle 3 of carboplatin, paclitaxel, pembrolizumab, docetaxel. Reports mild cough and dyspnea on exertion; otherwise tolerating treatment.
+
+OBJECTIVE:
+ECOG performance status: 1
+Weight: 77.6 kg
+Laboratory values within acceptable parameters for treatment continuation.
+
+ASSESSMENT:
+squamous cell carcinoma NSCLC, stage IVB.
+Treatment: carboplatin, paclitaxel, pembrolizumab, docetaxel (initiated 2015-08-04).
+CT imaging shows stable disease. No new lesions identified.
+
+PLAN:
+Disease progression identified. Discontinue current carboplatin, paclitaxel, pembrolizumab, docetaxel. Referral to clinical trial team. Consider second-line therapy options.
+
+Disease progression documented on 2016-10-23 with new involvement at: brain, lymph_node_distant, adrenal.

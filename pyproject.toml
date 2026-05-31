@@ -1,0 +1,90 @@
+[project]
+name = "ehrzipper"
+version = "0.1.0"
+description = "Healthcare-extended Zippering — schema reconciliation for oncology data, Flatiron-style"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Jackson Shuey", email = "jacksonshuey@gmail.com" }]
+dependencies = [
+    "zipper",
+    "anthropic>=0.40.0",
+    "faker>=30.0.0",
+    "pandas>=2.0.0",
+    "plotly>=5.20.0",
+    "pydantic>=2.8.0",
+    "python-dotenv>=1.0.0",
+    "streamlit>=1.40.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0",
+    "pytest-cov>=5.0.0",
+    "ruff>=0.7.0",
+    "mypy>=1.13.0",
+]
+snowflake = [
+    "snowflake-connector-python>=3.12.0",
+    "snowflake-snowpark-python>=1.24.0",
+]
+integrations = [
+    "google-api-python-client>=2.140.0",
+    "google-auth-oauthlib>=1.2.0",
+    "dropbox>=12.0.0",
+]
+
+[tool.uv.sources]
+zipper = { git = "https://github.com/jacksonshuey/zipper.git", rev = "beb53d84725b0a70b2c1a17a63dbb2f28bbfc4c6" }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["ehrzipper", "synthetic", "derived", "ui", "abstraction", "ingest"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "UP", "B", "SIM", "RUF"]
+
+[tool.ruff.lint.per-file-ignores]
+"ui/pages/*.py" = ["N999"]  # Streamlit numbered-page naming convention
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_unused_ignores = true
+
+[[tool.mypy.overrides]]
+module = ["snowflake.*"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["streamlit.*", "plotly.*"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = [
+    "google.*",
+    "google_auth_oauthlib.*",
+    "googleapiclient.*",
+    "dropbox.*",
+]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "ehrzipper/tests"]
+asyncio_mode = "auto"
+markers = [
+    "snowflake: live Snowflake smoke tests (skipped unless SNOWFLAKE_ACCOUNT is set)",
+]
+
+[dependency-groups]
+dev = [
+    "pandas-stubs>=3.0.0.260204",
+]

@@ -1,0 +1,94 @@
+biomarker_id,patient_id,biomarker_name,result,result_value,result_date,test_method,specimen_type,lab_vendor,loinc_code
+bm_15756cf3,pat_9b7cedbc,egfr,negative,,2016-12-16,ngs,tissue,Foundation Medicine,53041-0
+bm_8f105ba1,pat_9b7cedbc,alk,negative,,2016-12-17,ngs,tissue,Guardant Health,76042-8
+bm_49cb2799,pat_9b7cedbc,ros1,negative,,2016-12-17,ngs,tissue,Guardant Health,81202-7
+bm_c7a9c447,pat_9b7cedbc,kras,positive,KRAS G12C,2016-12-18,ngs,tissue,Foundation Medicine,21704-5
+bm_32df7626,pat_9b7cedbc,braf,negative,,2016-12-19,ngs,tissue,Caris Life Sciences,21702-9
+bm_0f8be6fb,pat_9b7cedbc,pdl1,negative,0%,2016-12-18,ihc,tissue,Guardant Health,85337-4
+bm_170281c3,pat_1535553c,egfr,negative,,2016-07-08,ngs,tissue,Guardant Health,53041-0
+bm_bd43155b,pat_1535553c,alk,negative,,2016-07-06,ngs,tissue,Guardant Health,76042-8
+bm_fcadef43,pat_1535553c,ros1,negative,,2016-07-07,ngs,tissue,Guardant Health,81202-7
+bm_dd48853b,pat_1535553c,kras,positive,KRAS G12C,2016-07-05,ngs,tissue,Foundation Medicine,21704-5
+bm_ff8fb8dc,pat_1535553c,braf,negative,,2016-07-07,ngs,tissue,Guardant Health,21702-9
+bm_87a0df54,pat_1535553c,pdl1,low,12%,2016-07-08,ihc,tissue,Foundation Medicine,85337-4
+bm_b87d4dd7,pat_b7c65a04,egfr,negative,,2021-09-12,ngs,tissue,Caris Life Sciences,53041-0
+bm_d3d1eab9,pat_b7c65a04,alk,negative,,2021-09-14,ngs,tissue,Foundation Medicine,76042-8
+bm_05232bad,pat_b7c65a04,ros1,negative,,2021-09-14,ngs,tissue,Foundation Medicine,81202-7
+bm_de1fc912,pat_b7c65a04,kras,negative,,2021-09-11,ngs,tissue,Guardant Health,21704-5
+bm_97d6cd9b,pat_b7c65a04,braf,negative,,2021-09-13,ngs,tissue,Foundation Medicine,21702-9
+bm_8f4bcee4,pat_b7c65a04,pdl1,high,86%,2021-09-14,ihc,tissue,Guardant Health,85337-4
+bm_984032a6,pat_36ad2b67,egfr,negative,,2019-06-09,ngs,tissue,Caris Life Sciences,53041-0
+bm_0ac9fa20,pat_36ad2b67,alk,negative,,2019-06-09,ngs,tissue,Guardant Health,76042-8
+bm_3c5c5c02,pat_36ad2b67,ros1,negative,,2019-06-10,ngs,tissue,Foundation Medicine,81202-7
+bm_14416952,pat_36ad2b67,kras,negative,,2019-06-10,ngs,tissue,Foundation Medicine,21704-5
+bm_2b3f98ba,pat_36ad2b67,braf,negative,,2019-06-11,ngs,tissue,Guardant Health,21702-9
+bm_007f9917,pat_36ad2b67,pdl1,high,74%,2019-06-11,ihc,tissue,Foundation Medicine,85337-4
+bm_274aa5a2,pat_9607e814,egfr,negative,,2015-01-15,ngs,tissue,Caris Life Sciences,53041-0
+bm_4bffa23a,pat_9607e814,alk,negative,,2015-01-16,ngs,tissue,Guardant Health,76042-8
+bm_01e640e6,pat_9607e814,ros1,negative,,2015-01-14,ngs,tissue,Foundation Medicine,81202-7
+bm_60d755c1,pat_9607e814,kras,negative,,2015-01-16,ngs,tissue,Foundation Medicine,21704-5
+bm_6107bdba,pat_9607e814,braf,negative,,2015-01-16,ngs,tissue,Caris Life Sciences,21702-9
+bm_3fffe9d3,pat_9607e814,pdl1,low,44%,2015-01-16,ihc,tissue,Caris Life Sciences,85337-4
+bm_c095db2f,pat_a5bec111,egfr,negative,,2014-01-19,ngs,tissue,Guardant Health,53041-0
+bm_8ef7917d,pat_a5bec111,alk,negative,,2014-01-16,ngs,tissue,Caris Life Sciences,76042-8
+bm_c9be37e7,pat_a5bec111,ros1,negative,,2014-01-16,ngs,tissue,Caris Life Sciences,81202-7
+bm_76e4bdf4,pat_a5bec111,kras,negative,,2014-01-18,ngs,tissue,Caris Life Sciences,21704-5
+bm_492a3056,pat_a5bec111,braf,negative,,2014-01-19,ngs,tissue,Guardant Health,21702-9
+bm_37d7da89,pat_b6ffeb06,egfr,negative,,2014-03-24,ngs,tissue,Foundation Medicine,53041-0
+bm_55996547,pat_b6ffeb06,alk,negative,,2014-03-26,ngs,tissue,Foundation Medicine,76042-8
+bm_2e9e48b1,pat_b6ffeb06,ros1,negative,,2014-03-27,ngs,tissue,Foundation Medicine,81202-7
+bm_eb004b66,pat_b6ffeb06,kras,negative,,2014-03-26,ngs,tissue,Caris Life Sciences,21704-5
+bm_295e7868,pat_b6ffeb06,braf,negative,,2014-03-24,ngs,tissue,Guardant Health,21702-9
+bm_7d4ebf02,pat_b6ffeb06,pdl1,low,3%,2014-03-25,ihc,tissue,Caris Life Sciences,85337-4
+bm_c6244a41,pat_c9701516,egfr,negative,,2019-01-22,ngs,tissue,Caris Life Sciences,53041-0
+bm_25547ed3,pat_c9701516,alk,negative,,2019-01-23,ngs,tissue,Caris Life Sciences,76042-8
+bm_d01edd15,pat_c9701516,ros1,negative,,2019-01-25,ngs,tissue,Foundation Medicine,81202-7
+bm_62bfc8e6,pat_c9701516,kras,positive,KRAS G12C,2019-01-23,ngs,tissue,Caris Life Sciences,21704-5
+bm_d0507b93,pat_c9701516,braf,negative,,2019-01-22,ngs,tissue,Caris Life Sciences,21702-9
+bm_0fd5212b,pat_c9701516,pdl1,low,11%,2019-01-22,ihc,tissue,Caris Life Sciences,85337-4
+bm_84a9a74f,pat_c78a52f5,egfr,negative,,2019-10-10,ngs,tissue,Foundation Medicine,53041-0
+bm_0bdef78b,pat_c78a52f5,alk,negative,,2019-10-11,ngs,tissue,Caris Life Sciences,76042-8
+bm_cf1a9983,pat_c78a52f5,ros1,negative,,2019-10-10,ngs,tissue,Guardant Health,81202-7
+bm_72707fed,pat_c78a52f5,kras,negative,,2019-10-09,ngs,tissue,Guardant Health,21704-5
+bm_b9d3ccd6,pat_c78a52f5,braf,negative,,2019-10-11,ngs,tissue,Foundation Medicine,21702-9
+bm_7c53f621,pat_c78a52f5,pdl1,negative,1%,2019-10-09,ihc,tissue,Caris Life Sciences,85337-4
+bm_7d5dfe01,pat_57506e4b,egfr,negative,,2019-05-01,ngs,tissue,Caris Life Sciences,53041-0
+bm_d6ae00f6,pat_57506e4b,alk,negative,,2019-05-02,ngs,tissue,Foundation Medicine,76042-8
+bm_9cd9808b,pat_57506e4b,ros1,negative,,2019-05-04,ngs,tissue,Guardant Health,81202-7
+bm_b631c2f1,pat_57506e4b,kras,positive,KRAS G12C,2019-05-02,ngs,tissue,Caris Life Sciences,21704-5
+bm_17acb6f1,pat_57506e4b,braf,negative,,2019-05-03,ngs,tissue,Caris Life Sciences,21702-9
+bm_74dc0827,pat_57506e4b,pdl1,high,95%,2019-05-02,ihc,tissue,Foundation Medicine,85337-4
+bm_a39d88d5,pat_a07fd240,egfr,negative,,2016-12-28,ngs,tissue,Guardant Health,53041-0
+bm_edfc7052,pat_a07fd240,alk,negative,,2016-12-27,ngs,tissue,Foundation Medicine,76042-8
+bm_0aaa8581,pat_a07fd240,ros1,negative,,2016-12-25,ngs,tissue,Foundation Medicine,81202-7
+bm_e4e0015f,pat_a07fd240,kras,negative,,2016-12-28,ngs,tissue,Foundation Medicine,21704-5
+bm_521ca97e,pat_a07fd240,braf,negative,,2016-12-28,ngs,tissue,Guardant Health,21702-9
+bm_396dfba7,pat_a07fd240,pdl1,low,44%,2016-12-26,ihc,tissue,Foundation Medicine,85337-4
+bm_0777dd3c,pat_20249930,egfr,negative,,2019-11-18,ngs,tissue,Guardant Health,53041-0
+bm_25ba0fbd,pat_20249930,alk,negative,,2019-11-16,ngs,tissue,Caris Life Sciences,76042-8
+bm_e827e8c1,pat_20249930,ros1,negative,,2019-11-16,ngs,tissue,Foundation Medicine,81202-7
+bm_0b2c43dc,pat_20249930,kras,negative,,2019-11-18,ngs,tissue,Guardant Health,21704-5
+bm_5fc2079a,pat_20249930,braf,negative,,2019-11-15,ngs,tissue,Guardant Health,21702-9
+bm_bc4725ec,pat_20249930,pdl1,low,20%,2019-11-17,ihc,tissue,Guardant Health,85337-4
+bm_86167bf5,pat_cd89ab66,egfr,negative,,2016-07-13,ngs,tissue,Guardant Health,53041-0
+bm_6f63939d,pat_cd89ab66,alk,negative,,2016-07-13,ngs,tissue,Foundation Medicine,76042-8
+bm_01c9fbea,pat_cd89ab66,ros1,negative,,2016-07-13,ngs,tissue,Caris Life Sciences,81202-7
+bm_a7046f52,pat_cd89ab66,kras,negative,,2016-07-12,ngs,tissue,Foundation Medicine,21704-5
+bm_fc6cc2a0,pat_cd89ab66,braf,negative,,2016-07-13,ngs,tissue,Caris Life Sciences,21702-9
+bm_5e9236eb,pat_cd89ab66,pdl1,low,35%,2016-07-13,ihc,tissue,Guardant Health,85337-4
+bm_c3194e2d,pat_0b01ea9d,egfr,negative,,2017-05-08,ngs,tissue,Caris Life Sciences,53041-0
+bm_20ee8660,pat_0b01ea9d,alk,negative,,2017-05-07,ngs,tissue,Foundation Medicine,76042-8
+bm_a31d4f74,pat_0b01ea9d,ros1,negative,,2017-05-05,ngs,tissue,Foundation Medicine,81202-7
+bm_528fd8c8,pat_0b01ea9d,kras,negative,,2017-05-06,ngs,tissue,Caris Life Sciences,21704-5
+bm_ac516566,pat_0b01ea9d,braf,negative,,2017-05-06,ngs,tissue,Guardant Health,21702-9
+bm_288cac05,pat_95422bdf,egfr,positive,EGFR exon 19 deletion,2021-08-07,ngs,tissue,Foundation Medicine,53041-0
+bm_e3ef18bd,pat_95422bdf,alk,negative,,2021-08-07,ngs,tissue,Guardant Health,76042-8
+bm_d9d86a71,pat_95422bdf,ros1,negative,,2021-08-06,ngs,tissue,Guardant Health,81202-7
+bm_a00aed06,pat_95422bdf,kras,negative,,2021-08-07,ngs,tissue,Foundation Medicine,21704-5
+bm_ca0a3e3e,pat_95422bdf,braf,negative,,2021-08-06,ngs,tissue,Foundation Medicine,21702-9
+bm_7f40f29d,pat_95422bdf,pdl1,high,62%,2021-08-08,ihc,tissue,Caris Life Sciences,85337-4
+bm_686cd8e7,pat_9ec9aa87,egfr,negative,,2021-07-18,ngs,tissue,Guardant Health,53041-0
+bm_55cfff2b,pat_9ec9aa87,alk,negative,,2021-07-21,ngs,tissue,Foundation Medicine,76042-8
+bm_ab8192de,pat_9ec9aa87,ros1,negative,,2021-07-18,ngs,tissue,Guardant Health,81202-7
+bm_bdd68f1a,pat_9ec9aa87,kras,negative,,2021-07-19,ngs,tissue,Foundation Medicine,21704-5
+bm_85bd2f6e,pat_9ec9aa87,braf,negative,,2021-07-18,ngs,tissue,Guardant Health,21702-9

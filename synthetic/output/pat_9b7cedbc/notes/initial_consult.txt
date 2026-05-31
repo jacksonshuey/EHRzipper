@@ -1,0 +1,26 @@
+ONCOLOGY INITIAL CONSULTATION NOTE
+Date: 2016-12-08
+Patient: Campos, Katherine | DOB: 1958-05 | MRN: pat_9b7cedbc
+Practice: prac_0005
+
+REASON FOR CONSULTATION:
+New diagnosis of advanced non-small cell lung cancer, stage IIIC.
+
+HISTORY OF PRESENT ILLNESS:
+Katherine Campos is a 58-year-old female with a 75-pack-year smoking history
+who presents with a new diagnosis of squamous cell carcinoma of the lung, stage IIIC per
+AJCC 8th edition. Initial symptoms included progressive dyspnea and a 6-week
+history of hemoptysis. CT of the chest revealed a right upper lobe mass with mediastinal
+lymphadenopathy. PET/CT confirmed IIIC disease.
+
+PERFORMANCE STATUS:
+ECOG performance status: 0
+
+MOLECULAR TESTING:
+EGFR: negative; ALK: negative; ROS1: negative; KRAS: positive; BRAF: negative; PD-L1: negative (TPS 0.3%)
+
+ASSESSMENT AND PLAN:
+Diagnosis: squamous cell carcinoma, stage IIIC, progression from earlier stage.
+Will initiate carboplatin + paclitaxel + pembrolizumab per guideline-concordant approach.
+
+Follow-up in 4 weeks for treatment monitoring.

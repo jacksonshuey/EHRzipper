@@ -1,0 +1,26 @@
+ONCOLOGY INITIAL CONSULTATION NOTE
+Date: 2020-10-16
+Patient: Walls, Brandi | DOB: 1950-12 | MRN: pat_7a7c51f6
+Practice: prac_0002
+
+REASON FOR CONSULTATION:
+New diagnosis of advanced non-small cell lung cancer, stage IVA.
+
+HISTORY OF PRESENT ILLNESS:
+Brandi Walls is a 70-year-old female with a 45-pack-year smoking history
+who presents with a new diagnosis of squamous cell carcinoma of the lung, stage IVA per
+AJCC 8th edition. Initial symptoms included progressive dyspnea and a 6-week
+history of hemoptysis. CT of the chest revealed a right lower lobe mass with mediastinal
+lymphadenopathy. PET/CT confirmed IVA disease.
+
+PERFORMANCE STATUS:
+ECOG performance status: 1
+
+MOLECULAR TESTING:
+EGFR: negative; ALK: negative; ROS1: negative; KRAS: negative; BRAF: negative; PD-L1: negative (TPS 0.0%)
+
+ASSESSMENT AND PLAN:
+Diagnosis: squamous cell carcinoma, stage IVA, progression from earlier stage.
+Treatment options discussed; plan for watchful waiting vs. clinical trial enrollment.
+
+Follow-up in 6 weeks for treatment monitoring.

@@ -1,0 +1,21 @@
+ONCOLOGY PROGRESS NOTE
+Date: 2019-05-18
+Patient: Manning, Stephanie | MRN: pat_c9701516
+
+SUBJECTIVE:
+Patient returns for cycle 6 of carboplatin, pemetrexed, pembrolizumab, gemcitabine. No significant side effects. Appetite improved since last visit.
+
+OBJECTIVE:
+ECOG performance status: 1
+Weight: 62.5 kg
+Laboratory values within acceptable parameters for treatment continuation.
+
+ASSESSMENT:
+adenocarcinoma NSCLC, stage IVB.
+Treatment: carboplatin, pemetrexed, pembrolizumab, gemcitabine (initiated 2019-02-16).
+Partial response to therapy. Primary tumor decreased 30% in size.
+
+PLAN:
+Disease progression identified. Discontinue current carboplatin, pemetrexed, pembrolizumab, gemcitabine. Referral to clinical trial team. Consider second-line therapy options.
+
+Disease progression documented on 2019-11-11 with new involvement at: liver.

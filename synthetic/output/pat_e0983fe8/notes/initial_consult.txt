@@ -1,0 +1,26 @@
+ONCOLOGY INITIAL CONSULTATION NOTE
+Date: 2018-09-03
+Patient: Phillips, Jennifer | DOB: 1965-05 | MRN: pat_e0983fe8
+Practice: prac_0001
+
+REASON FOR CONSULTATION:
+New diagnosis of advanced non-small cell lung cancer, stage IIIB.
+
+HISTORY OF PRESENT ILLNESS:
+Jennifer Phillips is a 53-year-old female with a 36-pack-year smoking history
+who presents with a new diagnosis of sarcomatoid carcinoma of the lung, stage IIIB per
+AJCC 8th edition. Initial symptoms included progressive dyspnea and a 6-week
+history of hemoptysis. CT of the chest revealed a right upper lobe mass with mediastinal
+lymphadenopathy. PET/CT confirmed IIIB disease.
+
+PERFORMANCE STATUS:
+ECOG performance status: 1
+
+MOLECULAR TESTING:
+EGFR: negative; ALK: negative; ROS1: negative; KRAS: negative; BRAF: negative; PD-L1: negative (TPS 0.4%)
+
+ASSESSMENT AND PLAN:
+Diagnosis: sarcomatoid carcinoma, stage IIIB, metastatic recurrence after ned.
+Will initiate carboplatin + paclitaxel + pembrolizumab per guideline-concordant approach.
+
+Follow-up in 3 weeks for treatment monitoring.

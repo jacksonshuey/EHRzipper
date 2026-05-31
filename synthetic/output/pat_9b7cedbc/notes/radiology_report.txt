@@ -1,0 +1,34 @@
+RADIOLOGY REPORT — CT CHEST WITH CONTRAST
+Study Date: 2016-12-08
+Patient: Campos, Katherine | MRN: pat_9b7cedbc
+Ordering Provider: Medical Oncology
+
+INDICATION:
+squamous cell carcinoma lung cancer, stage IIIC. Staging evaluation.
+
+COMPARISON:
+No prior CT available.
+
+TECHNIQUE:
+Helical CT acquisition through the chest with IV contrast.
+
+FINDINGS:
+Primary tumor: left upper lobe mass measuring 4.6 cm in greatest dimension,
+with spiculated margins. No evidence of chest wall invasion.
+
+Mediastinum/Hilar: Enlarged mediastinal lymph nodes measuring up to 1.8 cm,
+most prominent in the right paratracheal station (4R). Bilateral mediastinal adenopathy raising concern for N2 or N3 nodal involvement.
+
+Pleural spaces: No pleural effusion.
+
+Pulmonary vasculature: Normal.
+
+Bones: No bone lesions identified on current study.
+
+IMPRESSION:
+1. 4.6 cm left upper lobe primary lung mass consistent with known squamous cell carcinoma,
+   stage IIIC.
+2. Mediastinal lymphadenopathy as described above.
+3. Pleural effusion as above, may warrant thoracentesis.
+
+Disease progression documented on 2017-08-08 with new involvement at: brain, adrenal.

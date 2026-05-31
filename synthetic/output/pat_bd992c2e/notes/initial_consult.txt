@@ -1,0 +1,26 @@
+ONCOLOGY INITIAL CONSULTATION NOTE
+Date: 2022-11-21
+Patient: Bell, Zachary | DOB: 1955-10 | MRN: pat_bd992c2e
+Practice: prac_0001
+
+REASON FOR CONSULTATION:
+New diagnosis of advanced non-small cell lung cancer, stage IIIC.
+
+HISTORY OF PRESENT ILLNESS:
+Zachary Bell is a 67-year-old male with a 53-pack-year smoking history
+who presents with a new diagnosis of adenocarcinoma of the lung, stage IIIC per
+AJCC 8th edition. Initial symptoms included progressive dyspnea and a 6-week
+history of hemoptysis. CT of the chest revealed a left upper lobe mass with mediastinal
+lymphadenopathy. PET/CT confirmed IIIC disease.
+
+PERFORMANCE STATUS:
+ECOG performance status: 0
+
+MOLECULAR TESTING:
+EGFR: negative; ALK: negative; ROS1: negative; KRAS: negative; BRAF: negative; PD-L1: low (TPS 20.7%)
+
+ASSESSMENT AND PLAN:
+Diagnosis: adenocarcinoma, stage IIIC, progression from earlier stage.
+Will initiate carboplatin + pemetrexed + pembrolizumab per guideline-concordant approach.
+
+Follow-up in 4 weeks for treatment monitoring.

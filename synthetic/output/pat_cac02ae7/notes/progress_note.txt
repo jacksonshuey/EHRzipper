@@ -1,0 +1,21 @@
+ONCOLOGY PROGRESS NOTE
+Date: 2022-01-10
+Patient: Henry, Sheena | MRN: pat_cac02ae7
+
+SUBJECTIVE:
+Patient returns for cycle 5 of carboplatin, pemetrexed, pembrolizumab, adagrasib. Patient reports mild fatigue, grade 1. No nausea or vomiting.
+
+OBJECTIVE:
+ECOG performance status: 1
+Weight: 81.1 kg
+Laboratory values within acceptable parameters for treatment continuation.
+
+ASSESSMENT:
+adenocarcinoma NSCLC, stage IVA.
+Treatment: carboplatin, pemetrexed, pembrolizumab, adagrasib (initiated 2021-10-31).
+Stable disease per RECIST 1.1. Continuing current regimen.
+
+PLAN:
+Disease progression identified. Discontinue current carboplatin, pemetrexed, pembrolizumab, adagrasib. Referral to clinical trial team. Consider second-line therapy options.
+
+Disease progression documented on 2022-09-05 with new involvement at: brain.

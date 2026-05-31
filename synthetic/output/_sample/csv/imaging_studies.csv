@@ -1,0 +1,4 @@
+imaging_id,patient_id,study_date,modality,body_region
+img_8f10bd6f,pat_2ec4ec15,2020-02-14,pet_ct,whole_body
+img_78b932bc,pat_2ec4ec15,2020-05-28,ct,chest
+img_cb8d613e,pat_2ec4ec15,2020-12-06,ct,chest

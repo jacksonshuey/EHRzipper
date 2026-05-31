@@ -1,0 +1,21 @@
+ONCOLOGY PROGRESS NOTE
+Date: 2016-11-21
+Patient: Morales, Samantha | MRN: pat_43022bf2
+
+SUBJECTIVE:
+Patient returns for cycle 6 of osimertinib, docetaxel. Patient reports mild fatigue, grade 1. No nausea or vomiting.
+
+OBJECTIVE:
+ECOG performance status: 1
+Weight: 78.0 kg
+Laboratory values within acceptable parameters for treatment continuation.
+
+ASSESSMENT:
+adenocarcinoma NSCLC, stage IVA.
+Treatment: osimertinib, docetaxel (initiated 2016-08-28).
+CT imaging shows stable disease. No new lesions identified.
+
+PLAN:
+Disease progression identified. Discontinue current osimertinib, docetaxel. Referral to clinical trial team. Consider second-line therapy options.
+
+Disease progression documented on 2017-07-23 with new involvement at: liver.

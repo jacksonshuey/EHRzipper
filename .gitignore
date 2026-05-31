@@ -1,0 +1,99 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Venv
+.venv/
+venv/
+env/
+ENV/
+
+# uv
+.uv/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.cache
+
+# Type checking
+.mypy_cache/
+.ruff_cache/
+
+# Env / secrets
+.env
+.env.local
+.env.*.local
+
+# dbt
+dbt_project/target/
+dbt_project/dbt_packages/
+dbt_project/logs/
+dbt_project/.user.yml
+
+# Snowflake
+.snowflake/
+
+# Local SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Local data dumps
+data/
+*.parquet
+synthetic_data/output/
+
+# Synthetic patient output is committed as the demo dataset (fully synthetic,
+# no PHI) so the hosted app has data without a generation step.
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local agent / assistant state
+.claude/
+
+# Internal-only docs / private reference material (not part of the public project)
+reference/
+CLAUDE.md
+BUILD_PLAN.md
+
+# Synthea outputs (top-level raw generator output only)
+synthea/
+/output/
+
+# Snowflake key-pair auth (never commit)
+.secrets/
+*.p8
+
+# Local Streamlit machine config
+.streamlit/credentials.toml
+# OAuth client secrets for the Import page connectors (never commit)
+.streamlit/secrets.toml

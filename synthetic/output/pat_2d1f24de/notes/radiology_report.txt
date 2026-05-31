@@ -1,0 +1,34 @@
+RADIOLOGY REPORT — CT CHEST WITH CONTRAST
+Study Date: 2016-12-02
+Patient: Jones, Samantha | MRN: pat_2d1f24de
+Ordering Provider: Medical Oncology
+
+INDICATION:
+squamous cell carcinoma lung cancer, stage IVA. Staging evaluation.
+
+COMPARISON:
+No prior CT available.
+
+TECHNIQUE:
+Helical CT acquisition through the chest with IV contrast.
+
+FINDINGS:
+Primary tumor: right upper lobe mass measuring 6.8 cm in greatest dimension,
+with spiculated margins. No evidence of chest wall invasion.
+
+Mediastinum/Hilar: Enlarged mediastinal lymph nodes measuring up to 1.8 cm,
+most prominent in the right paratracheal station (4R). Mediastinal nodes mildly enlarged.
+
+Pleural spaces: No pleural effusion.
+
+Pulmonary vasculature: Normal.
+
+Bones: Lytic lesion noted in T7 vertebral body, concerning for metastasis.
+
+IMPRESSION:
+1. 6.8 cm right upper lobe primary lung mass consistent with known squamous cell carcinoma,
+   stage IVA.
+2. Mediastinal lymphadenopathy as described above.
+3. Pleural effusion as above, may warrant thoracentesis.
+
+Disease progression documented on 2017-05-20 with new involvement at: adrenal, lymph_node_distant, bone.

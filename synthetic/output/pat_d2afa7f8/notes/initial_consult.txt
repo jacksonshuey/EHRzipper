@@ -1,0 +1,26 @@
+ONCOLOGY INITIAL CONSULTATION NOTE
+Date: 2018-09-23
+Patient: Herrera, Corey | DOB: 1947-04 | MRN: pat_d2afa7f8
+Practice: prac_0007
+
+REASON FOR CONSULTATION:
+New diagnosis of advanced non-small cell lung cancer, stage IIIC.
+
+HISTORY OF PRESENT ILLNESS:
+Corey Herrera is a 71-year-old male with a 46-pack-year smoking history
+who presents with a new diagnosis of adenocarcinoma of the lung, stage IIIC per
+AJCC 8th edition. Initial symptoms included progressive dyspnea and a 6-week
+history of hemoptysis. CT of the chest revealed a right middle lobe mass with mediastinal
+lymphadenopathy. PET/CT confirmed IIIC disease.
+
+PERFORMANCE STATUS:
+ECOG performance status: 0
+
+MOLECULAR TESTING:
+EGFR: negative; ALK: negative; ROS1: negative; KRAS: negative; BRAF: negative; PD-L1: high (TPS 90.7%)
+
+ASSESSMENT AND PLAN:
+Diagnosis: adenocarcinoma, stage IIIC, progression from earlier stage.
+Will initiate pembrolizumab per guideline-concordant approach.
+
+Follow-up in 3 weeks for treatment monitoring.

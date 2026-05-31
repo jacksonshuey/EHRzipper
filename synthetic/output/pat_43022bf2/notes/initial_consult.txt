@@ -1,0 +1,26 @@
+ONCOLOGY INITIAL CONSULTATION NOTE
+Date: 2016-07-18
+Patient: Morales, Samantha | DOB: 1949-02 | MRN: pat_43022bf2
+Practice: prac_0007
+
+REASON FOR CONSULTATION:
+New diagnosis of advanced non-small cell lung cancer, stage IVA.
+
+HISTORY OF PRESENT ILLNESS:
+Samantha Morales is a 67-year-old female with a 12-pack-year smoking history
+who presents with a new diagnosis of adenocarcinoma of the lung, stage IVA per
+AJCC 8th edition. Initial symptoms included progressive dyspnea and a 6-week
+history of hemoptysis. CT of the chest revealed a left upper lobe mass with mediastinal
+lymphadenopathy. PET/CT confirmed IVA disease.
+
+PERFORMANCE STATUS:
+ECOG performance status: 1
+
+MOLECULAR TESTING:
+EGFR: positive; ALK: negative; ROS1: negative; KRAS: negative; BRAF: negative; PD-L1: low (TPS 34.4%)
+
+ASSESSMENT AND PLAN:
+Diagnosis: adenocarcinoma, stage IVA, progression from earlier stage.
+Will initiate osimertinib per guideline-concordant approach.
+
+Follow-up in 3 weeks for treatment monitoring.

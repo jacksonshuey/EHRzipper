@@ -1,0 +1,21 @@
+ONCOLOGY PROGRESS NOTE
+Date: 2016-02-12
+Patient: Brooks, Cristian | MRN: pat_3dc96eea
+
+SUBJECTIVE:
+Patient returns for cycle 6 of pembrolizumab. Patient reports mild fatigue, grade 1. No nausea or vomiting.
+
+OBJECTIVE:
+ECOG performance status: 2
+Weight: 74.3 kg
+Laboratory values within acceptable parameters for treatment continuation.
+
+ASSESSMENT:
+adenocarcinoma NSCLC, stage IVA.
+Treatment: pembrolizumab (initiated 2015-11-23).
+Stable disease per RECIST 1.1. Continuing current regimen.
+
+PLAN:
+Continue pembrolizumab per current dosing schedule. Repeat CT chest in 6 weeks. CBC and CMP prior to next cycle.
+
+

@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EHRzipper × zipper — live reconciliation flow</title>
+<style>
+  :root{
+    --bg:#0a0e14; --bg2:#0d1219; --panel:#111824; --panel2:#0f1520;
+    --border:#1e2836; --border2:#26344a;
+    --text:#d8e0ec; --muted:#7d8aa0; --faint:#5a6678;
+    --teal:#00b3b3; --teal-dim:#0a6b6b;     /* deterministic lookup */
+    --blue:#5b8def; --blue-dim:#1B3A6B;      /* llm router */
+    --amber:#f0a93b;                          /* normalize / transform */
+    --green:#46d39a;                          /* join */
+    --violet:#b06cf0;                         /* append / new canonical */
+    --cache:#90a2c0;                          /* cache hit */
+    --fhir:#ff7a59; --hl7:#5b8def; --csv:#46d39a;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{
+    background:
+      radial-gradient(1200px 600px at 20% -10%, #122033 0%, transparent 55%),
+      radial-gradient(1000px 500px at 95% 110%, #0e1b2b 0%, transparent 50%),
+      var(--bg);
+    color:var(--text); font-family:var(--sans);
+    font-size:13px; -webkit-font-smoothing:antialiased; overflow:hidden;
+  }
+  .app{display:flex;flex-direction:column;height:100vh;padding:14px 16px 12px;gap:10px}
+
+  /* ---------- header ---------- */
+  header{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex:0 0 auto}
+  .title h1{margin:0;font-size:18px;font-weight:650;letter-spacing:.2px}
+  .title h1 .x{color:var(--teal);font-weight:500;margin:0 4px}
+  .title p{margin:3px 0 0;color:var(--muted);font-size:12px;max-width:720px;line-height:1.45}
+  .title .arch{color:var(--faint);font-family:var(--mono);font-size:11px;margin-top:5px}
+  .title .arch b{color:var(--teal)} .title .arch i{color:var(--blue);font-style:normal}
+  .title .arch u{color:var(--violet);text-decoration:none}
+
+  .controls{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+  button.ctl{
+    background:var(--panel);border:1px solid var(--border2);color:var(--text);
+    border-radius:8px;padding:7px 12px;font-size:12px;font-weight:550;cursor:pointer;
+    font-family:var(--sans);transition:.15s;display:flex;align-items:center;gap:6px;
+  }
+  button.ctl:hover{border-color:var(--teal);color:#fff}
+  button.ctl.primary{background:linear-gradient(180deg,#0c5f5f,#073f3f);border-color:var(--teal-dim);color:#cffdfd}
+  button.ctl.primary:hover{background:linear-gradient(180deg,#0f7575,#085050)}
+  .speed{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:11px;
+    background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:6px 10px}
+  .speed input{accent-color:var(--teal);width:90px}
+  .toggle{display:flex;align-items:center;gap:6px;color:var(--muted);font-size:11px;cursor:pointer;user-select:none}
+  .toggle input{accent-color:var(--teal)}
+
+  /* ---------- stats HUD ---------- */
+  .hud{display:flex;gap:8px;flex:0 0 auto}
+  .stat{flex:1;background:linear-gradient(180deg,var(--panel),var(--panel2));
+    border:1px solid var(--border);border-radius:10px;padding:8px 12px;position:relative;overflow:hidden}
+  .stat .k{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.6px}
+  .stat .v{font-size:22px;font-weight:650;font-variant-numeric:tabular-nums;margin-top:2px;font-family:var(--mono)}
+  .stat .bar{position:absolute;left:0;bottom:0;height:3px;width:100%;opacity:.85;transform-origin:left;transform:scaleX(0);transition:transform .4s}
+  .stat.s-proc .v{color:var(--text)} .stat.s-proc .bar{background:var(--text)}
+  .stat.s-look .v{color:var(--teal)} .stat.s-look .bar{background:var(--teal)}
+  .stat.s-llm  .v{color:var(--blue)} .stat.s-llm .bar{background:var(--blue)}
+  .stat.s-cache .v{color:var(--cache)} .stat.s-cache .bar{background:var(--cache)}
+  .stat.s-join .v{color:var(--green)} .stat.s-join .bar{background:var(--green)}
+  .stat.s-app  .v{color:var(--violet)} .stat.s-app .bar{background:var(--violet)}
+  .stat.s-conv .v{color:var(--amber)} .stat.s-conv .bar{background:var(--amber)}
+
+  /* ---------- main stage ---------- */
+  .stage{flex:1 1 auto;display:grid;grid-template-columns:230px 1fr 360px;gap:14px;min-height:0;position:relative}
+  .col{display:flex;flex-direction:column;min-height:0}
+  .col-h{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:1px;margin:0 2px 8px;
+    display:flex;align-items:center;gap:7px}
+  .col-h .seam{margin-left:auto;color:var(--faint);font-family:var(--mono);font-size:9px;
+    border:1px solid var(--border);border-radius:5px;padding:1px 6px}
+
+  /* sources */
+  .sources{display:flex;flex-direction:column;gap:10px;min-height:0}
+  .src{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--border);
+    border-radius:12px;padding:10px 11px;position:relative;flex:1;display:flex;flex-direction:column;gap:7px;overflow:hidden}
+  .src::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;border-radius:3px 0 0 3px}
+  .src.fhir::before{background:var(--fhir)} .src.hl7::before{background:var(--hl7)} .src.csv::before{background:var(--csv)}
+  .src-top{display:flex;align-items:center;gap:8px}
+  .src-dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+  .src.fhir .src-dot{background:var(--fhir);box-shadow:0 0 10px var(--fhir)}
+  .src.hl7 .src-dot{background:var(--hl7);box-shadow:0 0 10px var(--hl7)}
+  .src.csv .src-dot{background:var(--csv);box-shadow:0 0 10px var(--csv)}
+  .src-name{font-weight:650;font-size:13px}
+  .src-fmt{color:var(--muted);font-size:10px;font-family:var(--mono);margin-left:auto}
+  .src-pay{font-family:var(--mono);font-size:10.5px;color:var(--faint);line-height:1.5;
+    background:#0a0f17;border:1px solid var(--border);border-radius:7px;padding:7px 8px;flex:1;overflow:hidden;
+    white-space:pre-wrap;word-break:break-word;transition:.2s}
+  .src.active{border-color:currentColor}
+  .src.fhir.active{box-shadow:0 0 0 1px var(--fhir),0 0 22px -4px var(--fhir)}
+  .src.hl7.active{box-shadow:0 0 0 1px var(--hl7),0 0 22px -4px var(--hl7)}
+  .src.csv.active{box-shadow:0 0 0 1px var(--csv),0 0 22px -4px var(--csv)}
+  .src-emit{position:absolute;right:-1px;top:50%;width:8px;height:8px}
+
+  /* pipeline */
+  .pipe{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--border);
+    border-radius:14px;flex:1;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .pipe-bg{position:absolute;inset:0;opacity:.5;
+    background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);
+    background-size:34px 34px;-webkit-mask-image:radial-gradient(600px 300px at 50% 50%,#000,transparent 80%)}
+  .rail{display:flex;align-items:center;justify-content:space-between;width:94%;position:relative;z-index:2}
+  .rail::before{content:"";position:absolute;left:34px;right:34px;top:50%;height:2px;
+    background:linear-gradient(90deg,var(--teal-dim),var(--blue-dim),var(--teal-dim));opacity:.5;
+    background-size:200% 100%;animation:flow 6s linear infinite}
+  @keyframes flow{to{background-position:200% 0}}
+  .node{display:flex;flex-direction:column;align-items:center;gap:8px;position:relative;width:118px;text-align:center}
+  .node .ring{width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    background:radial-gradient(circle at 50% 35%,#16202f,#0c121b);border:2px solid var(--border2);
+    font-size:22px;position:relative;transition:.25s}
+  .node .ring .num{position:absolute;top:-7px;right:-7px;background:var(--bg2);border:1px solid var(--border2);
+    color:var(--muted);font-family:var(--mono);font-size:10px;border-radius:10px;min-width:19px;height:19px;
+    display:flex;align-items:center;justify-content:center;padding:0 4px;transition:.2s}
+  .node .lbl{font-size:11px;font-weight:600;letter-spacing:.3px}
+  .node .sub{font-size:9px;color:var(--faint);font-family:var(--mono);line-height:1.3;min-height:12px}
+  .node.pulse .ring{transform:scale(1.12)}
+  .node[data-stage="cache"].pulse .ring{border-color:var(--cache);box-shadow:0 0 26px -4px var(--cache)}
+  .node[data-stage="lookup"].pulse .ring{border-color:var(--teal);box-shadow:0 0 30px -2px var(--teal)}
+  .node[data-stage="llm"].pulse .ring{border-color:var(--blue);box-shadow:0 0 30px -2px var(--blue)}
+  .node[data-stage="normalize"].pulse .ring{border-color:var(--amber);box-shadow:0 0 30px -2px var(--amber)}
+  .node[data-stage="merge"].pulse .ring{border-color:var(--green);box-shadow:0 0 30px -2px var(--green)}
+  .node[data-stage="ingest"].pulse .ring{border-color:#fff;box-shadow:0 0 24px -4px #fff}
+
+  /* record */
+  .record{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--border);
+    border-radius:12px;flex:1;display:flex;flex-direction:column;min-height:0;overflow:hidden}
+  .rec-h{padding:10px 12px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
+  .rec-h .pid{font-family:var(--mono);color:var(--teal);font-size:12px}
+  .rec-h .tag{margin-left:auto;font-size:9px;color:var(--faint);border:1px solid var(--border);border-radius:5px;padding:2px 6px;font-family:var(--mono)}
+  .rec-body{overflow-y:auto;padding:6px 6px 8px;flex:1}
+  .rec-body::-webkit-scrollbar{width:7px}.rec-body::-webkit-scrollbar-thumb{background:var(--border2);border-radius:4px}
+  .field{display:grid;grid-template-columns:1fr auto;gap:2px 8px;padding:6px 8px;border-radius:8px;
+    border:1px solid transparent;align-items:center;transition:.25s}
+  .field + .field{margin-top:3px}
+  .field .fname{font-family:var(--mono);font-size:11px;color:var(--muted)}
+  .field .fval{font-family:var(--mono);font-size:12.5px;font-weight:600;text-align:right;color:var(--faint);transition:.2s}
+  .field .ftype{grid-column:1;font-size:9px;color:var(--faint);font-family:var(--mono)}
+  .field .prov{grid-column:2;display:flex;gap:3px;justify-content:flex-end;flex-wrap:wrap}
+  .chip{font-size:8.5px;font-family:var(--mono);border-radius:4px;padding:1px 5px;font-weight:600;letter-spacing:.3px}
+  .chip.fhir{background:rgba(255,122,89,.16);color:var(--fhir)}
+  .chip.hl7{background:rgba(91,141,239,.16);color:var(--hl7)}
+  .chip.csv{background:rgba(70,211,154,.16);color:var(--csv)}
+  .field.empty{opacity:.45}
+  .field.filled{border-color:var(--border2);background:#0c131d}
+  .field.filled .fval{color:var(--green)}
+  .field.flash{border-color:var(--green);background:rgba(70,211,154,.10)}
+  .field.appended{border-color:var(--violet);background:rgba(176,108,240,.08)}
+  .field.appended .fval{color:var(--violet)}
+  .field.review .fval{color:var(--amber)}
+  .field .newbadge{grid-column:1;font-size:8.5px;color:var(--violet);font-family:var(--mono)}
+
+  /* audit log */
+  .audit{flex:0 0 38%;display:flex;flex-direction:column;min-height:0;margin-top:10px}
+  .audit-h{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:1px;margin:0 2px 6px;display:flex;gap:7px;align-items:center}
+  .audit-h .ap{margin-left:auto;font-family:var(--mono);font-size:9px;color:var(--faint)}
+  .audit-body{flex:1;overflow-y:auto;background:var(--panel2);border:1px solid var(--border);border-radius:10px;padding:6px}
+  .audit-body::-webkit-scrollbar{width:7px}.audit-body::-webkit-scrollbar-thumb{background:var(--border2);border-radius:4px}
+  .arow{display:grid;grid-template-columns:54px 1fr auto;gap:8px;align-items:center;padding:6px 8px;border-radius:7px;
+    border:1px solid var(--border);background:#0b1119;margin-bottom:5px;animation:slidein .35s ease both}
+  @keyframes slidein{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .arow .tier{font-family:var(--mono);font-size:9px;font-weight:700;text-align:center;border-radius:5px;padding:3px 0;letter-spacing:.3px}
+  .arow .tier.lookup{background:rgba(0,179,179,.16);color:var(--teal)}
+  .arow .tier.llm{background:rgba(91,141,239,.16);color:var(--blue)}
+  .arow .tier.cache{background:rgba(144,162,192,.16);color:var(--cache)}
+  .arow .tier.normalizer{background:rgba(240,169,59,.16);color:var(--amber)}
+  .arow .mid{min-width:0}
+  .arow .map{font-family:var(--mono);font-size:11px;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .arow .map .raw{color:var(--muted)} .arow .map .arr{color:var(--faint);margin:0 5px}
+  .arow .map .can{color:var(--teal)}
+  .arow .xform{font-family:var(--mono);font-size:10px;margin-top:2px;color:var(--amber);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .arow .xform .nochg{color:var(--faint)}
+  .arow .reason{font-size:9.5px;color:var(--faint);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .arow .vd{display:flex;flex-direction:column;align-items:flex-end;gap:3px}
+  .arow .verdict{font-family:var(--mono);font-size:9px;font-weight:700;border-radius:5px;padding:2px 7px}
+  .arow .verdict.join{background:rgba(70,211,154,.16);color:var(--green)}
+  .arow .verdict.append{background:rgba(176,108,240,.16);color:var(--violet)}
+  .arow .sim{font-family:var(--mono);font-size:9px;color:var(--faint)}
+  .arow .rev{font-family:var(--mono);font-size:8.5px;color:var(--amber)}
+
+  /* packets */
+  #packetLayer{position:absolute;inset:0;pointer-events:none;z-index:50;overflow:visible}
+  .packet{position:absolute;transform:translate(-50%,-50%);will-change:left,top;
+    display:flex;flex-direction:column;align-items:center;gap:3px;filter:drop-shadow(0 4px 10px rgba(0,0,0,.5))}
+  .packet .body{background:#0e1622;border:1.5px solid var(--border2);border-radius:9px;padding:5px 9px;
+    font-family:var(--mono);font-size:11px;font-weight:650;white-space:nowrap;transition:border-color .2s,background .2s,color .2s;
+    display:flex;align-items:center;gap:6px;max-width:230px}
+  .packet .body .pchip{font-size:8px;font-weight:700;border-radius:4px;padding:1px 4px}
+  .packet .body .pchip.fhir{background:rgba(255,122,89,.2);color:var(--fhir)}
+  .packet .body .pchip.hl7{background:rgba(91,141,239,.2);color:var(--hl7)}
+  .packet .body .pchip.csv{background:rgba(70,211,154,.2);color:var(--csv)}
+  .packet .body .pval{overflow:hidden;text-overflow:ellipsis}
+  .packet.s-lookup .body{border-color:var(--teal);color:#d6ffff;box-shadow:0 0 18px -4px var(--teal)}
+  .packet.s-llm .body{border-color:var(--blue);color:#dfe9ff;box-shadow:0 0 18px -4px var(--blue)}
+  .packet.s-cache .body{border-color:var(--cache);color:#e3eaf5}
+  .packet.s-normalize .body{border-color:var(--amber);color:#fff0d6;box-shadow:0 0 20px -3px var(--amber)}
+  .packet.s-merge .body{border-color:var(--green);color:#d8ffee}
+  .packet.fade{opacity:0;transition:opacity .4s,transform .4s;transform:translate(-50%,-50%) scale(.8)}
+  .packet .cap{font-size:8.5px;font-family:var(--mono);color:var(--faint);background:#0a0f17;
+    border-radius:4px;padding:1px 5px;opacity:0;transition:.2s}
+  .packet.show-cap .cap{opacity:1}
+
+  .legend{display:flex;gap:14px;flex:0 0 auto;align-items:center;color:var(--muted);font-size:10.5px;padding:0 2px}
+  .legend .li{display:flex;align-items:center;gap:5px}
+  .legend .sw{width:10px;height:10px;border-radius:3px}
+  .legend .note{margin-left:auto;color:var(--faint);font-family:var(--mono);font-size:10px}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div class="title">
+      <h1>EHRzipper<span class="x">×</span>zipper <span style="color:var(--muted);font-weight:400;font-size:14px">— live reconciliation flow</span></h1>
+      <p>Three EHR sources emit the same clinical facts in different shapes. The generic <b style="color:var(--teal)">zipper</b> engine routes each source column to a canonical field and records every transformation in an append-only audit trail.</p>
+      <div class="arch">determinism&nbsp;→&nbsp;<b>lookup</b>&nbsp;·&nbsp;<i>llm router</i>&nbsp;·&nbsp;<span style="color:var(--amber)">normalize</span>&nbsp;→&nbsp;<u>append</u> &nbsp;&nbsp;|&nbsp;&nbsp; 4 injected seams: Lookup · Router · Normalizer · Storage</div>
+    </div>
+    <div class="controls">
+      <button class="ctl primary" id="btnPlay">⏸ Pause</button>
+      <button class="ctl" id="btnStep">⤳ Step</button>
+      <button class="ctl" id="btnReset">↺ Reset</button>
+      <label class="toggle"><input type="checkbox" id="loop" checked> loop</label>
+      <div class="speed">speed<input type="range" id="speed" min="0.5" max="3" step="0.25" value="1.2"><span id="speedV" style="font-family:var(--mono)">1.2×</span></div>
+    </div>
+  </header>
+
+  <div class="hud">
+    <div class="stat s-proc"><div class="k">Columns</div><div class="v" id="cProc">0</div><div class="bar" id="bProc"></div></div>
+    <div class="stat s-look"><div class="k">Lookup (det.)</div><div class="v" id="cLook">0</div><div class="bar" id="bLook"></div></div>
+    <div class="stat s-llm"><div class="k">LLM router</div><div class="v" id="cLlm">0</div><div class="bar" id="bLlm"></div></div>
+    <div class="stat s-cache"><div class="k">Cache hits</div><div class="v" id="cCache">0</div><div class="bar" id="bCache"></div></div>
+    <div class="stat s-join"><div class="k">Joins</div><div class="v" id="cJoin">0</div><div class="bar" id="bJoin"></div></div>
+    <div class="stat s-app"><div class="k">Appends</div><div class="v" id="cApp">0</div><div class="bar" id="bApp"></div></div>
+    <div class="stat s-conv"><div class="k">Unit conversions</div><div class="v" id="cConv">0</div><div class="bar" id="bConv"></div></div>
+  </div>
+
+  <div class="stage" id="stageEl">
+    <!-- SOURCES -->
+    <div class="col">
+      <div class="col-h">Heterogeneous sources <span class="seam">ingest</span></div>
+      <div class="sources">
+        <div class="src fhir" id="src-fhir">
+          <div class="src-top"><span class="src-dot"></span><span class="src-name">Epic FHIR R4</span><span class="src-fmt">epic_fhir_r4</span></div>
+          <div class="src-pay" id="pay-fhir">{ "resourceType": "Bundle" … }</div>
+        </div>
+        <div class="src hl7" id="src-hl7">
+          <div class="src-top"><span class="src-dot"></span><span class="src-name">Legacy HL7v2</span><span class="src-fmt">legacy_hl7v2</span></div>
+          <div class="src-pay" id="pay-hl7">MSH|^~\&|… ORU^R01</div>
+        </div>
+        <div class="src csv" id="src-csv">
+          <div class="src-top"><span class="src-dot"></span><span class="src-name">Registry CSV</span><span class="src-fmt">registry_csv_export</span></div>
+          <div class="src-pay" id="pay-csv">patient_id,sex,dob,… </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PIPELINE -->
+    <div class="col">
+      <div class="col-h">zipper routing pipeline <span class="seam">lookup · router · normalizer</span></div>
+      <div class="pipe">
+        <div class="pipe-bg"></div>
+        <div class="rail" id="rail">
+          <div class="node" data-stage="ingest"><div class="ring">📥<span class="num" id="n-ingest">0</span></div><div class="lbl">INGEST</div><div class="sub">parse column</div></div>
+          <div class="node" data-stage="cache"><div class="ring">⚡<span class="num" id="n-cache">0</span></div><div class="lbl">CACHE</div><div class="sub">tier 0 · reuse</div></div>
+          <div class="node" data-stage="lookup"><div class="ring">🔎<span class="num" id="n-lookup">0</span></div><div class="lbl">LOOKUP</div><div class="sub">LOINC·RxNorm·ICD-10</div></div>
+          <div class="node" data-stage="llm"><div class="ring">🧠<span class="num" id="n-llm">0</span></div><div class="lbl">LLM ROUTER</div><div class="sub">tier 2 · Haiku</div></div>
+          <div class="node" data-stage="normalize"><div class="ring">⚗️<span class="num" id="n-normalize">0</span></div><div class="lbl">NORMALIZE</div><div class="sub">UCUM · vocab · dates</div></div>
+          <div class="node" data-stage="merge"><div class="ring">🧬<span class="num" id="n-merge">0</span></div><div class="lbl">MERGE</div><div class="sub">join / append</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RECORD + AUDIT -->
+    <div class="col">
+      <div class="col-h">Canonical patient record <span class="seam">storage</span></div>
+      <div class="record">
+        <div class="rec-h"><span style="color:var(--muted)">patient</span><span class="pid">pat_0007</span><span class="tag">wide row · 1 per pkey</span></div>
+        <div class="rec-body" id="recBody"></div>
+      </div>
+      <div class="audit">
+        <div class="audit-h">Append-only audit trail <span class="ap" id="auditCount">0 decisions</span></div>
+        <div class="audit-body" id="auditBody"></div>
+      </div>
+    </div>
+
+    <div id="packetLayer"></div>
+  </div>
+
+  <div class="legend">
+    <div class="li"><span class="sw" style="background:var(--teal)"></span>deterministic lookup</div>
+    <div class="li"><span class="sw" style="background:var(--blue)"></span>llm router</div>
+    <div class="li"><span class="sw" style="background:var(--cache)"></span>cache hit</div>
+    <div class="li"><span class="sw" style="background:var(--amber)"></span>value transformed</div>
+    <div class="li"><span class="sw" style="background:var(--green)"></span>join</div>
+    <div class="li"><span class="sw" style="background:var(--violet)"></span>append (new canonical)</div>
+    <div class="note">self-contained demo · synthetic data · no PHI</div>
+  </div>
+</div>
+
+<script>
+"use strict";
+/* ============================================================================
+   EHR reconciliation events — one patient (pat_0007), three sources.
+   Each event mirrors the real zipper pipeline: a source column resolves at a
+   tier (cache | lookup | llm), is normalized against its canonical target,
+   then joins/appends into the wide record. Faithful to the real registries
+   (LOINC / RxNorm / ICD-10) and UCUM conversions in the EHRzipper code.
+============================================================================ */
+const SRC = {
+  fhir:{cls:"fhir",label:"FHIR",name:"Epic FHIR R4"},
+  hl7 :{cls:"hl7", label:"HL7v2",name:"Legacy HL7v2"},
+  csv :{cls:"csv", label:"CSV",  name:"Registry CSV"},
+};
+
+// canonical record rows (pre-declared globals = the data dictionary)
+const CANON = [
+  {key:"date_of_birth", type:"partial_date"},
+  {key:"sex", type:"text"},
+  {key:"diagnosis_code", type:"coded_value · ICD-10"},
+  {key:"wbc_count", type:"quantity · 10*3/uL"},
+  {key:"creatinine", type:"quantity · mg/dL"},
+  {key:"glucose", type:"quantity · mg/dL"},
+  {key:"hemoglobin", type:"quantity · g/dL"},
+  {key:"ecog_at_advanced_diagnosis", type:"integer"},
+  {key:"drug_name", type:"text · RxNorm"},
+  {key:"egfr_status", type:"coded_value"},
+];
+
+const EVENTS = [
+  { src:"fhir", col:"gender", raw:"male", tier:"lookup", reg:"vocab",
+    canon:"sex", verdict:"join", norm:"male",
+    xform:["male","male"], note:"controlled vocab sex: male|female|other|unknown",
+    reason:"Column 'gender' → sex; value validated against controlled vocabulary." },
+
+  { src:"hl7", col:"PID.8", raw:"M", tier:"lookup", reg:"vocab",
+    canon:"sex", verdict:"join", norm:"male",
+    xform:["M","male"], note:"HL7 sex code M → controlled vocab 'male'",
+    reason:"PID.8 sex code mapped to canonical vocabulary; joins existing field." },
+
+  { src:"fhir", col:"birthDate", raw:"1960-03", tier:"lookup", reg:"name",
+    canon:"date_of_birth", verdict:"join", norm:"1960-03",
+    xform:["1960-03","partial_date{1960-03}"], note:"month-precision → partial_date",
+    reason:"Column name 'birthDate' matches date_of_birth; month precision preserved." },
+
+  { src:"hl7", col:"PID.7", raw:"202003", tier:"llm", sim:0.91, reg:null,
+    canon:"date_of_birth", verdict:"join", norm:"1960-03",
+    xform:["202003","partial_date{1960-03}"], note:"HL7 YYYYMM → ISO partial_date",
+    reason:"Opaque field PID.7 semantically matched to date_of_birth (0.91)." },
+
+  { src:"fhir", col:"loinc:26464-8", raw:"7.2 10*3/uL", tier:"lookup", reg:"LOINC",
+    code:"26464-8", canon:"wbc_count", verdict:"join", norm:"7.2 10*3/uL",
+    xform:["7.2 10*3/uL","{value:7.2, unit:10*3/uL}"], note:"LOINC 26464-8 White blood cell count",
+    reason:"LOINC 26464-8 resolves to wbc_count; quantity_with_unit structured." },
+
+  { src:"csv", col:"observation.value", raw:"7.4 10*3/uL", tier:"lookup", reg:"LOINC",
+    code:"26464-8", canon:"wbc_count", verdict:"join", norm:"7.4 10*3/uL",
+    xform:["7.4 10*3/uL","{value:7.4, unit:10*3/uL}"], note:"second source agrees on wbc_count",
+    reason:"LOINC 26464-8 from CSV joins wbc_count; multi-source reconciliation." },
+
+  { src:"fhir", col:"loinc:26464-8", raw:"6.9 10*3/uL", tier:"cache",
+    canon:"wbc_count", verdict:"join", norm:"6.9 10*3/uL",
+    xform:["6.9 10*3/uL","{value:6.9, unit:10*3/uL}"], note:"re-ingest → tier-0 cache hit (no LLM)",
+    reason:"Cached decision for (pat_0007, epic_fhir_r4, loinc:26464-8) reused." },
+
+  { src:"hl7", col:"OBX:2160-0", raw:"88 umol/L", tier:"lookup", reg:"LOINC",
+    code:"2160-0", canon:"creatinine", verdict:"join", norm:"1.00 mg/dL", convert:true,
+    xform:["88 umol/L","1.00 mg/dL"], note:"UCUM analyte conversion (creatinine ÷88.42)",
+    reason:"LOINC 2160-0 creatinine; µmol/L→mg/dL via analyte-aware UCUM conversion." },
+
+  { src:"csv", col:"glucose", raw:"9.99 mmol/L", tier:"lookup", reg:"LOINC",
+    code:"2345-7", canon:"glucose", verdict:"join", norm:"180.0 mg/dL", convert:true,
+    xform:["9.99 mmol/L","180.0 mg/dL"], note:"UCUM analyte conversion (glucose ×18.0)",
+    reason:"LOINC 2345-7 glucose; mmol/L→mg/dL via analyte-aware UCUM conversion." },
+
+  { src:"fhir", col:"loinc:718-7", raw:"13.6 g/dL", tier:"lookup", reg:"LOINC",
+    code:"718-7", canon:"hemoglobin", verdict:"join", norm:"13.6 g/dL",
+    xform:["13.6 g/dL","{value:13.6, unit:g/dL}"], note:"LOINC 718-7 Hemoglobin",
+    reason:"LOINC 718-7 resolves to hemoglobin; units already canonical." },
+
+  { src:"csv", col:"medication", raw:"osimertinib", tier:"lookup", reg:"RxNorm",
+    code:"1721560", canon:"drug_name", verdict:"join", norm:"osimertinib",
+    xform:["osimertinib","osimertinib (RxNorm 1721560)"], note:"RxNorm EGFR_TKI",
+    reason:"Drug name resolves to RxNorm CUI 1721560 (osimertinib); canonical drug_name." },
+
+  { src:"fhir", col:"code.coding", raw:"C3499", tier:"lookup", reg:"ICD-10",
+    code:"C34.99", canon:"diagnosis_code", verdict:"join", norm:"C34.99",
+    xform:["C3499","C34.99"], note:"ICD-10 dotless → dotted; code_system ICD-10",
+    reason:"ICD-10 C34.99 (malignant neoplasm of lung); canonical diagnosis_code." },
+
+  { src:"hl7", col:"OBX:89243-0", raw:"2", tier:"lookup", reg:"LOINC",
+    code:"89243-0", canon:"ecog_at_advanced_diagnosis", verdict:"join", norm:"2",
+    xform:["\"2\"","2 (integer)"], note:"LOINC 89243-0 ECOG; text→integer",
+    reason:"LOINC 89243-0 ECOG performance status; coerced text→integer." },
+
+  { src:"hl7", col:"egfr_result", raw:"EGFR L858R detected", tier:"llm", sim:0.88, reg:null,
+    canon:"egfr_status", verdict:"join", norm:"positive",
+    xform:["EGFR L858R detected","positive"], note:"free-text → vocab positive|negative|unknown",
+    reason:"Semantic match to egfr_status (0.88); mutation text → controlled vocab." },
+
+  { src:"csv", col:"histology_text", raw:"adenocarcinoma", tier:"llm", sim:0.82, reg:null,
+    canon:"tumor_histology_text", verdict:"append", norm:"adenocarcinoma", newType:"text",
+    xform:["adenocarcinoma","adenocarcinoma"], note:"no canonical match → new canonical field",
+    reason:"No existing canonical match (0.82); appended as new field tumor_histology_text." },
+
+  { src:"csv", col:"insurance_plan", raw:"PPO-Gold", tier:"llm", sim:0.41, reg:null,
+    canon:"insurance_plan", verdict:"append", norm:"PPO-Gold", newType:"text", review:true,
+    xform:["PPO-Gold","PPO-Gold"], note:"low similarity → append + flag for review",
+    reason:"Low confidence (0.41); appended as new canonical and flagged needs_review." },
+];
+
+// source payload previews (cosmetic, shown in source cards)
+const PAYLOADS = {
+  fhir:`{
+  "resourceType":"Observation",
+  "code":{"coding":[{"system":"loinc",
+    "code":"26464-8"}]},
+  "valueQuantity":{"value":7.2,
+    "unit":"10*3/uL"},
+  "subject":{"reference":"Patient/0007"}
+}`,
+  hl7:`MSH|^~\\&|EHR|HOSP|...|ORU^R01
+PID|1||0007||DOE^JANE||202003|F
+OBX|1|NM|2160-0^Creatinine||88
+   |umol/L|...|||F`,
+  csv:`patient_id,test,value,unit
+0007,glucose,9.99,mmol/L
+0007,medication,osimertinib,
+0007,insurance_plan,PPO-Gold,`,
+};
+
+/* ============================ engine / animation ========================== */
+const STAGES = ["ingest","cache","lookup","llm","normalize","merge"];
+const ROUTES = {
+  cache:  ["ingest","cache","merge"],
+  lookup: ["ingest","cache","lookup","normalize","merge"],
+  llm:    ["ingest","cache","lookup","llm","normalize","merge"],
+};
+const SEG_MS = 560;          // base ms per segment
+const SPAWN_MS = 820;        // base ms between spawns
+const MAX_CONCURRENT = 2;
+
+const layer = document.getElementById("packetLayer");
+const stageEl = document.getElementById("stageEl");
+const recBody = document.getElementById("recBody");
+const auditBody = document.getElementById("auditBody");
+
+let queue=[], active=[], clock=0, lastSpawn=-1e9, playing=true, speed=1.2;
+let stepRemaining=0, loop=true, stepping=false;
+let counters={proc:0,look:0,llm:0,cache:0,join:0,app:0,conv:0};
+const rowEls={}; // canonical key -> field element
+
+function el(tag,cls,html){const e=document.createElement(tag);if(cls)e.className=cls;if(html!=null)e.innerHTML=html;return e;}
+
+function buildRecord(){
+  recBody.innerHTML="";
+  for(const k in rowEls) delete rowEls[k];
+  for(const f of CANON){
+    const row=el("div","field empty");
+    row.dataset.key=f.key;
+    row.innerHTML=`<div class="fname">${f.key}</div><div class="fval">—</div><div class="ftype">${f.type}</div><div class="prov"></div>`;
+    recBody.appendChild(row);
+    rowEls[f.key]=row;
+  }
+}
+
+function setPayloads(){
+  document.getElementById("pay-fhir").textContent=PAYLOADS.fhir;
+  document.getElementById("pay-hl7").textContent=PAYLOADS.hl7;
+  document.getElementById("pay-csv").textContent=PAYLOADS.csv;
+}
+
+/* anchor geometry (recomputed live so it survives resize) */
+function layerRect(){return layer.getBoundingClientRect();}
+function pointOf(desc){
+  const lr=layerRect();
+  if(desc.t==="source"){
+    const e=document.getElementById("src-"+desc.key).getBoundingClientRect();
+    return {x:e.right-lr.left-6, y:e.top-lr.top+e.height/2};
+  }
+  if(desc.t==="stage"){
+    const e=stageEl.querySelector(`.node[data-stage="${desc.key}"] .ring`).getBoundingClientRect();
+    return {x:e.left-lr.left+e.width/2, y:e.top-lr.top+e.height/2};
+  }
+  if(desc.t==="record"){
+    const row=rowEls[desc.key];
+    const e=(row||document.querySelector(".rec-h")).getBoundingClientRect();
+    return {x:e.left-lr.left+14, y:e.top-lr.top+e.height/2};
+  }
+  return {x:0,y:0};
+}
+function lerp(a,b,t){return {x:a.x+(b.x-a.x)*t, y:a.y+(b.y-a.y)*t};}
+function ease(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;}
+
+function spawn(ev){
+  const route=ROUTES[ev.tier].slice();
+  const anchors=route.map(s=>({t:"stage",key:s}));
+  anchors.unshift({t:"source",key:ev.src});
+  anchors.push({t:"record",key:ev.canon});
+
+  const p=el("div","packet");
+  const sc=SRC[ev.src];
+  p.innerHTML=`<div class="body"><span class="pchip ${sc.cls}">${sc.label}</span><span class="pval">${ev.raw}</span></div><div class="cap">${ev.col}</div>`;
+  layer.appendChild(p);
+
+  const pk={ev,anchors,route,seg:0,t:0,el:el0(p),bodyVal:p.querySelector(".pval"),
+            lastStage:null,morphed:false,done:false};
+  pk.dom=p;
+  // flash the source card
+  const card=document.getElementById("src-"+ev.src);
+  card.classList.add("active");
+  setTimeout(()=>card.classList.remove("active"),700/speed);
+
+  const pos=pointOf(anchors[0]); p.style.left=pos.x+"px"; p.style.top=pos.y+"px";
+  p.classList.add("show-cap");
+  active.push(pk);
+}
+function el0(x){return x;} // (kept for clarity)
+
+function onStageEnter(pk,stage){
+  const node=stageEl.querySelector(`.node[data-stage="${stage}"]`);
+  node.classList.add("pulse");
+  setTimeout(()=>node.classList.remove("pulse"),360/speed);
+  bumpNode(stage);
+
+  pk.dom.classList.remove("s-cache","s-lookup","s-llm","s-normalize","s-merge");
+  if(stage==="cache" && pk.ev.tier==="cache"){pk.dom.classList.add("s-cache");}
+  if(stage==="lookup"){
+    if(pk.ev.tier==="lookup"){pk.dom.classList.add("s-lookup");}
+    else {pk.dom.style.opacity=".7";}   // passes through, not resolved here
+  }
+  if(stage==="llm"){pk.dom.style.opacity="1";pk.dom.classList.add("s-llm");}
+  if(stage==="normalize"){
+    pk.dom.classList.add("s-normalize");
+    // morph the displayed value raw -> normalized
+    if(!pk.morphed){
+      pk.morphed=true;
+      pk.bodyVal.style.opacity="0";
+      setTimeout(()=>{pk.bodyVal.textContent=pk.ev.norm;pk.bodyVal.style.transition="opacity .2s";pk.bodyVal.style.opacity="1";},170/speed);
+    }
+  }
+  if(stage==="merge"){pk.dom.classList.add("s-merge");}
+}
+
+function bumpNode(stage){
+  const n=document.getElementById("n-"+stage);
+  if(n) n.textContent=(parseInt(n.textContent,10)+1);
+}
+
+function finalize(pk){
+  const ev=pk.ev;
+  // 1. dock into record
+  let row=rowEls[ev.canon];
+  if(!row && ev.verdict==="append"){
+    row=el("div","field appended");
+    row.dataset.key=ev.canon;
+    row.innerHTML=`<div class="newbadge">＋ new canonical${ev.review?" · needs_review":""}</div>
+      <div class="fval">—</div><div class="ftype">${ev.newType||"text"}</div><div class="prov"></div>`;
+    recBody.appendChild(row); rowEls[ev.canon]=row;
+    const nm=el("div","fname");nm.textContent=ev.canon;row.insertBefore(nm,row.firstChild);
+    row.scrollIntoView({block:"nearest",behavior:"smooth"});
+  }
+  if(row){
+    row.classList.remove("empty");
+    row.classList.add(ev.verdict==="append"?"appended":"filled");
+    if(ev.review) row.classList.add("review");
+    row.querySelector(".fval").textContent=ev.norm;
+    const prov=row.querySelector(".prov");
+    if(![...prov.children].some(c=>c.classList.contains(SRC[ev.src].cls))){
+      prov.appendChild(el("span","chip "+SRC[ev.src].cls,SRC[ev.src].label));
+    }
+    row.classList.add("flash");setTimeout(()=>row.classList.remove("flash"),650);
+  }
+  // 2. audit row
+  addAudit(ev);
+  // 3. counters
+  counters.proc++;
+  if(ev.tier==="lookup")counters.look++;
+  else if(ev.tier==="llm")counters.llm++;
+  else if(ev.tier==="cache")counters.cache++;
+  if(ev.verdict==="join")counters.join++; else counters.app++;
+  if(ev.convert)counters.conv++;
+  renderCounters();
+  // 4. remove packet
+  pk.dom.classList.add("fade");
+  setTimeout(()=>pk.dom.remove(),420);
+}
+
+let auditN=0;
+function addAudit(ev){
+  auditN++;
+  const tier = ev.tier==="cache" ? "cache" : ev.tier;       // lookup | llm | cache
+  const r=el("div","arow");
+  const regTxt = ev.reg && ev.reg!=="name" && ev.reg!=="vocab" ? `${ev.reg} ${ev.code||""}` :
+                 ev.reg==="vocab" ? "vocab" : ev.reg==="name" ? "column-name" :
+                 ev.tier==="cache" ? "cached" : `sim ${ev.sim}`;
+  const changed = ev.xform[0]!==ev.xform[1];
+  r.innerHTML=`
+    <div class="tier ${tier}">${tier}</div>
+    <div class="mid">
+      <div class="map"><span class="raw">${SRC[ev.src].label}:${ev.col}</span><span class="arr">→</span><span class="can">${ev.canon}</span></div>
+      <div class="xform">${changed?`⚗ ${ev.xform[0]} <span style="color:var(--faint)">→</span> ${ev.xform[1]}`:`<span class="nochg">≡ ${ev.xform[1]} (no change)</span>`}</div>
+      <div class="reason">${ev.reason}</div>
+    </div>
+    <div class="vd">
+      <div class="verdict ${ev.verdict}">${ev.verdict}</div>
+      <div class="sim">${regTxt}</div>
+      ${ev.review?'<div class="rev">⚑ review</div>':''}
+    </div>`;
+  auditBody.prepend(r);
+  while(auditBody.children.length>40) auditBody.lastChild.remove();
+  document.getElementById("auditCount").textContent=auditN+" decision"+(auditN===1?"":"s");
+}
+
+function renderCounters(){
+  const tot=EVENTS.length||1;
+  const set=(id,bid,v,max)=>{document.getElementById(id).textContent=v;
+    const b=document.getElementById(bid);if(b)b.style.transform="scaleX("+Math.min(1,v/max)+")";};
+  set("cProc","bProc",counters.proc,tot);
+  set("cLook","bLook",counters.look,tot);
+  set("cLlm","bLlm",counters.llm,tot);
+  set("cCache","bCache",counters.cache,Math.max(1,Math.round(tot/4)));
+  set("cJoin","bJoin",counters.join,tot);
+  set("cApp","bApp",counters.app,Math.max(1,Math.round(tot/4)));
+  set("cConv","bConv",counters.conv,Math.max(1,Math.round(tot/4)));
+}
+
+/* main loop */
+let lastTs=null;
+function tick(ts){
+  if(lastTs==null)lastTs=ts;
+  let dt=(ts-lastTs);lastTs=ts;
+  if(playing){
+    dt*=speed; clock+=dt;
+    // spawn
+    if(queue.length && active.length<MAX_CONCURRENT && (clock-lastSpawn)>=SPAWN_MS && (!stepping || stepRemaining>0)){
+      spawn(queue.shift()); lastSpawn=clock;
+      if(stepping) stepRemaining--;
+    }
+    // advance
+    for(const pk of active){
+      if(pk.done)continue;
+      pk.t += dt/SEG_MS;
+      while(pk.t>=1 && pk.seg<pk.anchors.length-2){
+        pk.t-=1; pk.seg++;
+        const stage=pk.anchors[pk.seg].t==="stage"?pk.anchors[pk.seg].key:null;
+        if(stage)onStageEnter(pk,stage);
+      }
+      const a=pointOf(pk.anchors[pk.seg]);
+      const b=pointOf(pk.anchors[pk.seg+1]);
+      const pos=lerp(a,b,ease(Math.min(1,pk.t)));
+      pk.dom.style.left=pos.x+"px"; pk.dom.style.top=pos.y+"px";
+      if(pk.seg>=pk.anchors.length-2 && pk.t>=1){
+        pk.done=true; finalize(pk);
+      }
+    }
+    active=active.filter(p=>!p.done);
+    if(stepping && stepRemaining===0 && !active.length){ stepping=false; setPlaying(false); }
+    // loop
+    if(!queue.length && !active.length && loop && counters.proc>=EVENTS.length){
+      setTimeout(()=>{ if(loop) resetRun(true); }, 1400/speed);
+    }
+  }
+  requestAnimationFrame(tick);
+}
+
+function resetRun(auto){
+  active.forEach(p=>p.dom.remove()); active=[];
+  queue=EVENTS.slice(); clock=0; lastSpawn=-1e9;
+  counters={proc:0,look:0,llm:0,cache:0,join:0,app:0,conv:0};
+  STAGES.forEach(s=>{const n=document.getElementById("n-"+s);if(n)n.textContent="0";});
+  auditN=0; auditBody.innerHTML=""; document.getElementById("auditCount").textContent="0 decisions";
+  buildRecord(); renderCounters();
+  if(!auto){/* keep current play state */}
+}
+
+function setPlaying(v){
+  playing=v;
+  const b=document.getElementById("btnPlay");
+  b.textContent=v?"⏸ Pause":"▶ Play";
+  b.classList.toggle("primary",!v?false:true);
+}
+
+/* controls */
+document.getElementById("btnPlay").onclick=()=>{stepping=false;setPlaying(!playing);};
+document.getElementById("btnReset").onclick=()=>{stepping=false;resetRun(false);setPlaying(true);};
+document.getElementById("btnStep").onclick=()=>{
+  if(!queue.length) resetRun(false);
+  stepping=true; stepRemaining=1; setPlaying(true);
+  // force a spawn promptly
+  lastSpawn=clock-SPAWN_MS;
+};
+document.getElementById("loop").onchange=e=>loop=e.target.checked;
+const sp=document.getElementById("speed");
+sp.oninput=e=>{speed=parseFloat(e.target.value);document.getElementById("speedV").textContent=speed.toFixed(2).replace(/0$/,"")+"×";};
+
+/* boot */
+setPayloads(); buildRecord(); renderCounters();
+queue=EVENTS.slice();
+requestAnimationFrame(tick);
+window.addEventListener("resize",()=>{/* anchors recompute each frame; nothing to do */});
+</script>
+</body>
+</html>

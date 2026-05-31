@@ -1,0 +1,79 @@
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ADT^A01^ADT_A01|EHRZ0000019|P|2.5.1
+PID|1||pat_9db0cb46||Humphrey^Amy||194410|F||Other|71822 Arroyo Expressway^^Allisonchester^MD^28261^USA|||||N||||pat_9db0cb46
+PV1|1|O|prac_0001^ONCOLOGY^^^||||DR9999^ONCOLOGIST^SYNTHETIC^MD|||||||||||||20200822|20200822
+DG1|1|I10|C34.90|NSCLC Adenocarcinoma|20200822|F|||||||STAGE_IVB|||||||8140.3
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ORU^R01^ORU_R01|EHRZ0000020|P|2.5.1
+PID|1||pat_9db0cb46||Humphrey^Amy||194410|F||Other|71822 Arroyo Expressway^^Allisonchester^MD^28261^USA|||||N||||pat_9db0cb46
+OBR|1|ORD00001|FIL00001|26464-8^Leukocytes [#/volume] in Blood^LN||20200821|20200821||||||||F
+OBX|1|NM|26464-8^Leukocytes [#/volume] in Blood^LN||3.7|10*3/uL|5.0-10.5|||F|||20200821
+OBR|2|ORD00002|FIL00002|26515-7^Platelets [#/volume] in Blood^LN||20200821|20200821||||||||F
+OBX|1|NM|26515-7^Platelets [#/volume] in Blood^LN||369.5|10*3/uL|150.0-400.0|||F|||20200821
+OBR|3|ORD00003|FIL00003|718-7^Hemoglobin [Mass/volume] in Blood^LN||20200821|20200821||||||||F
+OBX|1|NM|718-7^Hemoglobin [Mass/volume] in Blood^LN||16.7|g/dL|12.0-17.5|||F|||20200821
+OBR|4|ORD00004|FIL00004|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||20200821|20200821||||||||F
+OBX|1|NM|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||2.2|mg/dL|0.6-1.2|||F|||20200821
+OBR|5|ORD00005|FIL00005|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||20200821|20200821||||||||F
+OBX|1|NM|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||60.5|U/L|7.0-56.0|||F|||20200821
+OBR|6|ORD00006|FIL00006|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||20200821|20200821||||||||F
+OBX|1|NM|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||2.9|g/dL|3.5-5.0|||F|||20200821
+OBR|7|ORD00007|FIL00007|26464-8^Leukocytes [#/volume] in Blood^LN||20201002|20201002||||||||F
+OBX|1|NM|26464-8^Leukocytes [#/volume] in Blood^LN||6.9|10*3/uL|5.0-10.5|||F|||20201002
+OBR|8|ORD00008|FIL00008|26515-7^Platelets [#/volume] in Blood^LN||20201002|20201002||||||||F
+OBX|1|NM|26515-7^Platelets [#/volume] in Blood^LN||302.0|10*3/uL|150.0-400.0|||F|||20201002
+OBR|9|ORD00009|FIL00009|718-7^Hemoglobin [Mass/volume] in Blood^LN||20201002|20201002||||||||F
+OBX|1|NM|718-7^Hemoglobin [Mass/volume] in Blood^LN||16.4|g/dL|12.0-17.5|||F|||20201002
+OBR|10|ORD00010|FIL00010|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||20201002|20201002||||||||F
+OBX|1|NM|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||2.0|mg/dL|0.6-1.2|||F|||20201002
+OBR|11|ORD00011|FIL00011|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||20201002|20201002||||||||F
+OBX|1|NM|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||27.2|U/L|7.0-56.0|||F|||20201002
+OBR|12|ORD00012|FIL00012|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||20201002|20201002||||||||F
+OBX|1|NM|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||3.1|g/dL|3.5-5.0|||F|||20201002
+OBR|13|ORD00013|FIL00013|26464-8^Leukocytes [#/volume] in Blood^LN||20201117|20201117||||||||F
+OBX|1|NM|26464-8^Leukocytes [#/volume] in Blood^LN||3.5|10*3/uL|5.0-10.5|||F|||20201117
+OBR|14|ORD00014|FIL00014|26515-7^Platelets [#/volume] in Blood^LN||20201117|20201117||||||||F
+OBX|1|NM|26515-7^Platelets [#/volume] in Blood^LN||163.5|10*3/uL|150.0-400.0|||F|||20201117
+OBR|15|ORD00015|FIL00015|718-7^Hemoglobin [Mass/volume] in Blood^LN||20201117|20201117||||||||F
+OBX|1|NM|718-7^Hemoglobin [Mass/volume] in Blood^LN||9.7|g/dL|12.0-17.5|||F|||20201117
+OBR|16|ORD00016|FIL00016|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||20201117|20201117||||||||F
+OBX|1|NM|2160-0^Creatinine [Mass/volume] in Serum or Plasma^LN||1.8|mg/dL|0.6-1.2|||F|||20201117
+OBR|17|ORD00017|FIL00017|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||20201117|20201117||||||||F
+OBX|1|NM|1742-6^Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma^LN||49.3|U/L|7.0-56.0|||F|||20201117
+OBR|18|ORD00018|FIL00018|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||20201117|20201117||||||||F
+OBX|1|NM|1751-7^Albumin [Mass/volume] in Serum or Plasma^LN||3.1|g/dL|3.5-5.0|||F|||20201117
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||ORU^R01^ORU_R01|EHRZ0000021|P|2.5.1
+PID|1||pat_9db0cb46||Humphrey^Amy||194410|F||Other|71822 Arroyo Expressway^^Allisonchester^MD^28261^USA|||||N||||pat_9db0cb46
+OBR|1|ORD00001|FIL00001|53041-0^EGFR gene mutations found [Identifier] in Blood or Tissue^LN||20200908|20200908||||||||F
+OBX|1|ST|53041-0^EGFR gene mutations found [Identifier] in Blood or Tissue^LN||negative|||||F|||20200908
+OBR|2|ORD00002|FIL00002|76042-8^ALK gene rearrangements [Presence] in Tissue by FISH^LN||20200908|20200908||||||||F
+OBX|1|ST|76042-8^ALK gene rearrangements [Presence] in Tissue by FISH^LN||negative|||||F|||20200908
+OBR|3|ORD00003|FIL00003|81202-7^ROS1 gene rearrangements [Presence] in Tissue by FISH^LN||20200907|20200907||||||||F
+OBX|1|ST|81202-7^ROS1 gene rearrangements [Presence] in Tissue by FISH^LN||negative|||||F|||20200907
+OBR|4|ORD00004|FIL00004|21704-5^KRAS gene mutations found [Identifier] in Blood or Tissue^LN||20200909|20200909||||||||F
+OBX|1|ST|21704-5^KRAS gene mutations found [Identifier] in Blood or Tissue^LN||KRAS G12C|||||F|||20200909
+OBR|5|ORD00005|FIL00005|21702-9^BRAF gene mutations found [Identifier] in Blood or Tissue^LN||20200909|20200909||||||||F
+OBX|1|ST|21702-9^BRAF gene mutations found [Identifier] in Blood or Tissue^LN||negative|||||F|||20200909
+OBR|6|ORD00006|FIL00006|85337-4^PD-L1 (CD274) [Presence] in Tissue by Immune stain^LN||20200908|20200908||||||||F
+OBX|1|ST|85337-4^PD-L1 (CD274) [Presence] in Tissue by Immune stain^LN||83%|||||F|||20200908
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||RDE^O11^RDE_O11|EHRZ0000022|P|2.5.1
+PID|1||pat_9db0cb46||Humphrey^Amy||194410|F||Other|71822 Arroyo Expressway^^Allisonchester^MD^28261^USA|||||N||||pat_9db0cb46
+RXA|0|1|20200923|20200924|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_6810b7e7_l1
+RXA|0|1|20201014|20201015|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_6810b7e7_l1
+RXA|0|1|20201104|20201105|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_6810b7e7_l1
+RXA|0|1|20201125|20201126|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_6810b7e7_l1
+RXA|0|1|20201216|20201217|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_6810b7e7_l1
+RXA|0|1|20210106|20210107|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_6810b7e7_l1
+RXA|0|1|20210127|20210128|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_6810b7e7_l1
+RXA|0|1|20210217|20210218|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_6810b7e7_l1
+RXA|0|1|20210310|20210311|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_6810b7e7_l1
+RXA|0|1|20210331|20210401|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_6810b7e7_l1
+RXA|0|1|20210421|20210422|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_6810b7e7_l1
+RXA|0|1|20210512|20210513|1719765^pembrolizumab^RXN|200.0|mg||IV|||||||A|||reg_6810b7e7_l1
+
+MSH|^~\&|EHRZIPPER|ONCOLOGY_EMR|EHRZIPPER|CANONICAL_STORE|20241231120000||MDM^T02^MDM_T02|EHRZ0000023|P|2.5.1
+PID|1||pat_9db0cb46||Humphrey^Amy||194410|F||Other|71822 Arroyo Expressway^^Allisonchester^MD^28261^USA|||||N||||pat_9db0cb46
+TXA|1|11529-5|TX|20200822|DR9999^ONCOLOGIST^SYNTHETIC^MD|20200822|||doc_pat_9db0cb46_pathology||||||AU||||pat_9db0cb46
+TXA|1|18748-4|TX|20200822|DR9999^ONCOLOGIST^SYNTHETIC^MD|20200822|||doc_pat_9db0cb46_radiology||||||AU||||pat_9db0cb46
+TXA|1|11488-4|TX|20200822|DR9999^ONCOLOGIST^SYNTHETIC^MD|20200822|||doc_pat_9db0cb46_consult||||||AU||||pat_9db0cb46

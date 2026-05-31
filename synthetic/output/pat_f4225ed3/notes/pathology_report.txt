@@ -1,0 +1,32 @@
+SURGICAL PATHOLOGY REPORT
+Accession Number: PATH-pat_f4225ed3
+Specimen Date: 2014-10-12
+Patient: Brock, Colleen | MRN: pat_f4225ed3
+
+CLINICAL HISTORY:
+Right upper lobe mass, suspicious for malignancy. Rule out primary lung carcinoma.
+
+SPECIMENS SUBMITTED:
+A. CT-guided core needle biopsy, right upper lobe mass (3 cores)
+B. Bronchial washings
+
+GROSS DESCRIPTION:
+A. Three tan-white cores measuring 0.5-1.2 cm in aggregate length.
+
+MICROSCOPIC DESCRIPTION:
+Sections show fragments of lung parenchyma with infiltrating carcinoma.
+The tumor demonstrates large undifferentiated malignant cells without glandular or squamous differentiation..
+
+DIAGNOSIS:
+A-B. Large cell carcinoma of the lung, 8012/3
+   - Stage at diagnosis: IVB (AJCC 8th edition)
+   - Lymphovascular invasion: present
+   - Ki-67 proliferative index: approximately 35%
+
+MOLECULAR ANCILLARY STUDIES:
+EGFR: negative; ALK: negative; ROS1: negative; KRAS: negative; BRAF: negative; PD-L1: low (TPS 13.5%)
+
+COMMENT:
+This case was reviewed at multidisciplinary tumor board. Molecular testing was recommended per NCCN guidelines for advanced NSCLC.
+
+Electronically signed: Synthetic Pathologist, MD

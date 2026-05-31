@@ -1,0 +1,21 @@
+ONCOLOGY PROGRESS NOTE
+Date: 2023-03-27
+Patient: Bell, Zachary | MRN: pat_bd992c2e
+
+SUBJECTIVE:
+Patient returns for cycle 6 of carboplatin, pemetrexed, pembrolizumab. Patient reports mild fatigue, grade 1. No nausea or vomiting.
+
+OBJECTIVE:
+ECOG performance status: 0
+Weight: 70.8 kg
+Laboratory values within acceptable parameters for treatment continuation.
+
+ASSESSMENT:
+adenocarcinoma NSCLC, stage IIIC.
+Treatment: carboplatin, pemetrexed, pembrolizumab (initiated 2023-01-02).
+Partial response to therapy. Primary tumor decreased 30% in size.
+
+PLAN:
+Continue carboplatin, pemetrexed, pembrolizumab per current dosing schedule. Repeat CT chest in 6 weeks. CBC and CMP prior to next cycle.
+
+

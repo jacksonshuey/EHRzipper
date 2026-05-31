@@ -1,0 +1,26 @@
+ONCOLOGY INITIAL CONSULTATION NOTE
+Date: 2017-04-22
+Patient: Peterson, Robert | DOB: 1946-08 | MRN: pat_0b01ea9d
+Practice: prac_0001
+
+REASON FOR CONSULTATION:
+New diagnosis of advanced non-small cell lung cancer, stage IVB.
+
+HISTORY OF PRESENT ILLNESS:
+Robert Peterson is a 71-year-old male with a 8-pack-year smoking history
+who presents with a new diagnosis of squamous cell carcinoma of the lung, stage IVB per
+AJCC 8th edition. Initial symptoms included progressive dyspnea and a 6-week
+history of hemoptysis. CT of the chest revealed a left upper lobe mass with mediastinal
+lymphadenopathy. PET/CT confirmed IVB disease.
+
+PERFORMANCE STATUS:
+ECOG performance status: 1
+
+MOLECULAR TESTING:
+EGFR: negative; ALK: negative; ROS1: negative; KRAS: negative; BRAF: negative
+
+ASSESSMENT AND PLAN:
+Diagnosis: squamous cell carcinoma, stage IVB, de novo stage iiib plus.
+Will initiate carboplatin + paclitaxel + pembrolizumab per guideline-concordant approach.
+
+Follow-up in 3 weeks for treatment monitoring.
