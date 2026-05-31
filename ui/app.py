@@ -6,23 +6,20 @@ Main entrypoint. Run with:
 
 import streamlit as st
 
-st.set_page_config(
-    page_title="EHRzipper | aNSCLC Cohort Platform",
-    page_icon="🫁",
-    layout="wide",
-    initial_sidebar_state="expanded",
+from ui.components.theme import header, setup_page
+
+setup_page("aNSCLC Cohort Platform")
+
+header(
+    "EHRzipper",
+    "A Flatiron-style real-world oncology data product. Reconcile messy "
+    "multi-source EHR records into one clean, audited dataset — and produce the "
+    "real-world cancer outcomes that pharma companies buy.",
 )
 
-st.title("EHRzipper -- aNSCLC Cohort Platform")
 st.markdown(
     """
-    Welcome to the **EHRzipper** clinical data platform demo. This application demonstrates a
-    Flatiron-style real-world oncology data product built on synthetic advanced NSCLC patient
-    data.
-
-    Take messy oncology records from many hospital systems, reconcile them into
-    one clean dataset with a full audit trail, and produce the real-world cancer
-    outcomes that pharma companies buy. Use the sidebar to navigate:
+    Built on **fully synthetic** advanced NSCLC patient data. Use the sidebar to navigate:
 
     | Page | What it shows |
     |------|-------------|

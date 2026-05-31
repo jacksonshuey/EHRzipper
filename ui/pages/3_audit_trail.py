@@ -14,15 +14,15 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-st.set_page_config(page_title="Audit Trail | EHRzipper", layout="wide")
+from ui.components.theme import chart, header, setup_page
 
-st.title("Audit Trail")
-st.markdown(
-    """
-    Every schema routing decision made by the Zippering engine is recorded in an append-only
-    table — never updated or deleted. This page shows the decision log, filterable by routing
-    tier, with a timeline view.
-    """
+setup_page("Audit Trail")
+
+header(
+    "Audit Trail",
+    "Every schema routing decision the engine makes is recorded in an "
+    "append-only log — never updated or deleted. Filter by routing tier and "
+    "see the decision timeline.",
 )
 
 # ---------------------------------------------------------------------------
@@ -293,7 +293,7 @@ st.dataframe(
             "decided_at": "Decided At",
         }
     ),
-    use_container_width=True,
+    width="stretch",
     hide_index=True,
 )
 
@@ -334,7 +334,7 @@ if not timeline_df.empty:
         title="Decisions per Day by Routing Tier",
         color_discrete_map=DECIDER_COLORS,
     )
-    st.plotly_chart(fig, use_container_width=True)
+    chart(fig, height=380)
 else:
     st.info("No timeline data available for the current filter.")
 

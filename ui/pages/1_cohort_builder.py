@@ -13,17 +13,17 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
+from ui.components.theme import NAVY_SOFT as NAVY
+from ui.components.theme import SEQUENTIAL, TEAL, chart, header, setup_page
 from ui.data.loader import filter_patients, load_patients
 
-st.set_page_config(page_title="Cohort Builder | EHRzipper", layout="wide")
+setup_page("Cohort Builder")
 
-st.title("Cohort Builder")
-st.markdown(
-    """
-    Use the sidebar filters to define a patient cohort. The main panel updates in real time,
-    showing cohort size, demographic breakdowns, and biomarker co-occurrence. You can export
-    the current filter state as a JSON cohort definition file.
-    """
+header(
+    "Cohort Builder",
+    "Define a patient cohort with the sidebar filters. Cohort size, demographic "
+    "breakdowns, and biomarker co-occurrence update in real time — export the "
+    "current definition as JSON.",
 )
 
 # ---------------------------------------------------------------------------
@@ -177,7 +177,7 @@ for col, label in summary_fields:
 
 st.dataframe(
     pd.DataFrame(summary_rows),
-    use_container_width=True,
+    width="stretch",
     hide_index=True,
 )
 
@@ -188,9 +188,7 @@ st.subheader("Demographics Breakdown")
 
 col1, col2 = st.columns(2)
 
-NAVY = "#1B3A6B"
-TEAL = "#00A8A8"
-GRAY = "#888888"
+GRAY = "#8A93A0"
 
 with col1:
     if "sex" in df.columns:
@@ -204,8 +202,7 @@ with col1:
             color="Sex",
             color_discrete_sequence=[TEAL, NAVY, GRAY],
         )
-        fig_sex.update_layout(showlegend=False)
-        st.plotly_chart(fig_sex, use_container_width=True)
+        chart(fig_sex, show_legend=False)
     else:
         st.info("No data available for sex distribution.")
 
@@ -220,10 +217,8 @@ with col2:
             orientation="h",
             title="Race/Ethnicity Distribution",
             color="Race",
-            color_discrete_sequence=px.colors.qualitative.Set2,
         )
-        fig_race.update_layout(showlegend=False)
-        st.plotly_chart(fig_race, use_container_width=True)
+        chart(fig_race, show_legend=False)
     else:
         st.info("No data available for race distribution.")
 
@@ -255,11 +250,13 @@ if available_bm:
 
     fig_hm = px.imshow(
         cooccur,
-        title="Biomarker Co-occurrence (positive x positive)",
-        color_continuous_scale=[[0, "#1B3A6B"], [0.5, "#00A8A8"], [1, "#00FFE0"]],
+        color_continuous_scale=SEQUENTIAL,
         text_auto=True,
+        aspect="auto",
+        labels={"x": "", "y": "", "color": "Patients"},
     )
-    st.plotly_chart(fig_hm, use_container_width=True)
+    fig_hm.update_xaxes(side="top")
+    chart(fig_hm, height=420, grid=False)
 else:
     st.info("No biomarker data available.")
 

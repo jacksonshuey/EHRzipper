@@ -13,17 +13,16 @@ import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
+from ui.components.theme import chart, header, setup_page
 from ui.data.loader import load_patients
 
-st.set_page_config(page_title="Survival Analysis | EHRzipper", layout="wide")
+setup_page("Survival Analysis")
 
-st.title("Survival Analysis")
-st.markdown(
-    """
-    Kaplan-Meier overall survival (OS) curves derived from real-world data. Survival time is
-    measured from advanced diagnosis date to date of death, with living patients censored at
-    last known alive date. Use the toggle to stratify by EGFR mutation status.
-    """
+header(
+    "Survival Analysis",
+    "Kaplan-Meier real-world overall survival, measured from advanced diagnosis "
+    "to death, with living patients censored at last known alive date. Toggle to "
+    "stratify by EGFR mutation status.",
 )
 
 # ---------------------------------------------------------------------------
@@ -235,7 +234,7 @@ else:
         **{str(cp): n for cp, n in zip(checkpoints, ar, strict=False)},
     })
 
-fig.add_hline(y=0.5, line_dash="dash", line_color="gray", annotation_text="50%")
+fig.add_hline(y=0.5, line_dash="dash", line_color="#8A93A0", annotation_text="50%")
 fig.update_layout(
     title="Kaplan-Meier Overall Survival",
     xaxis_title="Time from Advanced Diagnosis (months)",
@@ -243,7 +242,7 @@ fig.update_layout(
     yaxis={"range": [0, 1.05]},
     legend={"orientation": "h", "yanchor": "bottom", "y": -0.3},
 )
-st.plotly_chart(fig, use_container_width=True)
+chart(fig, height=460)
 
 # ---------------------------------------------------------------------------
 # Summary metrics
@@ -265,4 +264,4 @@ st.caption("Number of patients remaining at risk at each time point (months).")
 
 if at_risk_rows:
     ar_df = pd.DataFrame(at_risk_rows)
-    st.dataframe(ar_df, use_container_width=True, hide_index=True)
+    st.dataframe(ar_df, width="stretch", hide_index=True)

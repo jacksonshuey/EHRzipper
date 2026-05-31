@@ -25,9 +25,10 @@ import streamlit as st
 
 from ingest import IngestReport, UploadedFile
 from ingest.runner import run_ingest
+from ui.components.theme import chart, header, setup_page
 from ui.integrations import CONNECTORS, ConnectorError, _store
 
-st.set_page_config(page_title="Import Data | EHRzipper", layout="wide")
+setup_page("Import Data")
 
 # Mirror the Audit Trail page so a routing tier is the same color everywhere.
 _DECIDER_COLORS = {
@@ -97,7 +98,7 @@ def _computer_panel() -> None:
 
     cols = st.columns(2)
     with cols[0]:
-        if st.button("Load sample files", use_container_width=True):
+        if st.button("Load sample files", width="stretch"):
             _load_samples()
     with cols[1]:
         st.caption("No files handy? Load a few synthetic records of each format.")
@@ -128,7 +129,7 @@ def _cloud_panel(provider: str) -> None:
 
     if not mod.connected():
         st.link_button(
-            f"Connect {provider}", mod.auth_url(), use_container_width=True
+            f"Connect {provider}", mod.auth_url(), width="stretch"
         )
         st.caption(
             "Opens the provider's consent screen, then returns here. Read-only access."
@@ -137,7 +138,7 @@ def _cloud_panel(provider: str) -> None:
 
     left, right = st.columns([3, 1])
     left.success(f"Connected to {provider}.")
-    if right.button("Disconnect", use_container_width=True):
+    if right.button("Disconnect", width="stretch"):
         mod.disconnect()
         st.rerun()
 
@@ -153,7 +154,7 @@ def _cloud_panel(provider: str) -> None:
 
     label_to_file = {f"{rf.name}": rf for rf in remote}
     chosen = st.multiselect(f"Files in {provider}", options=list(label_to_file))
-    if chosen and st.button(f"Add {len(chosen)} file(s)", use_container_width=True):
+    if chosen and st.button(f"Add {len(chosen)} file(s)", width="stretch"):
         for label in chosen:
             rf = label_to_file[label]
             try:
@@ -200,7 +201,7 @@ def _render_report(report: IngestReport) -> None:
                 for fo in report.files
             ]
         ),
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
     )
 
@@ -222,7 +223,7 @@ def _render_report(report: IngestReport) -> None:
                     "reason": "Reason",
                 }
             ),
-            use_container_width=True,
+            width="stretch",
             hide_index=True,
         )
 
@@ -257,7 +258,7 @@ def _render_decisions(report: IngestReport) -> None:
                 "reason": "Reason",
             }
         ),
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
     )
 
@@ -276,21 +277,17 @@ def _render_decisions(report: IngestReport) -> None:
             color_discrete_map=_DECIDER_COLORS,
             labels={"decided_by": "Decided by", "count": "Decisions"},
         )
-        fig.update_layout(showlegend=False)
-        st.plotly_chart(fig, use_container_width=True)
+        chart(fig, show_legend=False, height=340)
 
 
 # ---------------------------------------------------------------------------
 # Page body
 # ---------------------------------------------------------------------------
-st.title("Import Data")
-st.markdown(
-    """
-    Bring EHR files into the platform the way a hospital would deliver them —
-    **FHIR R4 Bundles**, **HL7v2 messages**, or **flat CSV extracts** — from your
-    computer, Google Drive, or Dropbox. Each file is reconciled live through the
-    three-tier engine and its full provenance is shown below.
-    """
+header(
+    "Import Data",
+    "Bring EHR files in the way a hospital delivers them — FHIR R4 Bundles, "
+    "HL7v2 messages, or flat CSV extracts — from your computer, Google Drive, or "
+    "Dropbox. Each file is reconciled live and its full provenance shown below.",
 )
 st.info(
     "All data here is **fully synthetic** — never upload real PHI. Files are "
@@ -318,7 +315,7 @@ if staged:
     st.divider()
     head, clear = st.columns([4, 1])
     head.subheader(f"Staged files ({len(staged)})")
-    if clear.button("Clear", use_container_width=True):
+    if clear.button("Clear", width="stretch"):
         staged.clear()
         st.session_state.pop("import_report", None)
         st.rerun()
