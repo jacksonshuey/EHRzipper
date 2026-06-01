@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS META.ZIPPERING_SCHEMA (
     ))
 )
 CLUSTER BY (workspace_key, pkey)
-COMMENT = 'Per-pkey current canonical inventory. Mutable. Updated via MERGE on upsert.';
+COMMENT = 'Per-pkey current canonical inventory. Mutable. Updated via MERGE on (workspace_key, pkey, canonical_name).';
 
 -- ---------------------------------------------------------------------------
 -- 3. ZIPPERING_DECISIONS — APPEND-ONLY audit
@@ -120,7 +120,7 @@ CREATE TABLE IF NOT EXISTS META.ZIPPERED_SIGNALS (
     CONSTRAINT uq_zippered_signals UNIQUE (source, external_id)
 )
 CLUSTER BY (workspace_key, pkey, occurred_at)
-COMMENT = 'Wide-row signal store. UPSERT on (source, external_id) for idempotent re-ingest.';
+COMMENT = 'Wide-row signal store. MERGE on (source, external_id) for idempotent re-ingest.';
 
 -- ---------------------------------------------------------------------------
 -- 5. ZIPPERING_CONFLICTS — value-disagreement audit

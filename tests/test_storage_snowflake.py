@@ -73,7 +73,7 @@ def test_insert_decision_roundtrip(storage) -> None:  # type: ignore[no-untyped-
     assert fetched.source_samples == ["Acme", "Acme Inc."]
 
 
-def test_upsert_signal_merge(storage) -> None:  # type: ignore[no-untyped-def]
+def test_merge_signal_merge(storage) -> None:  # type: ignore[no-untyped-def]
     workspace = "ehrzipper-default"
     pkey = f"test_{uuid.uuid4().hex[:8]}"
     external_id = f"ext_{uuid.uuid4().hex[:8]}"
@@ -85,9 +85,9 @@ def test_upsert_signal_merge(storage) -> None:  # type: ignore[no-untyped-def]
         "occurred_at": "2025-06-01T00:00:00Z",
         "columns": {"vital_status": "alive"},
     }
-    id1 = storage.upsert_signal(signal)
+    id1 = storage.merge_signal(signal)
     signal["columns"] = {"vital_status": "deceased"}
-    id2 = storage.upsert_signal(signal)
+    id2 = storage.merge_signal(signal)
     assert id1 == id2  # MERGE preserved the id
 
     row = storage.get_zippered_row(workspace, pkey)

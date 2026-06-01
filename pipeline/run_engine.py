@@ -31,7 +31,7 @@ from typing import TYPE_CHECKING
 _ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(_ROOT))
 
-from ehrzipper.engine import zipper_upsert  # noqa: E402
+from ehrzipper.engine import zipper_merge  # noqa: E402
 from ehrzipper.haiku_router import HaikuRouter  # noqa: E402
 from ehrzipper.lookup import CodeLookup  # noqa: E402
 from ehrzipper.sf_connect import connect  # noqa: E402
@@ -131,7 +131,7 @@ async def _run(profiles: list[PatientProfile], storage: SnowflakeStorage) -> Cou
             occurred_at=p.advanced_diagnosis_date.isoformat(),
             columns=_build_columns(p),
         )
-        result = await zipper_upsert(row, storage, router, lookup)
+        result = await zipper_merge(row, storage, router, lookup)
         for d in result.decisions:
             tally[d.decided_by] += 1
             tally[f"verdict:{d.verdict}"] += 1

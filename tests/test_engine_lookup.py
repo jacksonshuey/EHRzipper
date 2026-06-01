@@ -4,7 +4,7 @@ Integration tests for the engine's deterministic-lookup tier.
 Verifies that:
  - When the lookup tier matches, decided_by='lookup' and Haiku
    is NOT called.
- - The schema row is upserted with the lookup-provided data_type and unit.
+ - The schema row is mergeed with the lookup-provided data_type and unit.
  - Second ingest of the same column hits the decision cache (tier 0)
    and again does not call Haiku.
  - When the lookup tier returns None, Haiku is called normally.
@@ -15,7 +15,7 @@ from __future__ import annotations
 from datetime import UTC, datetime
 from unittest.mock import AsyncMock, MagicMock
 
-from ehrzipper.engine import zipper_upsert
+from ehrzipper.engine import zipper_merge
 from ehrzipper.haiku_router import HaikuRouter
 from ehrzipper.lookup import CodeLookup
 from ehrzipper.storage_sqlite import SQLiteStorage
@@ -66,14 +66,14 @@ class TestLookupTierFires:
         )
 
         # Pre-stage the schema so quantity_with_unit normalization has a clean target.
-        # The lookup tier itself upserts the schema; the value coercion runs after.
+        # The lookup tier itself merges the schema; the value coercion runs after.
         # For a text→quantity_with_unit coercion we need a numeric input.
         row.columns["wbc"] = IngestValue(
             value={"value": 8.4, "unit": "10*3/uL"},
             source_data_type="jsonb",
         )
 
-        result = await zipper_upsert(row, db_storage, router, lookup=lookup)
+        result = await zipper_merge(row, db_storage, router, lookup=lookup)
 
         assert len(result.decisions) == 1
         d = result.decisions[0]
@@ -84,7 +84,7 @@ class TestLookupTierFires:
         # Haiku was never called
         haiku_create.assert_not_called()
 
-        # Schema row was upserted with the LOINC data_type
+        # Schema row was mergeed with the LOINC data_type
         schema_rows = db_storage.load_pkey_schema(WS, PKEY)
         wbc_schema = next(
             (s for s in schema_rows if s.canonical_name == "wbc_count"), None
@@ -109,7 +109,7 @@ class TestLookupTierFires:
             },
         )
 
-        result = await zipper_upsert(row, db_storage, router, lookup=lookup)
+        result = await zipper_merge(row, db_storage, router, lookup=lookup)
 
         d = result.decisions[0]
         assert d.decided_by == "lookup"
@@ -134,7 +134,7 @@ class TestLookupTierFires:
                 "drug": IngestValue(value="osimertinib", source_data_type="text"),
             },
         )
-        r1 = await zipper_upsert(row, db_storage, router1, lookup=lookup)
+        r1 = await zipper_merge(row, db_storage, router1, lookup=lookup)
 
         # Second ingest — same (pkey, source, source_column), different external_id.
         # The decision cache should resolve before either lookup or Haiku is called.
@@ -159,7 +159,7 @@ class TestLookupTierFires:
                 "drug": IngestValue(value="alectinib", source_data_type="text"),
             },
         )
-        r2 = await zipper_upsert(row2, db_storage, router2, lookup=BoomLookup())
+        r2 = await zipper_merge(row2, db_storage, router2, lookup=BoomLookup())
 
         assert r2.decisions[0].id == r1.decisions[0].id
         assert r2.decisions[0].decided_by == "lookup"
@@ -192,7 +192,7 @@ class TestLookupTierMisses:
                 "comments": IngestValue(value="some note", source_data_type="text"),
             },
         )
-        result = await zipper_upsert(row, db_storage, router, lookup=lookup)
+        result = await zipper_merge(row, db_storage, router, lookup=lookup)
 
         assert result.decisions[0].decided_by == "llm"
         client.messages.create.assert_called_once()
@@ -222,5 +222,5 @@ class TestLookupTierMisses:
             },
         )
         # Note: no lookup= kwarg
-        result = await zipper_upsert(row, db_storage, router)
+        result = await zipper_merge(row, db_storage, router)
         assert result.decisions[0].decided_by == "llm"

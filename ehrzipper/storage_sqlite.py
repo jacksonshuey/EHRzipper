@@ -278,8 +278,8 @@ class SQLiteStorage:
         ).fetchone()
         return _row_to_decision(row)
 
-    def upsert_schema_row(self, schema_row: dict[str, Any]) -> None:
-        """UPSERT into zippering_schema on (workspace_key, pkey, canonical_name)."""
+    def merge_schema_row(self, schema_row: dict[str, Any]) -> None:
+        """MERGE into zippering_schema on (workspace_key, pkey, canonical_name)."""
         row_id = _new_uuid()
         now = _now_iso()
         self._conn.execute(
@@ -310,10 +310,10 @@ class SQLiteStorage:
         )
         self._conn.commit()
 
-    def upsert_signal(self, signal: dict[str, Any]) -> str:
+    def merge_signal(self, signal: dict[str, Any]) -> str:
         """
-        UPSERT into zippered_signals on (source, external_id).
-        Returns the id of the upserted row.
+        MERGE into zippered_signals on (source, external_id).
+        Returns the id of the mergeed row.
         """
         cols_json = json.dumps(signal.get("columns") or {})
         now = _now_iso()

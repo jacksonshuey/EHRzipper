@@ -15,7 +15,7 @@ coercions      — Type-normalization registry (UnsafeCoercion + normalize()).
 haiku_router   — LLM routing via claude-haiku-4-5 with forced tool_choice.
 storage        — Storage Protocol (ABC) defining the persistence contract.
 storage_sqlite — SQLite implementation of Storage for local dev and tests.
-engine         — zipper_upsert() hot path + read helpers.
+engine         — zipper_merge() hot path + read helpers.
 
 Invariants (non-negotiable)
 ---------------------------

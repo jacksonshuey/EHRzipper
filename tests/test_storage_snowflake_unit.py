@@ -214,14 +214,14 @@ def test_insert_decision_returns_pydantic_row(
 
 
 # ---------------------------------------------------------------------------
-# upsert_schema_row — uses MERGE
+# merge_schema_row — uses MERGE
 # ---------------------------------------------------------------------------
 
 
-def test_upsert_schema_row_uses_merge(
+def test_merge_schema_row_uses_merge(
     storage: SnowflakeStorage, mock_conn: MagicMock
 ) -> None:
-    storage.upsert_schema_row(
+    storage.merge_schema_row(
         {
             "workspace_key": "ws",
             "pkey": "p",
@@ -241,18 +241,18 @@ def test_upsert_schema_row_uses_merge(
 
 
 # ---------------------------------------------------------------------------
-# upsert_signal — MERGE on (source, external_id)
+# merge_signal — MERGE on (source, external_id)
 # ---------------------------------------------------------------------------
 
 
-def test_upsert_signal_with_external_id_uses_merge(
+def test_merge_signal_with_external_id_uses_merge(
     storage: SnowflakeStorage, mock_conn: MagicMock
 ) -> None:
     cur = mock_conn.cursor.return_value
     # No existing row → new id generated, MERGE INSERTs.
     cur.fetchone.return_value = None
 
-    row_id = storage.upsert_signal(
+    row_id = storage.merge_signal(
         {
             "workspace_key": "ws",
             "pkey": "p",
@@ -269,10 +269,10 @@ def test_upsert_signal_with_external_id_uses_merge(
     assert any("PARSE_JSON(%(columns)s)" in s for s in sqls)
 
 
-def test_upsert_signal_without_external_id_uses_insert(
+def test_merge_signal_without_external_id_uses_insert(
     storage: SnowflakeStorage, mock_conn: MagicMock
 ) -> None:
-    storage.upsert_signal(
+    storage.merge_signal(
         {
             "workspace_key": "ws",
             "pkey": "p",
@@ -287,12 +287,12 @@ def test_upsert_signal_without_external_id_uses_insert(
     assert "PARSE_JSON(%(columns)s)" in sql
 
 
-def test_upsert_signal_with_existing_external_id_reuses_id(
+def test_merge_signal_with_existing_external_id_reuses_id(
     storage: SnowflakeStorage, mock_conn: MagicMock
 ) -> None:
     cur = mock_conn.cursor.return_value
     cur.fetchone.return_value = {"ID": "existing-id-42"}
-    row_id = storage.upsert_signal(
+    row_id = storage.merge_signal(
         {
             "workspace_key": "ws",
             "pkey": "p",

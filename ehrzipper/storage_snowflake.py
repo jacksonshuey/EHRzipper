@@ -456,7 +456,7 @@ class SnowflakeStorage:
             raise RuntimeError(f"INSERT into ZIPPERING_DECISIONS produced no row for {row_id}")
         return _row_to_decision(row)
 
-    def upsert_schema_row(self, schema_row: dict[str, Any]) -> None:
+    def merge_schema_row(self, schema_row: dict[str, Any]) -> None:
         """MERGE INTO META.ZIPPERING_SCHEMA on (workspace_key, pkey, canonical_name)."""
         row_id = _new_uuid()
         now = _now_iso()
@@ -511,10 +511,10 @@ class SnowflakeStorage:
         finally:
             cur.close()
 
-    def upsert_signal(self, signal: dict[str, Any]) -> str:
+    def merge_signal(self, signal: dict[str, Any]) -> str:
         """
         MERGE INTO META.ZIPPERED_SIGNALS on (source, external_id).
-        Returns the id of the upserted row.
+        Returns the id of the mergeed row.
         """
         cols_json = json.dumps(signal.get("columns") or {})
         now = _now_iso()
