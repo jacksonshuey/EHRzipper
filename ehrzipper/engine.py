@@ -15,40 +15,40 @@ engine sequences its tiers. The only EHRzipper-specific wiring is the
 ``EHRNormalizer`` injected here so clinical units / controlled vocabularies /
 partial dates are honored against the resolved canonical target.
 
-Hot path:  zipper_merge(row, storage, router, lookup=None)
+Hot path:  zipper_upsert(row, storage, router, lookup=None)
 Read path: get_zippered_row / get_zippered_timeline / get_decision_history
 """
 
 from __future__ import annotations
 
-from zipper import Lookup, Router, Storage, ZipperMergeResult
+from zipper import Lookup, Router, Storage, ZipperUpsertResult
 from zipper.engine import get_decision_history as get_decision_history
 from zipper.engine import get_merged_record as get_merged_record
 from zipper.engine import get_zippered_row as get_zippered_row
 from zipper.engine import get_zippered_timeline as get_zippered_timeline
-from zipper.engine import zipper_merge as _zipper_merge
+from zipper.engine import zipper_upsert as _zipper_upsert
 
 from ehrzipper.normalizer import EHRNormalizer
 from ehrzipper.types import IngestRow
 
 
-async def zipper_merge(
+async def zipper_upsert(
     row: IngestRow,
     storage: Storage,
     router: Router,
     lookup: Lookup | None = None,
-) -> ZipperMergeResult:
+) -> ZipperUpsertResult:
     """Ingest one integration row, injecting EHRzipper's clinical normalizer."""
-    return await _zipper_merge(
+    return await _zipper_upsert(
         row, storage, router, lookup=lookup, normalizer=EHRNormalizer()
     )
 
 
 __all__ = [
-    "ZipperMergeResult",
+    "ZipperUpsertResult",
     "get_decision_history",
     "get_merged_record",
     "get_zippered_row",
     "get_zippered_timeline",
-    "zipper_merge",
+    "zipper_upsert",
 ]

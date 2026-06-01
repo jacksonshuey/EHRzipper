@@ -124,7 +124,7 @@ CREATE TABLE IF NOT EXISTS zippered_signals (
     occurred_at     TEXT NOT NULL,
     columns         TEXT NOT NULL DEFAULT '{}',   -- JSON object
     ingested_at     TEXT NOT NULL,
-    UNIQUE (source, external_id)
+    UNIQUE (workspace_key, source, external_id)
 );
 
 CREATE INDEX IF NOT EXISTS zippered_signals_pkey_time_idx

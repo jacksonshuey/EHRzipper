@@ -15,17 +15,21 @@ that pharma companies buy.
 
 ## Try it in the browser
 
-The hosted app needs no setup or API key. The most representative path:
+The hosted app is a single focused reconciliation demo — no setup or API key
+needed:
 
-1. **Import Data** — drop a FHIR bundle, an HL7v2 message, or a CSV extract (or
-   click **Load sample files**). Watch every source column get reconciled live
-   through the three-tier engine, with the full provenance: per-tier decision
-   counts, the append-only decision log, anything held for review, and the
-   merged canonical record per patient.
-2. **Cohort Builder** — filter the 50 synthetic aNSCLC patients by biomarker,
-   stage, ECOG, histology, and practice type.
-3. **Survival Analysis** — real-world overall survival (Kaplan-Meier) by subgroup.
-4. **Audit Trail** — the same append-only provenance log, browsable.
+1. **Upload** — drop a FHIR bundle (`.json`), an HL7v2 message (`.hl7`), or a CSV
+   extract, or click **Load sample files** for a bundled multi-source set.
+2. **How it works** — a live engine-flow diagram shows your files routing through
+   the three tiers as you reconcile.
+3. **Result** — the merged, downloadable canonical dataset; per-tier decision
+   counts; the append-only routing log (one row per decision: source, column,
+   canonical field, decided-by, similarity, verdict, reason); and a *Held for
+   review* list of columns Tier 1 couldn't resolve.
+
+The cohort definition and the derived oncology endpoints (lines of therapy,
+rwOS) are specified in [`methodology/`](./methodology/); they are not surfaced in
+this demo UI.
 
 ## The reconciliation engine
 
@@ -71,9 +75,10 @@ That's enough for the full UI on the bundled synthetic data. To regenerate data,
 load Snowflake, run the engine from the CLI, and score the note-abstraction
 evals, see **[DEMO.md](./DEMO.md)** for the complete run-book.
 
-To enable the live LLM (Tier 2) or the Google Drive / Dropbox import connectors,
-set `ANTHROPIC_API_KEY` and copy `.streamlit/secrets.toml.example` to
-`.streamlit/secrets.toml`.
+To enable the live LLM (Tier 2), set `ANTHROPIC_API_KEY` — copy
+`.streamlit/secrets.toml.example` to `.streamlit/secrets.toml` and fill it in.
+Without a key the engine runs deterministic Tier-1 only and lists the rest under
+*Held for review*, exactly as the hosted demo does.
 
 ## Cohort anchor
 

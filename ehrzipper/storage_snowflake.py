@@ -456,7 +456,7 @@ class SnowflakeStorage:
             raise RuntimeError(f"INSERT into ZIPPERING_DECISIONS produced no row for {row_id}")
         return _row_to_decision(row)
 
-    def merge_schema_row(self, schema_row: dict[str, Any]) -> None:
+    def upsert_schema_row(self, schema_row: dict[str, Any]) -> None:
         """MERGE INTO META.ZIPPERING_SCHEMA on (workspace_key, pkey, canonical_name)."""
         row_id = _new_uuid()
         now = _now_iso()
@@ -511,10 +511,10 @@ class SnowflakeStorage:
         finally:
             cur.close()
 
-    def merge_signal(self, signal: dict[str, Any]) -> str:
+    def upsert_signal(self, signal: dict[str, Any]) -> str:
         """
-        MERGE INTO META.ZIPPERED_SIGNALS on (source, external_id).
-        Returns the id of the mergeed row.
+        MERGE INTO META.ZIPPERED_SIGNALS on (workspace_key, source, external_id).
+        Returns the id of the upserted row.
         """
         cols_json = json.dumps(signal.get("columns") or {})
         now = _now_iso()
@@ -551,12 +551,18 @@ class SnowflakeStorage:
             return row_id
 
         # Look up existing row id first to return a stable id post-merge.
+        # Scoped to workspace_key so signals stay tenant-partitioned.
         cur = self._cursor()
         try:
             cur.execute(
                 "SELECT id FROM META.ZIPPERED_SIGNALS "
-                "WHERE source = %(source)s AND external_id = %(external_id)s",
-                {"source": signal["source"], "external_id": external_id},
+                "WHERE workspace_key = %(workspace_key)s "
+                "  AND source = %(source)s AND external_id = %(external_id)s",
+                {
+                    "workspace_key": signal["workspace_key"],
+                    "source": signal["source"],
+                    "external_id": external_id,
+                },
             )
             existing = cast("dict[str, Any] | None", cur.fetchone())
             row_id = existing["ID"] if existing else _new_uuid()
@@ -575,8 +581,9 @@ class SnowflakeStorage:
                         PARSE_JSON(%(columns)s) AS columns,
                         %(ingested_at)s   AS ingested_at
                 ) s
-                ON  t.source      = s.source
-                AND t.external_id = s.external_id
+                ON  t.workspace_key = s.workspace_key
+                AND t.source        = s.source
+                AND t.external_id   = s.external_id
                 WHEN MATCHED THEN UPDATE SET
                     pkey        = s.pkey,
                     occurred_at = s.occurred_at,

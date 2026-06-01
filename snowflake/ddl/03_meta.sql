@@ -117,10 +117,10 @@ CREATE TABLE IF NOT EXISTS META.ZIPPERED_SIGNALS (
     columns         VARIANT      NOT NULL DEFAULT TO_VARIANT(OBJECT_CONSTRUCT()),
     ingested_at     TIMESTAMP_TZ NOT NULL DEFAULT CURRENT_TIMESTAMP(),
     CONSTRAINT pk_zippered_signals PRIMARY KEY (id),
-    CONSTRAINT uq_zippered_signals UNIQUE (source, external_id)
+    CONSTRAINT uq_zippered_signals UNIQUE (workspace_key, source, external_id)
 )
 CLUSTER BY (workspace_key, pkey, occurred_at)
-COMMENT = 'Wide-row signal store. MERGE on (source, external_id) for idempotent re-ingest.';
+COMMENT = 'Wide-row signal store. MERGE on (workspace_key, source, external_id) for idempotent, tenant-scoped re-ingest.';
 
 -- ---------------------------------------------------------------------------
 -- 5. ZIPPERING_CONFLICTS — value-disagreement audit

@@ -1,7 +1,7 @@
 """Reconciliation runner — uploaded files in, provenance report out.
 
 Wires the format adapters to the three-tier engine: parse each file into
-IngestRows, run them through ``zipper_merge`` against a fresh SQLite store
+IngestRows, run them through ``zipper_upsert`` against a fresh SQLite store
 (seeded with the clinical data dictionary), and collect the append-only
 decisions plus the merged canonical record per patient.
 
@@ -19,7 +19,7 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
-from ehrzipper.engine import get_merged_record, zipper_merge
+from ehrzipper.engine import get_merged_record, zipper_upsert
 from ehrzipper.lookup import CodeLookup
 from ehrzipper.storage_sqlite import SQLiteStorage
 from ehrzipper.types import IngestRow, ZipperingDecisionRow
@@ -106,7 +106,7 @@ async def _process(
 
     for row in rows:
         try:
-            result = await zipper_merge(row, storage, router, lookup)
+            result = await zipper_upsert(row, storage, router, lookup)
         except Exception as err:
             tally["errors"] += 1
             report.held_columns.append(

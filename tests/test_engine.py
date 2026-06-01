@@ -16,11 +16,11 @@ from __future__ import annotations
 from datetime import UTC, datetime
 
 from ehrzipper.engine import (
-    ZipperMergeResult,
+    ZipperUpsertResult,
     get_decision_history,
     get_zippered_row,
     get_zippered_timeline,
-    zipper_merge,
+    zipper_upsert,
 )
 from ehrzipper.storage_sqlite import SQLiteStorage
 from ehrzipper.types import HaikuRoutingVerdict, IngestRow, IngestValue
@@ -82,19 +82,19 @@ def _base_row(external_id: str = "ext-001", **kwargs: object) -> IngestRow:
 
 
 # ---------------------------------------------------------------------------
-# zipperMerge tests
+# zipperUpsert tests
 # ---------------------------------------------------------------------------
 
 
-class TestZipperMerge:
+class TestZipperUpsert:
     async def test_1_happy_path_new_column_append(
         self, db_storage: SQLiteStorage
     ) -> None:
-        """New column → append verdict, value written, schema mergeed."""
+        """New column → append verdict, value written, schema upserted."""
         router = make_fake_router(APPEND_V)
-        result = await zipper_merge(_base_row(), db_storage, router)
+        result = await zipper_upsert(_base_row(), db_storage, router)
 
-        assert isinstance(result, ZipperMergeResult)
+        assert isinstance(result, ZipperUpsertResult)
         assert result.signal_id != ""
         assert len(result.decisions) == 1
         assert result.decisions[0].verdict == "append"
@@ -107,7 +107,7 @@ class TestZipperMerge:
         router = make_fake_router(APPEND_V)
 
         # First ingest: Haiku should be called
-        r1 = await zipper_merge(_base_row(), db_storage, router)
+        r1 = await zipper_upsert(_base_row(), db_storage, router)
         assert len(r1.decisions) == 1
 
         # Second ingest: same (pkey, source, source_column) → cache hit
@@ -122,7 +122,7 @@ class TestZipperMerge:
                 reason="should not be called",
             )
         )
-        r2 = await zipper_merge(_base_row(), db_storage, router2)
+        r2 = await zipper_upsert(_base_row(), db_storage, router2)
 
         # Decision ID should be the same cached row
         assert r2.decisions[0].id == r1.decisions[0].id
@@ -157,7 +157,7 @@ class TestZipperMerge:
                 "empcount": IngestValue(value="hello", source_data_type="text")
             },
         )
-        result = await zipper_merge(row, db_storage, router)
+        result = await zipper_upsert(row, db_storage, router)
 
         review_decision = next(
             (d for d in result.decisions if d.decided_by == "normalizer"), None
@@ -170,11 +170,11 @@ class TestZipperMerge:
     ) -> None:
         """JOIN verdict against a global canonical: schema row has is_global=True."""
         router = make_fake_router(GLOBAL_V)
-        result = await zipper_merge(_base_row(), db_storage, router)
+        result = await zipper_upsert(_base_row(), db_storage, router)
 
         assert result.decisions[0].is_global_target is True
 
-        # Verify schema row was mergeed with is_global=1
+        # Verify schema row was upserted with is_global=1
         schema_rows = db_storage.load_pkey_schema(WS, PKEY)
         global_row = next(
             (r for r in schema_rows if r.canonical_name == "company_name"), None
@@ -187,7 +187,7 @@ class TestZipperMerge:
     ) -> None:
         """Unclear verdict: decision row has needs_review=True."""
         router = make_fake_router(UNCLEAR_V)
-        result = await zipper_merge(_base_row(), db_storage, router)
+        result = await zipper_upsert(_base_row(), db_storage, router)
 
         assert result.decisions[0].verdict == "unclear"
         assert result.decisions[0].needs_review is True
@@ -197,10 +197,10 @@ class TestZipperMerge:
     ) -> None:
         """Same external_id ingested twice returns the same signal row id."""
         router = make_fake_router(APPEND_V)
-        r1 = await zipper_merge(_base_row(), db_storage, router)
+        r1 = await zipper_upsert(_base_row(), db_storage, router)
 
         # Second call — cache hit on decision, same external_id → update not insert
-        r2 = await zipper_merge(_base_row(), db_storage, router)
+        r2 = await zipper_upsert(_base_row(), db_storage, router)
 
         assert r1.signal_id == r2.signal_id
 
@@ -227,7 +227,7 @@ class TestZipperMerge:
                 "ts": IngestValue(value=1_716_681_600_000, source_data_type="integer")
             },
         )
-        result = await zipper_merge(row, db_storage, router)
+        result = await zipper_upsert(row, db_storage, router)
         assert result.signal_id != ""
 
         # The signal's columns JSON should have an ISO timestamp string
@@ -294,7 +294,7 @@ class TestZipperMerge:
                 "stage":  IngestValue(value="Negotiation", source_data_type="text"),
             },
         )
-        result = await zipper_merge(row, db_storage, router)
+        result = await zipper_upsert(row, db_storage, router)
         assert len(result.decisions) == 3
         canonical_names = {d.canonical_name for d in result.decisions}
         assert canonical_names == {"company_name", "domain", "deal_stage"}
@@ -413,7 +413,7 @@ class TestReadHelpers:
         self, db_storage: SQLiteStorage
     ) -> None:
         router = make_fake_router(APPEND_V)
-        await zipper_merge(_base_row("ext-r1"), db_storage, router)
+        await zipper_upsert(_base_row("ext-r1"), db_storage, router)
 
         row = await get_zippered_row(WS, PKEY, db_storage)
         assert row is not None
@@ -423,7 +423,7 @@ class TestReadHelpers:
         self, db_storage: SQLiteStorage
     ) -> None:
         router = make_fake_router(APPEND_V)
-        await zipper_merge(_base_row("ext-tl1"), db_storage, router)
+        await zipper_upsert(_base_row("ext-tl1"), db_storage, router)
 
         rows = await get_zippered_timeline(
             WS, PKEY, "2020-01-01T00:00:00.000Z", db_storage
@@ -470,7 +470,7 @@ class TestReadHelpers:
     ) -> None:
         """Signals before the since timestamp are excluded."""
         router = make_fake_router(APPEND_V)
-        await zipper_merge(_base_row("ext-before"), db_storage, router)
+        await zipper_upsert(_base_row("ext-before"), db_storage, router)
 
         # Far future since — should return nothing
         rows = await get_zippered_timeline(

@@ -278,8 +278,8 @@ class SQLiteStorage:
         ).fetchone()
         return _row_to_decision(row)
 
-    def merge_schema_row(self, schema_row: dict[str, Any]) -> None:
-        """MERGE into zippering_schema on (workspace_key, pkey, canonical_name)."""
+    def upsert_schema_row(self, schema_row: dict[str, Any]) -> None:
+        """UPSERT into zippering_schema on (workspace_key, pkey, canonical_name)."""
         row_id = _new_uuid()
         now = _now_iso()
         self._conn.execute(
@@ -310,22 +310,25 @@ class SQLiteStorage:
         )
         self._conn.commit()
 
-    def merge_signal(self, signal: dict[str, Any]) -> str:
+    def upsert_signal(self, signal: dict[str, Any]) -> str:
         """
-        MERGE into zippered_signals on (source, external_id).
-        Returns the id of the mergeed row.
+        UPSERT into zippered_signals on (workspace_key, source, external_id).
+        Returns the id of the upserted row.
         """
         cols_json = json.dumps(signal.get("columns") or {})
         now = _now_iso()
 
-        # Check if a row already exists (for idempotent re-ingest)
+        # Check if a row already exists (for idempotent re-ingest). Scoped to
+        # workspace_key so the same source identifier in another workspace
+        # cannot match — signals are tenant-partitioned.
         external_id = signal.get("external_id")
         existing_id: str | None = None
 
         if external_id is not None:
             row = self._conn.execute(
-                "SELECT id FROM zippered_signals WHERE source = ? AND external_id = ?",
-                (signal["source"], external_id),
+                "SELECT id FROM zippered_signals "
+                "WHERE workspace_key = ? AND source = ? AND external_id = ?",
+                (signal["workspace_key"], signal["source"], external_id),
             ).fetchone()
             if row:
                 existing_id = row["id"]
